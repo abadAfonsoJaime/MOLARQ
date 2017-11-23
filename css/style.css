@@ -2370,7 +2370,36 @@
     font-size: 23px;
 }
 
+body{
+    margin: 0;
+    font-family: FontAwesome, Verdana, sans-serif;
+}
 
+.header{
+    width: 100%;
+    height: 150px;
+    background-color:gainsboro; 
+}
 
+.wrapper{
+    width: 960px;
+    margin: auto;
+}
 
+.LOGO{
+    width: 40%;
+    float: left;
+}
+li.menu{
+    width: 20%;
+    float: left;
+}
+
+ul.menu > li {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+   @font-face: FontAwesome;
+}
 
