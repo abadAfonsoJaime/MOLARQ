@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'texto', sans-serif;
   font-size:1em;
+  background-color: #D7DBDD; 
 }
 
 a, a:hover {
@@ -120,8 +121,27 @@ div.wrappersite img{
 }
 
 div.header {
-  
+  background-color: #A3E4D7;
 }
+
+.formfield {
+    padding-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.formbutton {
+    padding-top:55px;
+    float: left;
+    width: 100%;
+}
+
+.formcentre {
+    text-align: center;
+}
+
+
+
 
 
 /** TIPOGRAFIA TITULOS **/
@@ -2488,7 +2508,7 @@ div.header {
 
 /* -----------------MAR---------- */
 
-
+pepe
 
 
 body{
