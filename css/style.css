@@ -122,6 +122,7 @@ div.wrappersite img{
 
 div.header {
   background-color: #A3E4D7;
+}
 
 /** CAMBIOS GUILLE **/
 
@@ -2618,13 +2619,6 @@ div.map-event {
 
 /* -----------------MAR---------- */
 
-
-
-
-body{
-    margin: 0;
-    font-family: FontAwesome, Verdana, sans-serif;
-}
 
 .header{
     width: 100%;
