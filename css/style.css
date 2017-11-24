@@ -1,3 +1,79 @@
+body {
+  margin: 0;
+  font-family: 'texto', sans-serif;
+  font-size:1em;
+}
+
+a, a:hover {
+  font-weight: 900;
+  text-decoration: none;
+  color: #333;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+}
+
+video, iframe {
+  width: 100%;
+}
+
+.wrapper {
+  width: 480px; 
+  margin: 0 auto;
+}
+
+.parent {
+  width: 100%;
+  float: left;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.col-5 {
+  width: 5%;
+  float: left;
+}
+.col-25 {
+  width: 25%;
+  float: left;
+}
+
+.col-50 {
+  width: 50%;
+  float: left;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+}
+
+.col-95 {
+  width: 95%;
+  float: left;
+}
+
+div.header {
+  
+}
+
+
 /** TIPOGRAFIA TITULOS **/
 
 @font-face {
@@ -8,8 +84,6 @@
 	font-style: normal;
 }
 
------------------------------------------------------
-
 /** TIPOGRAFÍA TEXTO **/
 @font-face {
 	font-family: 'texto';
@@ -18,8 +92,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
------------------------------------------------------
 
 /** TIPOGRAFIA DE ICONOS **/
 
@@ -30,8 +102,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
 
 .fa {
   display: inline-block;
