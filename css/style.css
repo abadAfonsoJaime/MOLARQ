@@ -90,7 +90,69 @@ div.header {
     text-align: center;
 }
 
+#submit1 {
+    padding-bottom: 40px;
+}
 
+#forgotpass {
+    padding-bottom: 97px;
+     text-decoration: underline;
+}
+
+#registrarme {
+    text-decoration: underline;
+}
+
+div.formbutton a:hover {
+    color: #1ABC9C;
+}
+
+div.formbutton a:hover {
+    color: #1ABC9C;
+}
+
+
+div.footer {
+    padding-top: 40px;
+    background-color: #A3E4D7;
+}
+
+
+ul.legalstuff, ul.legalstuff li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.legalstuff li a {
+    text-decoration: underline;
+}
+
+ul.legalstuff li a:hover {
+    color: #1ABC9C;
+}
+
+ul.social-icon, ul.social-icon li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.social-icon li a {
+    font-size: 24px;
+    
+    
+}
+
+ul.social-icon li span {
+    float: right;
+    display: inline;
+    padding-left: 5%;
+}
+
+ul.social-icon li span:hover {
+    color: #1ABC9C;
+}
 
 
 
