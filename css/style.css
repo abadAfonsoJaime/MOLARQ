@@ -12,22 +12,22 @@ a, a:hover {
 }
 
 h1 {
-  font-size: 1.7em;
+  font-family: 'Titulos', sans-serif;
+  font-size: 1em;
 }
 
 h3 {
+  font-family: 'Titulos', sans-serif;
   font-size: 1.3em;
-}
-
-ul li {
-  list-style: none;
-  display: inline;
 }
 
 video, iframe {
   width: 100%;
 }
-
+.clear {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .wrapper {
   width: 480px; 
   margin: 0 auto;
@@ -122,9 +122,17 @@ div.wrappersite img{
 
 div.header {
   background-color: #A3E4D7;
+
+/** CAMBIOS GUILLE **/
+
+div.header {
+  background-color: #A3E4D7;
 }
 div.main > div.wrapper > div.col-50 > h2{
     text-align: center;
+}
+.menu-register > div.logo img {
+  max-width: 72px;
 }
 
 .formfield {
@@ -134,6 +142,29 @@ div.main > div.wrapper > div.col-50 > h2{
 }
 div.main > div.wrapper > div.col-50 > p{
     text-align: center;
+}
+.menu-register > .links > ul.nav > li {
+  list-style: none;
+  display: inline;
+}
+.menu-register > .links > ul.nav > li a {
+font-size: 24px;
+}
+.button {
+  width: 50%;
+  height: 20px;
+  margin-left: 25%;
+  padding: 5px 20px;
+  background-color: #A3E4D7;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
 }
 
 div.main > div.wrapper > div.col-50 > p::after{
@@ -169,6 +200,55 @@ div.main > div.wrapper > div.calendar > span{
 
 
 
+
+
+.button:hover {
+  background-color: #1ABC9C;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+.button:hover::after {
+  content: '\f0a9';
+  font-family: FontAwesome;
+  font-size: 12px;
+  color: #FEFEFE;
+  font-weight: normal;
+  font-style: normal;
+  margin:0px 0px 0px 5px;
+  text-decoration:none;
+}
+
+.button:hover a {
+  color: #FEFEFE;
+}
+
+div.title-event {
+  vertical-align: middle;
+  display: inline;
+}
+
+div.date-event {
+  font-size: 0.8em;
+  font-weight: 700;
+  vertical-align: middle;
+  display: inline;
+}
+div.date-event::after {
+  content: '\f073';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  margin:0px 0px 0px 5px;
+  text-decoration:none;
+}
+
+div.map-event {
+  margin-top: 30px;
+}
 
 
 /** TIPOGRAFIA TITULOS **/
