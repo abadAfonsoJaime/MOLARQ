@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'texto', sans-serif;
   font-size:1em;
+  background-color: #D7DBDD; 
 }
 
 a, a:hover {
@@ -70,8 +71,27 @@ video, iframe {
 }
 
 div.header {
-  
+  background-color: #A3E4D7;
 }
+
+.formfield {
+    padding-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.formbutton {
+    padding-top:55px;
+    float: left;
+    width: 100%;
+}
+
+.formcentre {
+    text-align: center;
+}
+
+
+
 
 
 /** TIPOGRAFIA TITULOS **/
@@ -2450,11 +2470,6 @@ body{
     width: 100%;
     height: 150px;
     background-color:gainsboro; 
-}
-
-.wrapper{
-    width: 960px;
-    margin: auto;
 }
 
 .LOGO{
