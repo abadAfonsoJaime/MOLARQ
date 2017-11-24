@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'texto', sans-serif;
   font-size:1em;
+  background-color: #D7DBDD; 
 }
 
 a, a:hover {
@@ -69,11 +70,18 @@ video, iframe {
   float: left;
 }
 
+div.header {
+  background-color: #A3E4D7;
 
 div.main > div.wrapper > div.col-50 > h2{
     text-align: center;
 }
 
+.formfield {
+    padding-top: 20px;
+    float: left;
+    width: 100%;
+}
 div.main > div.wrapper > div.col-50 > p{
     text-align: center;
 }
@@ -97,6 +105,20 @@ div.main > div.wrapper > div.calendar > span{
     margin-left: 100px;
     font-size: 280px;
 }
+
+
+.formbutton {
+    padding-top:55px;
+    float: left;
+    width: 100%;
+}
+
+.formcentre {
+    text-align: center;
+}
+
+
+
 
 
 /** TIPOGRAFIA TITULOS **/
