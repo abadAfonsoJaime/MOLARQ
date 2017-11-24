@@ -5,42 +5,52 @@
     <title>MOLARQ INICIO</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-
-<!--<div class="wrapper">
-</div>--> 
+</head> 
 <body>
    
 <!--HEADER-->
-    <div class="header">
-        <div class="LOGO">
-            <img src="img/logoMOLA.png" alt="logoMolArq">
+    
+    <div class="header parent">
+      <div class="wrapper">
+        <div class="LOGO col-50 left">
+                 <img src="img/logoMOLA.png" alt="logo">
         </div>
+        <div class="public col-50">
+            <ul>
+                    <li><a href="register1.html" class="link" ><span class="fa fa-user-circle" aria-hidden="true"></span>  REGISTRO</a></li>
+                    <li><a href="login1.html" class="link">  <span class="fa fa-sign-in" aria-hidden="true"></span>  ENTRAR</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--MAPA-->
+        <div class="wrapper">
+
+    <div class="main parent map right">
         <div>
-          <!-- ul>li*2>a[href=pagina$.html]-->
-           
-           <ul class="menu">
-               <li><a href="pagina1.html">REGISTRO</a></li>
-               <li><a href="pagina2.html">LOGIN</a></li>
-           </ul>
-            
+        <select name="filtros" id="filtros">
+            <option value="0">AREA</option>
+            <option value="0">CRONOLOGICO</option>
+            <option value="0">EVENTO</option>
+            <option value="0">ACADEMICO</option>
+        </select>
+        </div>
+         <div>
+             <input type="search">
+         </div>
+               
+
         </div>
     </div>
-    
-    
+
+
+    <div class="footer parent">
+        <div class="wrapper">
+        </div>
+    </div>
  
-    
-    <!--MAP-->
-    
-    <div class="wrapper">
-        <div class="imageMaps">
-       <img src="img/mapstoledo.png" alt="map">
-        </div>
-    </div>
-    
-    
-    
-    <!--MENU FILTROS-->
     
     
     
