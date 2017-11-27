@@ -69,6 +69,7 @@ div.wrappersite img{
     cursor: pointer;
     float: left;
     }
+
 .iconosite2:HOVER{
   color: red;
     }
@@ -132,7 +133,7 @@ div.header {
 div.main > div.wrapper > div.col-50 > h2{
     text-align: center;
 }
-.menu-register > div.logo img {
+.menu-register > div.logo img, .logo img {
   max-width: 72px;
 }
 
@@ -189,6 +190,14 @@ div.main > div.wrapper > div.calendar > span{
 }
 
 
+/** CAMBIOS CRIS **/
+
+.logo-init img {
+    width: 25%;
+    padding-top: 15px;
+    padding-left: 180px;
+}
+
 .formbutton {
     padding-top:55px;
     float: left;
@@ -220,12 +229,10 @@ div.formbutton a:hover {
     color: #1ABC9C;
 }
 
-
 div.footer {
     padding-top: 40px;
     background-color: #A3E4D7;
 }
-
 
 ul.legalstuff, ul.legalstuff li {
     display: inline;
@@ -249,8 +256,6 @@ ul.social-icon, ul.social-icon li {
 
 ul.social-icon li a {
     font-size: 24px;
-    
-    
 }
 
 ul.social-icon li span {
@@ -262,6 +267,8 @@ ul.social-icon li span {
 ul.social-icon li span:hover {
     color: #1ABC9C;
 }
+
+
 
 
 
@@ -2688,10 +2695,7 @@ div.map-event {
     background-color:gainsboro; 
 }
 
-.LOGO{
-    width: 40%;
-    float: left;
-}
+
 li.menu{
     width: 20%;
     float: left;
