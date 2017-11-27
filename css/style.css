@@ -69,6 +69,7 @@ div.wrappersite img{
     cursor: pointer;
     float: left;
     }
+
 .iconosite2:HOVER{
   color: red;
     }
@@ -126,6 +127,9 @@ div.header {
 div.main > div.wrapper > div.col-50 > h2{
     text-align: center;
 }
+.menu-register > div.logo img, .logo img {
+  max-width: 72px;
+}
 
 .formfield {
     padding-top: 20px;
@@ -157,6 +161,14 @@ div.main > div.wrapper > div.calendar > span{
 }
 
 
+/** CAMBIOS CRIS **/
+
+.logo-init img {
+    width: 25%;
+    padding-top: 15px;
+    padding-left: 180px;
+}
+
 .formbutton {
     padding-top:55px;
     float: left;
@@ -169,6 +181,102 @@ div.main > div.wrapper > div.calendar > span{
 
 
 
+
+
+div.formbutton a:hover {
+    color: #1ABC9C;
+}
+
+div.footer {
+    padding-top: 40px;
+    background-color: #A3E4D7;
+}
+
+ul.legalstuff, ul.legalstuff li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.legalstuff li a {
+    text-decoration: underline;
+}
+
+ul.legalstuff li a:hover {
+    color: #1ABC9C;
+}
+
+ul.social-icon, ul.social-icon li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.social-icon li a {
+    font-size: 24px;
+}
+
+ul.social-icon li span {
+    float: right;
+    display: inline;
+    padding-left: 5%;
+}
+
+ul.social-icon li span:hover {
+    color: #1ABC9C;
+}
+
+
+
+
+
+.button:hover {
+  background-color: #1ABC9C;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+.button:hover::after {
+  content: '\f0a9';
+  font-family: FontAwesome;
+  font-size: 12px;
+  color: #FEFEFE;
+  font-weight: normal;
+  font-style: normal;
+  margin:0px 0px 0px 5px;
+  text-decoration:none;
+}
+
+.button:hover a {
+  color: #FEFEFE;
+}
+
+div.title-event {
+  vertical-align: middle;
+  display: inline;
+}
+
+div.date-event {
+  font-size: 0.8em;
+  font-weight: 700;
+  vertical-align: middle;
+  display: inline;
+}
+div.date-event::after {
+  content: '\f073';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  margin:0px 0px 0px 5px;
+  text-decoration:none;
+}
+
+div.map-event {
+  margin-top: 30px;
+}
 
 
 /** TIPOGRAFIA TITULOS **/
@@ -2545,6 +2653,11 @@ div.main > div.wrapper > div.calendar > span{
     
 }
 
+
+li.menu{
+    width: 20%;
+    float: left;
+}
 div > .col-50 .LOGO {
     max-width: 100%;
 }
