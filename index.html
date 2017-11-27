@@ -7,50 +7,87 @@
     <link rel="stylesheet" href="css/style.css">
 </head> 
 <body>
-   
-<!--HEADER-->
-    
-    <div class="header parent">
+
+<!--HEADER-->   
+   <div class="header parent">
       <div class="wrapper">
-        <div class="LOGO col-50 left">
-                 <img src="img/logoMOLA.png" alt="logo">
-        </div>
-        <div class="public col-50">
-            <ul>
-                    <li><a href="register1.html" class="link" ><span class="fa fa-user-circle" aria-hidden="true"></span>  REGISTRO</a></li>
-                    <li><a href="login1.html" class="link">  <span class="fa fa-sign-in" aria-hidden="true"></span>  ENTRAR</a></li>
+          <div class="menu-register parent">
+            <div class=" logo col-25">
+            <a href="/"><img src="img/logo.png" alt="MOLARQ"></a>
+          </div>
+          <div class="links col-75 right">
+            <ul class="nav">
+            <li><a href="register.html" class="link">  REGISTRO  <span class="fa fa-user-circle" aria-hidden="true"></span></a></li>
+            <li><a href="login.html" class="link">ENTRAR  <span class="fa fa-sign-in" aria-hidden="true"></span>  </a></li>
             </ul>
-        </div>
+          </div>
+          </div>
       </div>
+
     </div>
     
     
     <!--MAPA-->
-        <div class="wrapper">
-
-    <div class="main parent map right">
+<div class="main parent">
+    <div class="wrapper">
+        <div class="map right">
         <div>
-        <select name="filtros" id="filtros">
+        <select  name="filtros" id="filtros">
             <option value="0">AREA</option>
             <option value="0">CRONOLOGICO</option>
             <option value="0">EVENTO</option>
             <option value="0">ACADEMICO</option>
         </select>
         </div>
-         <div>
-             <input type="search">
-         </div>
-               
-
+        <div>
+             <input type="search" maxlength="50">
+        </div>     
         </div>
     </div>
+</div>
 
 
+ <!--   FOOTER-->
     <div class="footer parent">
         <div class="wrapper">
+        
+           <div>
+                <div class="col-75 left">
+                  <ul class="legalstuff">
+                      <li>
+                          <span>&copy;Molarq, Corp.</span>
+                      </li>
+                      <li>
+                          <a href="legal.html" target="_blank">Aviso legal</a>
+                      </li>
+                      <li>
+                          <a href="cookies.html" target="_blank">Cookies</a>
+                      </li>
+                      <li>
+                           <a href="privacy.html" target="_blank">Privacidad</a>
+                      </li>
+                   </ul>
+               </div>
+
+               <div class="col-25 right" id="social-icon">
+                  <ul class="social-icon">
+                        <li>
+                            <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.com/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                        </li>
+
+                   </ul>
+                   
+               </div>
+           </div>
+        
         </div>
     </div>
- 
     
     
     

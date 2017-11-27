@@ -12,22 +12,22 @@ a, a:hover {
 }
 
 h1 {
-  font-family: 'Titulos', sans-serif;
-  font-size: 1em;
+  font-size: 1.7em;
 }
 
 h3 {
-  font-family: 'Titulos', sans-serif;
   font-size: 1.3em;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
 }
 
 video, iframe {
   width: 100%;
 }
-.clear {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
+
 .wrapper {
   width: 480px; 
   margin: 0 auto;
@@ -124,12 +124,6 @@ div.wrappersite img{
 div.header {
   background-color: #A3E4D7;
 }
-
-/** CAMBIOS GUILLE **/
-
-div.header {
-  background-color: #A3E4D7;
-}
 div.main > div.wrapper > div.col-50 > h2{
     text-align: center;
 }
@@ -144,29 +138,6 @@ div.main > div.wrapper > div.col-50 > h2{
 }
 div.main > div.wrapper > div.col-50 > p{
     text-align: center;
-}
-.menu-register > .links > ul.nav > li {
-  list-style: none;
-  display: inline;
-}
-.menu-register > .links > ul.nav > li a {
-font-size: 24px;
-}
-.button {
-  width: 50%;
-  height: 20px;
-  margin-left: 25%;
-  padding: 5px 20px;
-  background-color: #A3E4D7;
-  cursor: pointer;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 700;
-  transition: transform 0.5s;
-  -webkit-transition: transform 0.5s;
-  -moz-transition: transform 0.5s;
-  -o-transition: transform 0.5s;
-  -ms-transition: transform 0.5s;
 }
 
 div.main > div.wrapper > div.col-50 > p::after{
@@ -208,22 +179,9 @@ div.main > div.wrapper > div.calendar > span{
     text-align: center;
 }
 
-#submit1 {
-    padding-bottom: 40px;
-}
 
-#forgotpass {
-    padding-bottom: 97px;
-     text-decoration: underline;
-}
 
-#registrarme {
-    text-decoration: underline;
-}
 
-div.formbutton a:hover {
-    color: #1ABC9C;
-}
 
 div.formbutton a:hover {
     color: #1ABC9C;
@@ -2688,11 +2646,11 @@ div.map-event {
 
 /* -----------------MAR---------- */
 
-
-.header{
-    width: 100%;
-    height: 150px;
-    background-color:gainsboro; 
+.LOGO{
+    width: 22%;
+    margin-right: 22%;
+    height: auto;
+    
 }
 
 
@@ -2700,8 +2658,13 @@ li.menu{
     width: 20%;
     float: left;
 }
+div > .col-50 .LOGO {
+    max-width: 100%;
+}
 
-ul.menu > li {
+
+
+ul.public > li {
     display: inline-block;
     list-style-type: none;
     text-decoration: none;
@@ -2709,3 +2672,29 @@ ul.menu > li {
    @font-face: FontAwesome;
 }
 
+
+div.map{
+    height: 400px;
+    background: #D7DBDD url(../img/mapstoledo.jpg) no-repeat;
+/*    padding-top: 600px;*/
+}
+
+.padIco100{
+    padding-bottom: 100px;
+}
+
+.padIco165{
+    padding-top: 165px;
+}
+
+.plusinfo{
+    font-size: 20px;
+    color: seagreen;
+    
+}
+ul.nav > li:hover{
+    background-color: white;
+    transition: background-color 2s;
+    transform: scale(5);
+    cursor:pointer;
+}
