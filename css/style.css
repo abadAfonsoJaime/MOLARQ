@@ -41,7 +41,7 @@ iframe {
 }
 
 .wrapper {
-  width: 480px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -50,41 +50,63 @@ iframe {
   float: left;
 }
 
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-.col-5 {
-  width: 5%;
-  float: left;
-}
-
-.col-25 {
-  width: 25%;
-  float: left;
-}
-
-.col-50 {
-  width: 50%;
-  float: left;
-}
-
-.col-75 {
-  width: 75%;
-  float: left;
-}
-
-.col-95 {
-  width: 95%;
-  float: left;
+.center, .left, .right {
+	text-align: center;
 }
 
 div.header {
   background-color: #A3E4D7;
+}
+
+.col-5, .col-25, .col-50, .col-75, .col-95 {
+	width: 100%;
+}
+
+
+/* -----------------MAR---------- */
+
+.LOGO {
+  width: 22%;
+  margin-right: 22%;
+  height: auto;
+}
+
+li.menu {
+  width: 20%;
+  float: left;
+}
+
+div>.col-50 .LOGO {
+  max-width: 100%;
+}
+
+ul.public>li {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-family: FontAwesome;
+}
+
+div.map {
+  height: 600px;
+  background: #D7DBDD url(../img/mapstoledo.jpg) no-repeat;
+  /*    padding-top: 600px;*/
+}
+
+.padIco100 {
+  padding-bottom: 100px;
+}
+
+.padIco165 {
+  padding-top: 165px;
+}
+
+ul.nav>li:hover {
+  background-color: white;
+  transition: background-color 2s;
+  transform: scale(5);
+  cursor: pointer;
 }
 
 
@@ -286,12 +308,6 @@ ul.social-icon li a {
   font-size: 24px;
 }
 
-ul.social-icon li span {
-  float: right;
-  display: inline;
-  padding-left: 5%;
-}
-
 ul.social-icon li span:hover {
   color: #1ABC9C;
 }
@@ -339,6 +355,66 @@ div.map-event {
   margin-top: 30px;
 }
 
+@media only screen and (min-width:568px) and (max-width:959px) {
+	.wrapper {
+		width: 480px;
+	}
+	
+	.col-5 {
+  width: 5%;
+  float: left;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
+}
+
+.col-50 {
+  width: 50%;
+  float: left;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+}
+
+.col-95 {
+  width: 95%;
+  float: left;
+}
+	
+	.center {
+	text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+ul.social-icon li span {
+  float: right;
+  display: inline;
+  padding-left: 5%;
+}
+}
+
+@media screen only and (min-width:960px) and(max-width:1199px) {
+	.wrapper {
+		width: 720px;
+	}
+
+@media screen and (min-device-width: 1200px) {
+		
+	}.wrapper {
+		width: 960px;
+	}
+}
 
 /** TIPOGRAFIA TITULOS **/
 
@@ -3415,48 +3491,3 @@ div.map-event {
 }
 
 
-/* -----------------MAR---------- */
-
-.LOGO {
-  width: 22%;
-  margin-right: 22%;
-  height: auto;
-}
-
-li.menu {
-  width: 20%;
-  float: left;
-}
-
-div>.col-50 .LOGO {
-  max-width: 100%;
-}
-
-ul.public>li {
-  display: inline-block;
-  list-style-type: none;
-  text-decoration: none;
-  color: black;
-  font-family: FontAwesome;
-}
-
-div.map {
-  height: 600px;
-  background: #D7DBDD url(../img/mapstoledo.jpg) no-repeat;
-  /*    padding-top: 600px;*/
-}
-
-.padIco100 {
-  padding-bottom: 100px;
-}
-
-.padIco165 {
-  padding-top: 165px;
-}
-
-ul.nav>li:hover {
-  background-color: white;
-  transition: background-color 2s;
-  transform: scale(5);
-  cursor: pointer;
-}
