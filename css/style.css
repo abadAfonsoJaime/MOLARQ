@@ -40,43 +40,66 @@ iframe {
   margin: 15px 0;
 }
 
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .parent {
   width: 100%;
   float: left;
 }
 
-.center, .left, .right {
-	text-align: center;
+.col-5 {
+  width: 5%;
+  float: left;
+}
+
+.col-25 {
+  width: 25%;
+  float: left;
+}
+
+.col-50 {
+  width: 50%;
+  float: left;
+}
+
+.col-75 {
+  width: 75%;
+  float: left;
+}
+
+.col-95 {
+  width: 95%;
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
 
 div.header {
-  background-color: #A3E4D7;
+  background-color: #a3e4d7;
 }
 
-.col-5, .col-25, .col-50, .col-75, .col-95 {
-	width: 100%;
+ul.social-icon li span {
+  display: inline;
+  padding-left: 2%;
 }
 
 
 /* -----------------MAR---------- */
-
-.LOGO {
-  width: 22%;
-  margin-right: 22%;
-  height: auto;
-}
 
 li.menu {
   width: 20%;
   float: left;
 }
 
-div>.col-50 .LOGO {
+div>.col-50 .logo {
   max-width: 100%;
 }
 
@@ -102,16 +125,8 @@ div.map {
   padding-top: 165px;
 }
 
-ul.nav>li:hover {
-  background-color: white;
-  transition: background-color 2s;
-  transform: scale(5);
-  cursor: pointer;
-}
 
-
-/*AARÓN*/
-
+/* CAMBIOS AARÓN */
 
 .wrapper button {
   width: 480px;
@@ -130,19 +145,19 @@ div.wrapper img {
 
 .iconosite {
   font-size: 80px;
-  color: #1ABC9C;
+  color: #1abc9c;
   cursor: pointer;
   float: left;
   margin-bottom: 50px;
 }
 
 .iconosite:HOVER {
-  color: #A3E4D7;
+  color: #a3e4d7;
 }
 
 .iconosite2 {
   font-size: 80px;
-  color: #1ABC9C;
+  color: #1abc9c;
   cursor: pointer;
   float: left;
 }
@@ -166,10 +181,6 @@ div.main>div.wrapper>div.col-50>h2 {
   text-align: center;
 }
 
-.menu-register>div.logo img {
-  max-width: 72px;
-}
-
 div.main>div.wrapper>div.col-50>p {
   text-align: center;
 }
@@ -183,9 +194,13 @@ div.main>div.wrapper>div.col-50>p {
   font-size: 24px;
 }
 
+.menu-register>.links>ul.nav>li a:hover {
+  color: #1abc9c;
+}
+
 a.plusinfo {
   font-size: 20px;
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 a:hover.plusinfo {
@@ -197,7 +212,7 @@ a:hover.plusinfo {
   width: 120px;
   margin: 0 auto;
   padding: 10px 20px;
-  background-color: #1ABC9C;
+  background-color: #1abc9c;
   cursor: pointer;
   font-size: 12px;
   text-align: center;
@@ -210,8 +225,8 @@ a:hover.plusinfo {
 }
 
 .button:hover {
-  background-color: #A3E4D7;
-  border: 2px solid #1ABC9C;
+  background-color: #a3e4d7;
+  border: 2px solid #1abc9c;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -223,7 +238,7 @@ a:hover.plusinfo {
   content: '\f0a9';
   font-family: FontAwesome;
   font-size: 12px;
-  color: #1ABC9C;
+  color: #1abc9c;
   font-weight: normal;
   font-style: normal;
   margin: 0 5px 0 0;
@@ -274,12 +289,12 @@ div.main>div.wrapper>div.calendar>span {
 }
 
 div.formbutton a:hover {
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 div.footer {
   padding: 40px 0;
-  background-color: #A3E4D7;
+  background-color: #a3e4d7;
 }
 
 ul.legalstuff,
@@ -294,7 +309,7 @@ ul.legalstuff li a {
 }
 
 ul.legalstuff li a:hover {
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 ul.social-icon,
@@ -309,11 +324,11 @@ ul.social-icon li a {
 }
 
 ul.social-icon li span:hover {
-  color: #1ABC9C;
+  color: #1abc9c;
 }
 
 .button:hover {
-  background-color: #1ABC9C;
+  background-color: #1abc9c;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -325,7 +340,7 @@ ul.social-icon li span:hover {
   content: '\f0a9';
   font-family: FontAwesome;
   font-size: 12px;
-  color: #FEFEFE;
+  color: #fefefe;
   font-weight: normal;
   font-style: normal;
   margin: 0px 0px 0px 5px;
@@ -333,7 +348,7 @@ ul.social-icon li span:hover {
 }
 
 .button:hover a {
-  color: #FEFEFE;
+  color: #fefefe;
 }
 
 div.date-event {
@@ -355,66 +370,62 @@ div.map-event {
   margin-top: 30px;
 }
 
+@media only screen and (max-width:568px) {
+  .wrapper {
+    width: 100%;
+  }
+  .center,
+  .left,
+  .right {
+    text-align: center;
+  }
+  .col-5,
+  .col-25,
+  .col-50,
+  .col-75,
+  .col-95 {
+    width: 100%;
+  }
+
+  .menu-register .col-25 {
+    width: 25%;
+  }
+  
+  .menu-register .col-75 {
+    width: 75%;
+    text-align: right;
+  }
+
+  .menu-register>.links>ul.nav>li a {
+    font-size: 48px;
+  }
+
+  .menu-register>.links>ul.nav>li span.link-menu {
+    display:none;
+  }
+}
+
 @media only screen and (min-width:568px) and (max-width:959px) {
-	.wrapper {
-		width: 480px;
-	}
-	
-	.col-5 {
-  width: 5%;
-  float: left;
+  .wrapper {
+    width: 480px;
+    margin: 0 auto;
+  }
 }
 
-.col-25 {
-  width: 25%;
-  float: left;
+@media only screen and (min-width:960px) and (max-width:1199px) {
+  .wrapper {
+    width: 720px;
+    margin: 0 auto;
+  }
 }
 
-.col-50 {
-  width: 50%;
-  float: left;
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
 }
 
-.col-75 {
-  width: 75%;
-  float: left;
-}
-
-.col-95 {
-  width: 95%;
-  float: left;
-}
-	
-	.center {
-	text-align: center;
-}
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-ul.social-icon li span {
-  float: right;
-  display: inline;
-  padding-left: 5%;
-}
-}
-
-@media screen only and (min-width:960px) and(max-width:1199px) {
-	.wrapper {
-		width: 720px;
-	}
-
-@media screen and (min-device-width: 1200px) {
-		
-	}.wrapper {
-		width: 960px;
-	}
-}
 
 /** TIPOGRAFIA TITULOS **/
 
@@ -3489,5 +3500,3 @@ ul.social-icon li span {
   overflow: visible;
   clip: auto;
 }
-
-
