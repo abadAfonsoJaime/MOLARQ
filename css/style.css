@@ -355,60 +355,110 @@ div.map-event {
   margin-top: 30px;
 }
 
+
+
+
+/*----------------------------------------------------------------------MEDIAS QUERIES---------------------*/
+
+
+/*FABLET*/
 @media only screen and (min-width:568px) and (max-width:959px) {
 	.wrapper {
 		width: 480px;
 	}
-	
+
 	.col-5 {
-  width: 5%;
-  float: left;
-}
+      width: 5%;
+      float: left;
+    }
 
-.col-25 {
-  width: 25%;
-  float: left;
-}
+    .col-25 {
+      width: 25%;
+      float: left;
+    }
 
-.col-50 {
-  width: 50%;
-  float: left;
-}
+    .col-50 {
+      width: 50%;
+      float: left;
+    }
 
-.col-75 {
-  width: 75%;
-  float: left;
-}
+    .col-75 {
+      width: 75%;
+      float: left;
+    }
 
-.col-95 {
-  width: 95%;
-  float: left;
-}
+    .col-95 {
+      width: 95%;
+      float: left;
+    }
 	
 	.center {
-	text-align: center;
+	  text-align: center;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    ul.social-icon li span {
+      float: right;
+      display: inline;
+      padding-left: 5%;
+    }
 }
 
-.left {
-  text-align: left;
-}
 
-.right {
-  text-align: right;
-}
 
-ul.social-icon li span {
-  float: right;
-  display: inline;
-  padding-left: 5%;
-}
-}
+/*--------------------------------------------------------------------------- TABLET-----*/
 
 @media screen only and (min-width:960px) and(max-width:1199px) {
 	.wrapper {
 		width: 720px;
 	}
+    
+.col-5 {
+      width: 5%;
+      float: left;
+    }
 
+    .col-25 {
+      width: 25%;
+      float: left;
+    }
+
+    .col-50 {
+      width: 50%;
+      float: left;
+    }
+
+    .col-75 {
+      width: 75%;
+      float: left;
+    }
+
+    .col-95 {
+      width: 95%;
+      float: left;
+    }
+	
+	.center {
+	  text-align: center;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .right {
+      text-align: right;
+    }
+    
+    
+/*----------------------------------------------------------------------- LAPTOP   ---*/ 
 @media screen and (min-device-width: 1200px) {
 		
 	}.wrapper {
