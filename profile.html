@@ -1,22 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="x-ua-Compatible" content="ie=edge">
-  <title>Tu rincón molón - MOLARQ</title>
-
-  <link rel="stylesheet" href="css/style.css">
+  <title>Mi rincón molón - MOLARQ</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="x-ua-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
 
     <div class="header parent">
       <div class="wrapper">
-          <div class="menu-unknown">
+          <div class="menu-register parent">
+            <div class="logo col-25">
+            <a href="/"><img src="img/logo.png" alt="MOLARQ"></a>
+          </div>
+          <div class="links col-75 right">
             <ul class="nav">
-              <li><a href="" class="link"></a></li>
+              <li><a href="calendar.html"><span class="link-menu">Agenda</span><span class="fa fa-calendar" aria-hidden="true"></span></a></li>
+              <li><a href="profile.html"><span class="link-menu">Perfil</span><span class="fa fa-user" aria-hidden="true"></span></a></li>
+              <li><a href="#logout"><span class="link-menu">Salir</span><span class="fa fa-sign-out" aria-hidden="true"></span></a></li>
             </ul>
+          </div>
           </div>
       </div>
 
@@ -24,13 +31,52 @@
 
     <div class="main parent">
         <div class="wrapper">
+
+
         </div>
     </div>
 
-    <div class="footer parent">
-        <div class="wrapper">
-        </div>
-    </div>
+<!--   FOOTER-->
+<div class="footer parent">
+  <div class="wrapper">
+  
+     <div>
+          <div class="col-75 left">
+            <ul class="legalstuff">
+                <li>
+                    <span>&copy;Molarq, Corp.</span>
+                </li>
+                <li>
+                    <a href="legal.html" target="_blank">Aviso legal</a>
+                </li>
+                <li>
+                    <a href="cookies.html" target="_blank">Cookies</a>
+                </li>
+                <li>
+                     <a href="privacy.html" target="_blank">Privacidad</a>
+                </li>
+             </ul>
+         </div>
+
+         <div class="col-25 right" id="social-icon">
+            <ul class="social-icon">
+                  <li>
+                      <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
+                  </li>
+                  <li>
+                      <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
+                  </li>
+                  <li>
+                      <a href="http://www.instagram.com/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                  </li>
+
+             </ul>
+             
+         </div>
+     </div>
+  
+  </div>
+</div>
   
 </body>
 </html>
