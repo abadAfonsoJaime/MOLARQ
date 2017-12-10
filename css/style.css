@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'texto', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   background-color: #f5f5f5;
 }
 
@@ -14,6 +14,10 @@ a:hover {
 
 a:hover {
   color: #1abc9c;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Titulo", sans-serif;
 }
 
 h1 {
@@ -352,7 +356,7 @@ footer, div.footer {
 
 ul.legalstuff,
 ul.legalstuff li {
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding: 0;
 }
@@ -386,12 +390,17 @@ ul.social-icon li span:hover {
 }
 
 /* Estilos para smartphones */
-@media only screen and (max-width:568px) {
-  .wrapper {
+@media only screen and (max-width:480px) {
+    body{
+        font-size: 140%;
+    }
+    
+    .wrapper {
     width: 92%;
     margin-left: 4%;
     margin-right: 4%;
   }
+
   .center,
   .left,
   .right {
@@ -409,7 +418,15 @@ ul.social-icon li span:hover {
     margin-bottom: 24px;
   }
 
-  .nav-menu .col-25 {
+    footer, div.footer {
+     padding: 20px 0;
+    }
+        
+    ul.legalstuff > li:first-child {
+        width: 100%;
+    }
+    
+     .nav-menu .col-25 {
     width: 25%;
   }
   .nav-menu .col-75 {
@@ -437,25 +454,32 @@ ul.social-icon li span:hover {
 
 }
 
-/* Estilos generales para pantallas mayores que las de un smartphone pequeño */
-@media only screen and (min-width:568px) {
-  .wrapper {
-    width: 480px;
-    margin: 0 auto;
-  }
 
-}
 
 /* Estilos para phablets y tablets */
-@media only screen and (min-width:568px) and (max-width:959px) {
-  .wrapper {
-    width: 480px;
-    margin: 0 auto;
-  }
+@media only screen and (min-width:481px) and (max-width:768px) {
+    body{
+        font-size: 120%;
+    }
+    
+    .wrapper {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+   }  
+    
+    footer, div.footer {
+     padding: 20px 0;
+    }
+    
+    ul.legalstuff > li:first-child {
+        width: 100%;
+    }
+
 }
 
 /* Estilos para portátiles y monitores de pc */
-@media only screen and (min-width:960px) and (max-width:1199px) {
+@media only screen and (min-width:769px) and (max-width:1199px) {
   .wrapper {
     width: 720px;
     margin: 0 auto;
@@ -474,7 +498,7 @@ ul.social-icon li span:hover {
 /** TIPOGRAFIA TITULOS **/
 
 @font-face {
-  font-family: 'Titulos';
+  font-family: 'Titulo';
   src: url('../fonts/vintage.eot');
   src: local('☺'), url('../fonts/vintage.woff') format('woff'), url('../fonts/vintage.ttf') format('truetype'), url('../fonts/vintage.svg') format('svg'), url('../fonts/vintage.otf') format('otf');
   font-weight: normal;
