@@ -1,82 +1,183 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <title>Mi rincón molón - MOLARQ</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="x-ua-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Controla tus datos molones - MOLARQ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
-
+    <!--   HEADER   -->
     <div class="header parent">
-      <div class="wrapper">
-          <div class="nav-menu parent">
-            <div class="logo col-25">
-            <a href="index.html"><img src="img/logo.png" alt="MOLARQ"></a>
-          </div>
-          <div class="links col-75 right">
-            <ul class="nav">
-              <li><a href="calendar.html"><span class="link-menu">Agenda</span><span class="fa fa-calendar" aria-hidden="true"></span></a></li>
-              <li><a href="profile.html"><span class="link-menu">Perfil</span><span class="fa fa-user" aria-hidden="true"></span></a></li>
-              <li><a href="#logout"><span class="link-menu">Salir</span><span class="fa fa-sign-out" aria-hidden="true"></span></a></li>
-            </ul>
-          </div>
-          </div>
-      </div>
+        <div class="wrapper">
+            <div class="nav-menu parent">
+                <div class="logo col-25">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="MOLARQ">
+                    </a>
+                </div>
+                <div class="links col-75 right">
+                    <ul class="nav">
+                        <li>
+                            <a href="calendar.html">
+                                <span class="link-menu">Agenda</span>
+                                <span class="fa fa-calendar" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html">
+                                <span class="link-menu">Perfil</span>
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#logout">
+                                <span class="link-menu">Salir</span>
+                                <span class="fa fa-sign-out" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
     </div>
 
+    <!--   MAIN   -->
     <div class="main parent">
         <div class="wrapper">
+            <div class="row parent">
+            <div class="profile-card">
+                <h3>Mis eventos</h3>
+                <div class="row parent">
+                    <div class="div col-25"><h5>Próximo evento:</h5></div>
+                    <div class="div col-75 date-event right">
+                        <a href="event.html">3er Festival de Cine Arqueológico</a> - 06/04/2018</div>
+                    <div class="calendar">
+                        <span class="fa fa-calendar"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-card">
+                <h3>Yacimientos favoritos</h3>
+                <div>
+                    <img class="col-site" src="img/arq.jpg" alt="user">
+                </div>
+                <div>
+                    <img class="col-site" src="img/arq.jpg" alt="ark">
+                </div>
+                <div>
+                    <img class="col-site" src="img/arq.jpg" alt="ark">
+                </div>
+                <div>
+                    <img class="col-site" src="img/arq.jpg" alt="ark">
+                </div>
+                <div>
+                    <img class="col-site" src="img/arq.jpg" alt="ark">
+                </div>
+                <h5>Últimas actualizaciones en los yacimientos que sigues</h5>
+            </div>
+        </div>
+        <div class="row parent">
+            <div class="profile-card">
+                <h3>Datos personales</h3>
+                <div class="row parent">
+                    <div class="col-50">
+                        <img src="img/user.png" alt="My profile picture">
+                    </div>
+                    <div class="col-50">
+                        <p>
+                            <strong>@usuario</strong>
+                        </p>
+                        <p>Rol de usuario</p>
+                    </div>
+                </div>
+                <div class="row parent">
+                    <div class="div col-50">Nombre:</div>
+                    <div class="div col-50">Pepito</div>
+                </div>
+                <div class="row parent">
+                    <div class="div col-50">Apellidos:</div>
+                    <div class="div col-50">Guti Gutierrez</div>
+                </div>
+                <div class="row parent">
+                    <div class="div col-50">Fecha de nacimiento:</div>
+                    <div class="div col-50">DD/MM/AAAA</div>
+                </div>
+                <hr />
+                <div class="row parent">
+                    <div class="div col-50">Correo electrónico:</div>
+                    <div class="div col-50">myemail@mydomain.com</div>
+                </div>
+                <div class="row parent">
+                    <div class="div col-50">Contraseña:</div>
+                    <div class="div col-50">*****</div>
+                </div>
+                <!-- div.row.parent>.div.col-50*2 -->
+            </div>
 
+            <div class="profile-card">
+                <h3>Configuración de privacidad</h3>
+                <div class="row parent">
+                    <div class="div col-50">Visibilidad de mis comentarios</div>
+                    <div class="div col-50"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--   FOOTER   -->
+    <div class="footer parent">
+        <div class="wrapper">
+            <div>
+                <div class="col-75 left">
+                    <ul class="legalstuff">
+                        <li>
+                            <span>2017&copy;Molarq, Corp.</span>
+                        </li>
+                        <li>
+                            <a href="legal.html" target="_blank">Aviso legal</a>
+                        </li>
+                        <li>
+                            <a href="cookies.html" target="_blank">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" target="_blank">Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-25 right" id="social-icon">
+                    <ul class="social-icon">
+                        <li>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <span class="fa fa-facebook-official" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <span class="fa fa-twitter-square" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <span class="fa fa-instagram" aria-hidden="true"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
 
         </div>
     </div>
 
-<!--   FOOTER-->
-<div class="footer parent">
-  <div class="wrapper">
-  
-     <div>
-          <div class="col-75 left">
-            <ul class="legalstuff">
-                <li>
-                    <span>2017&copy;Molarq, Corp.</span>
-                </li>
-                <li>
-                    <a href="legal.html" target="_blank">Aviso legal</a>
-                </li>
-                <li>
-                    <a href="cookies.html" target="_blank">Cookies</a>
-                </li>
-                <li>
-                     <a href="privacy.html" target="_blank">Privacidad</a>
-                </li>
-             </ul>
-         </div>
-
-         <div class="col-25 right" id="social-icon">
-            <ul class="social-icon">
-                  <li>
-                      <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
-                  </li>
-                  <li>
-                      <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
-                  </li>
-                  <li>
-                      <a href="http://www.instagram.com/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
-                  </li>
-
-             </ul>
-             
-         </div>
-     </div>
-  
-  </div>
-</div>
-  
 </body>
+
 </html>

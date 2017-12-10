@@ -28,6 +28,12 @@ h3 {
   font-size: 1.3em;
 }
 
+h5 {
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
 video,
 iframe {
   width: 100%;
@@ -41,6 +47,14 @@ iframe {
 
 .clear {
   margin: 15px 0;
+}
+
+.valign {
+  padding-top: 28px;
+}
+
+.col-50 img {
+  max-width: 50%;
 }
 
 .parent {
@@ -181,7 +195,6 @@ textarea {
   margin-bottom: 1em;
 }
 
-
 /* CAMBIOS GUILLE */
 
 div.main>div.wrapper>div.col-50>h2 {
@@ -211,8 +224,6 @@ div.main>div.wrapper>div.col-50>p {
 }
 
 div.date-event {
-  padding-top: 36px;
-  font-size: 0.9em;
   font-weight: 700;
 }
 
@@ -258,7 +269,6 @@ input[type="submit"]:hover {
   -ms-transform: scale(1.1);
 }
 
-
 .button {
   width: 120px;
   margin: 0 auto;
@@ -300,6 +310,26 @@ input[type="submit"]:hover {
   color: #f5f5f5;
 }
 
+.profile-card {
+  width: calc(48% - 42px);
+  float: left;
+  margin: 1%;
+  background: #ffffff;
+  padding: 0 20px 20px 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.profile-card  h3 {
+  margin: 0 -20px 20px -20px;
+  padding: 20px;
+  background-color: #e5e5e5;
+}
+
+.profile-card::after {
+  content: "______________________________";
+  color: #999999;
+}
 
 /* CAMBIOS JAIME */
 
@@ -318,7 +348,7 @@ div.main>div.wrapper>div.col-50>p::after {
   float: left;
 } */
 
-div.main>div.wrapper>div.calendar {
+.calendar {
   text-align: center;
   font-size: 20em;
 }
@@ -440,6 +470,10 @@ ul.social-icon li span:hover {
     display: none;
   }
 
+  .calendar {
+    font-size: 10em;
+  }
+
   .title-event {
     font-size: 1.3em;
     text-align: center;
@@ -452,6 +486,19 @@ ul.social-icon li span:hover {
     padding-bottom: 24px;
   }
 
+  .profile-card {
+    width: calc(92% - 42px);
+    float: left;
+    margin: 2% 4% 4% 4%;
+    background: #ffffff;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  .profile-card::after {
+    display: none;
+  }
+
 }
 
 
@@ -461,12 +508,11 @@ ul.social-icon li span:hover {
     body{
         font-size: 120%;
     }
-    
     .wrapper {
     width: 92%;
     margin-left: 4%;
     margin-right: 4%;
-   }  
+   }
     
     footer, div.footer {
      padding: 20px 0;
@@ -474,6 +520,16 @@ ul.social-icon li span:hover {
     
     ul.legalstuff > li:first-child {
         width: 100%;
+    }
+
+    .profile-card {
+      width: calc(92% - 42px);
+      float: left;
+      margin: 2% 4% 4% 4%;
+      background: #ffffff;
+      padding: 0 20px 20px 20px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
     }
 
 }
