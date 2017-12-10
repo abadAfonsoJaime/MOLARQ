@@ -1,15 +1,19 @@
 body {
   margin: 0;
   font-family: 'texto', sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   background-color: #f5f5f5;
 }
 
 a,
 a:hover {
-  font-weight: 900;
+  font-weight: 700;
   text-decoration: none;
   color: #333333;
+}
+
+a:hover {
+  color: #1abc9c;
 }
 
 h1 {
@@ -77,7 +81,7 @@ iframe {
   text-align: right;
 }
 
-div.header {
+header, div.header {
   background-color: #a3e4d7;
 }
 
@@ -132,41 +136,45 @@ div.map {
   float: left;
 }
 
-
 .col-site {
-  width: 14%;
+  width: calc(100% / 5);
+  height: 120px;
   float: left;
 }
 
 .iconosite {
-  font-size: 80px;
+  font-size: 5em;
   color: #1abc9c;
   cursor: pointer;
-  float: left;
-  margin-bottom: 50px;
+  text-align: center;
+  line-height: 1.2em;
 }
 
 .iconosite:hover {
   color: #a3e4d7;
 }
 
-.iconosite2 {
-  font-size: 80px;
-  color: #1abc9c;
+.like, .dislike {
+  font-size: 2em;
+  color: #a5a5a5;
   cursor: pointer;
-  float: left;
 }
 
-.iconosite2:hover {
-  color: #ce0000;
+.like:hover {
+  color: #1abc9c;
 }
 
-.textfooter {
-  text-align: right;
+.dislike:hover {
+  color: #df0000;
 }
 
 .buttonsite {
   float: left;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 
@@ -180,17 +188,17 @@ div.main>div.wrapper>div.col-50>p {
   text-align: center;
 }
 
-.menu-register>.links>ul.nav>li {
+.nav-menu>.links>ul.nav>li {
   list-style: none;
   display: inline;
 }
 
-.menu-register>.links>ul.nav>li a {
+.nav-menu>.links>ul.nav>li a {
   font-size: 24px;
   margin: 0 3px;
 }
 
-.menu-register>.links>ul.nav>li a:hover {
+.nav-menu>.links>ul.nav>li a:hover {
   color: #1abc9c;
 }
 
@@ -198,13 +206,13 @@ div.main>div.wrapper>div.col-50>p {
   font-size: 1.2em;
 }
 
-.date-event {
+div.date-event {
   padding-top: 36px;
   font-size: 0.9em;
   font-weight: 700;
 }
 
-.date-event::after {
+div.date-event::after, p.date-event::after {
   content: '\f073';
   font-family: FontAwesome;
   font-weight: normal;
@@ -222,6 +230,30 @@ a:hover.plusinfo {
   border-bottom: 2px solid #e5e5e5;
   padding-bottom: 3px;
 }
+
+input[type="submit"] {
+  color: #e5e5e5;
+  border: 0;
+  background-color: #1abc9c;
+  padding: 10px 20px;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+}
+
+input[type="submit"]:hover {
+  background-color: #a3e4d7;
+  color: #444444;
+  transform: scale(1.1);
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
 
 .button {
   width: 120px;
@@ -277,14 +309,14 @@ div.main>div.wrapper>div.col-50>p::after {
   margin: 0 0 0 10px;
 }
 
-div.main>div.wrapper>div.calendar {
+/* div.main>div.wrapper>div.calendar {
   width: 100%;
   float: left;
-}
+} */
 
-div.main>div.wrapper>div.calendar>span {
-  margin-left: 100px;
-  font-size: 280px;
+div.main>div.wrapper>div.calendar {
+  text-align: center;
+  font-size: 20em;
 }
 
 div.map-event {
@@ -296,7 +328,7 @@ div.map-event {
 
 .logo-init img {
   width: 96px;
-  margin-left: calc((100% / 2) - 96px);
+  margin-left: calc((100% / 2) - 48px);
 }
 
 .formbutton {
@@ -313,7 +345,7 @@ div.formbutton a:hover {
   color: #1abc9c;
 }
 
-div.footer {
+footer, div.footer {
   padding: 40px 0;
   background-color: #a3e4d7;
 }
@@ -377,17 +409,17 @@ ul.social-icon li span:hover {
     margin-bottom: 24px;
   }
 
-  .menu-register .col-25 {
+  .nav-menu .col-25 {
     width: 25%;
   }
-  .menu-register .col-75 {
+  .nav-menu .col-75 {
     width: 75%;
     text-align: right;
   }
-  .menu-register>.links>ul.nav>li a {
+  .nav-menu>.links>ul.nav>li a {
     font-size: 48px;
   }
-  .menu-register>.links>ul.nav>li span.link-menu {
+  .nav-menu>.links>ul.nav>li span.link-menu {
     display: none;
   }
 
