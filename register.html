@@ -1,185 +1,192 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-  <title>Forma parte de MOLARQ</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="x-ua-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Forma parte de MOLARQ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
 
-<!--   HEADER-->
-     <div class="header parent">
-      <div class="wrapper">
+    <!--   HEADER-->
+    <div class="header parent">
+        <div class="wrapper">
             <div class="logo-init">
-            <a href="/"><img src="img/logo.png" alt="MOLARQ"></a>
-          </div>
-      </div>
+                <a href="index.html">
+                    <img src="img/logo.png" alt="MOLARQ">
+                </a>
+            </div>
+        </div>
 
     </div>
-    
 
-<!--   REGISTER FORM-->
-   
+
+    <!--   REGISTER FORM-->
+
     <div class="main parent">
         <div class="wrapper">
-    <form action="register.php" method="post">
-        
-        
-<!--    Nombre y Apellidos    -->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="username">Nombre y Apellidos</label>
-            </div>
-            <div class="col-50">
-                <input type="text" id="username" name="username" maxlength="20" placeholder="Escriba su nombre aquí" required />
-            </div>
-        </div>
-        
-<!--        Email-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="usermail">Email</label>
-            </div>
-            <div class="col-50">
-                <input type="email" id="usermail" name="usermail" maxlength="255" placeholder="Escriba su email aquí" required />
-            </div>
-        </div>
-        
-<!--        Contraseña-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="userpass">Contraseña</label>
-            </div>
-            <div class="col-50">
-                <input type="password" id="userpass" name="userpass" maxlength="20" placeholder="Escriba su contraseña aquí" required />
-            </div>
-        </div>
-        
-<!--        Confirmar Contraseña-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="userpass2">Confirmar Contraseña</label>
-            </div>
-            <div class="col-50">
-                <input type="password" id="userpass2" name="userpass2" maxlength="20" placeholder="Escriba su contraseña aquí" required />
-            </div>
-        </div>
-        
-<!--        UserName-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="usernick">User Name</label>
-            </div>
-            <div class="col-50">
-                <input type="text" id="usernick" name="usernick" maxlength="20" placeholder="Escriba su user name aquí" required />
-            </div>
-        </div>
-        
-<!--        Ocupación-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="occupation">Ocupación</label>
-            </div>
-            <div class="col-50">
-               <select name="occupation" id="occupation" required>
-                   <option value="" selected>Turista - Aficionado</option>
-                   <option value="1">Estudiante en el campo</option>
-                   <option value="2">Guía Turística</option>
-                   <option value="3">Profesional en el campo</option>
-                   <option value="4">Docente en el campo</option> 
-               </select> 
-            </div>
-        </div>
-        
-<!--        Fecha de Nacimiento-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="userbdate">Fecha de Nacimiento</label>
-            </div>
-            <div class="col-50">
-                <input type="date" id="userbdate" name="userbdate" required>
-            </div>
-        </div>
-            
-<!--        Subir Imagen-->
-        <div class="formfield">
-            <div class="col-50">
-                <label for="userphoto">Subir Imagen</label>
-            </div>
-            <div class="col-50">
-                <input type="file" id="userphoto" name="userphoto" accept="image/*" />
-            </div>
-        </div>
-        
-<!--        Acepto las condiciones-->
-        <div class="formbutton">
-            <div class="col-50">
-                <label for="tos">Acepto las políticas de uso</label>
-            </div>
-            <div class="col-50">
-                <input type="checkbox" name="tos" id="tos" value="2" required>
-            </div>
-        </div>
-        
-<!--        Enviar-->
-        <div class="col-95 formbutton formcentre" id="submit1">
-               <input type="submit" />
-        </div>
-                         
-                                
-                                            
-    </form>
-        
+            <form action="profile.html" method="post">
+
+
+                <!--    Nombre y Apellidos    -->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="username">Nombre y Apellidos</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="text" id="username" name="username" maxlength="20" placeholder="Escriba su nombre aquí" required />
+                    </div>
+                </div>
+
+                <!--        Email-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="usermail">Email</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="email" id="usermail" name="usermail" maxlength="255" placeholder="Escriba su email aquí" required />
+                    </div>
+                </div>
+
+                <!--        Contraseña-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="userpass">Contraseña</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="password" id="userpass" name="userpass" maxlength="20" placeholder="Escriba su contraseña aquí" required />
+                    </div>
+                </div>
+
+                <!--        Confirmar Contraseña-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="userpass2">Confirmar Contraseña</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="password" id="userpass2" name="userpass2" maxlength="20" placeholder="Escriba su contraseña aquí" required />
+                    </div>
+                </div>
+
+                <!--        UserName-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="usernick">User Name</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="text" id="usernick" name="usernick" maxlength="20" placeholder="Escriba su user name aquí" required />
+                    </div>
+                </div>
+
+                <!--        Ocupación-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="occupation">Ocupación</label>
+                    </div>
+                    <div class="col-50">
+                        <select name="occupation" id="occupation" required>
+                            <option value="" selected>Turista - Aficionado</option>
+                            <option value="1">Estudiante en el campo</option>
+                            <option value="2">Guía Turística</option>
+                            <option value="3">Profesional en el campo</option>
+                            <option value="4">Docente en el campo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--        Fecha de Nacimiento-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="userbdate">Fecha de Nacimiento</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="date" id="userbdate" name="userbdate" required>
+                    </div>
+                </div>
+
+                <!--        Subir Imagen-->
+                <div class="formfield">
+                    <div class="col-50">
+                        <label for="userphoto">Subir Imagen</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="file" id="userphoto" name="userphoto" accept="image/*" />
+                    </div>
+                </div>
+
+                <!--        Acepto las condiciones-->
+                <div class="formbutton">
+                    <div class="col-50">
+                        <label for="tos">Acepto las políticas de uso</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="checkbox" name="tos" id="tos" value="2" required>
+                    </div>
+                </div>
+
+                <!--        Enviar-->
+                <div class="col-95 formbutton formcentre" id="submit1">
+                    <input type="submit" />
+                </div>
+            </form>
+
         </div>
     </div>
 
 
 
-<!--   FOOTER-->
+    <!--   FOOTER-->
     <div class="footer parent">
         <div class="wrapper">
-        
-           <div>
+
+            <div>
                 <div class="col-75 left">
-                  <ul class="legalstuff">
-                      <li>
-                          <span>&copy;Molarq, Corp.</span>
-                      </li>
-                      <li>
-                          <a href="legal.html" target="_blank">Aviso legal</a>
-                      </li>
-                      <li>
-                          <a href="cookies.html" target="_blank">Cookies</a>
-                      </li>
-                      <li>
-                           <a href="privacy.html" target="_blank">Privacidad</a>
-                      </li>
-                   </ul>
-               </div>
+                    <ul class="legalstuff">
+                        <li>
+                            <span>2017&copy;Molarq, Corp.</span>
+                        </li>
+                        <li>
+                            <a href="legal.html" target="_blank">Aviso legal</a>
+                        </li>
+                        <li>
+                            <a href="cookies.html" target="_blank">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" target="_blank">Privacidad</a>
+                        </li>
+                    </ul>
+                </div>
 
-               <div class="col-25 right" id="social-icon">
-                  <ul class="social-icon">
+                <div class="col-25 right" id="social-icon">
+                    <ul class="social-icon">
                         <li>
-                            <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
+                            <a href="http://www.facebook.com/" target="_blank">
+                                <span class="fa fa-facebook-official" aria-hidden="true"></span>
+                            </a>
                         </li>
                         <li>
-                            <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
+                            <a href="http://www.twitter.com/" target="_blank">
+                                <span class="fa fa-twitter-square" aria-hidden="true"></span>
+                            </a>
                         </li>
                         <li>
-                            <a href="http://www.instagram.com/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                            <a href="http://www.instagram.com/" target="_blank">
+                                <span class="fa fa-instagram" aria-hidden="true"></span>
+                            </a>
                         </li>
 
-                   </ul>
-                   
-               </div>
-           </div>
-        
+                    </ul>
+
+                </div>
+            </div>
+
         </div>
     </div>
-  
+
 </body>
+
 </html>
