@@ -11,12 +11,12 @@
 
 <body>
    
-   <div class="header parent">
+   <header class="header parent">
       <div class="wrapper">
           <div class="private">
-            <div class="menu-register parent">
+            <div class="nav-menu parent">
             <div class=" logo col-25">
-            <a href="/"><img src="img/logo.png" alt="MOLARQ"></a>
+            <a href="index.html"><img src="img/logo.png" alt="MOLARQ"></a>
             </div>
             <div class="links col-75 right">
             <ul class="nav">
@@ -29,84 +29,95 @@
 
           </div>
         </div>
-    </div>
+    </header>
    
+    <main class="parent site-token">
     <div class="wrapper clear">
+        <div class="site-vd">
         <video controls>
-            <source src="media/Licenciado.ogv.oggtheora.ogv" type="video/ogb">
-            <source src="media/Licenciadomp4.mp4.mp4" type="video/mp4">
-            <source src="media/Licenciadoweb.webmhd.webm" type="video/webm">
+            <source src="media/licenciado.mp4" type="video/mp4" />
+            <source src="media/licenciado.webm" type="video/webm" />
+            <source src="media/licenciado.ogv" type="video/ogv" />
 
         </video>
     </div>
-    <div class="wrapper">
-        <h1>La magia de la arqueologia</h1>
-        La arqueología (del griego «ἀρχαίος» archaios, viejo o antiguo, y «λόγος» logos, ciencia o estudio) es la ciencia que estudia
+    <div class="site-description">
+        <h1>La magia de la arqueología</h1>
+        <p>La arqueología (del griego «ἀρχαίος» archaios, viejo o antiguo, y «λόγος» logos, ciencia o estudio) es la ciencia que estudia
         los cambios que se producen desde las sociedades antiguas hasta las actuales, a través de restos materiales dispersos
         en la geografía y conservados a través del tiempo. La arqueología ha sido considerada como una ciencia social y también
         como una variedad de las humanidades. En Estados Unidos, la arqueología es considerada un campo de la antropología.
         La arqueología es una mezcla de descubrimientos de tesoros, junto al paciente trabajo de analistas científicos, y
-        junto a la etapa de interpretación, que permite entender qué significaron los elementos descubiertos o explorados
-        en la historia de la humanidad. En consecuencia, la arqueología es tanto una actividad física de campo como una búsqueda
-        y exploración intelectual en el laboratorio.
+        junto a la etapa de interpretación, que permite entender qué significaron los elementos descubiertos o explorados en la historia de la humanidad. En consecuencia, la arqueología es tanto una actividad física de campo como una búsqueda y exploración intelectual en el laboratorio.</p>
     </div>
-    <div class="wrapper">
-        <h1>Galeria de Fotos</h1>
-    </div>
-
-    <div class="wrapper">
-        <div>
-            <img class="col" src="img/arq.jpg" alt="ark">
-        </div>
-        <div>
-            <img class="col" src="img/arq.jpg" alt="ark">
-        </div>
-        <div>
-            <img class="col" src="img/arq.jpg" alt="ark">
-        </div>
-        <div>
-            <img class="col" src="img/arq.jpg" alt="ark">
-        </div>
-        <div>
-            <img class="col" src="img/arq.jpg" alt="ark">
-        </div>
-        <div class="iconosite">
-            <span class="fa fa-plus-circle" aria-hidden="true"></span>
-        </div>
-    </div>
-    <div class="wrapper">
-        <H1>Comentarios</H1>
-    </div>
-    <div class="wrapper">
+    <div class="site-gallery">
+        <h3>Galería de fotos</h3>
+    <div class="parent slider">
         <div class="col-75">
-            <textarea name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                <div>
+                        <img class="col-site" src="img/arq.jpg" alt="ark">
+                    </div>
+                    <div>
+                        <img class="col-site" src="img/arq.jpg" alt="ark">
+                    </div>
+                    <div>
+                        <img class="col-site" src="img/arq.jpg" alt="ark">
+                    </div>
+                    <div>
+                        <img class="col-site" src="img/arq.jpg" alt="ark">
+                    </div>
+                    <div>
+                        <img class="col-site" src="img/arq.jpg" alt="ark">
+                    </div>
         </div>
-        <div class="iconosite col-25">
+
+        <div class="col-25 iconosite">
             <span class="fa fa-plus-circle" aria-hidden="true"></span>
         </div>
     </div>
-
-    <div class="wrapper">
-        <textarea name="comentarios" rows="10" cols="40">Comentario de la demás gente que es muy maja y simpática que proporciona eventos sobre el lugar</textarea>
     </div>
-    <div class="wrapper">
-        <div class="iconosite">
-            <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+
+    <div class="parent site-comments">
+        <div class="row">
+            <h3>Comentarios</h3>
+        <div class="col-75">
+                <textarea name="comentarios" rows="5" placeholder="Escribe aquí tus comentarios"></textarea>
+            </div>
+        <div class="col-25 iconosite">
+                <span class="fa fa-plus-circle" aria-hidden="true"></span>
+            </div>
         </div>
 
-        <div class="iconosite2">
-            <span class="fa fa-thumbs-down" aria-hidden="true"></span>
+        <div class="row">
+                <div class="col-75">
+                    <ul class="comments-list">
+                        <li><p>Comentario de la demás gente que es muy maja y simpática que proporciona eventos sobre el lugar</p></li>
+                        <li><p>Otro comentario</p></li>
+                        <li><p>Otro comentario guapérrimo</p></li>
+                    </ul>
+                </div>
+                <div class="col-25">
+                        <div class="like">
+                                <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+                            </div>
+                    
+                            <div class="dislike">
+                                <span class="fa fa-thumbs-down" aria-hidden="true"></span>
+                            </div>
+                </div>
         </div>
     </div>
+    </div>
+</main>
     
-    <div class="footer parent">
+    <footer class="parent">
         <div class="wrapper">
         
-           <div>
+           <div class="row">
                 <div class="col-75 left">
                   <ul class="legalstuff">
                       <li>
-                          <span>&copy;Molarq, Corp.</span>
+                          <span>2017&copy;Molarq, Corp.</span>
                       </li>
                       <li>
                           <a href="legal.html" target="_blank">Aviso legal</a>
@@ -138,7 +149,7 @@
            </div>
         
         </div>
-    </div>
+    </footer>
     
 </body>
 
