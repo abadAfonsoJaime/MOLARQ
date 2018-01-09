@@ -30,26 +30,31 @@
     
     
     <!--MAPA-->
-<div class="main parent">
-    <div class="wrapper">
-        <div class="map right">
-        <div>
-        <select  name="filtros" id="filtros">
-            <option value="0">ÁREA</option>
-            <option value="0">CRONOLOGICO</option>
-            <option value="0">EVENTO</option>
-            <option value="0">ACADEMICO</option>
-        </select>
-        </div>
-        <div>
-             <input type="search" maxlength="50">
-        </div>     
-        </div>
+  <div class="main parent">
+    <div class="wrapper-map">
+      <nav>
+        <ul class="vertical">
+          <li><strong>Yacimientos por provincia</strong></li>
+          <li><a onclick="javascript:$('#map_canvas').trigger('show', '1')">Cinemas</a></li>
+          <li><strong>Yacimientos por cronología</strong></li>
+          <li><a onclick="javascript:$('#map_canvas').trigger('show', '2')">Museums</a></li>
+          <li><strong>Eventos activos</strong></li>
+          <li><a onclick="javascript:$('#map_canvas').trigger('show', '2')">Museums</a></li>
+          <li><strong>Controles</strong></li>
+          <li><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Limpiar marcadores</a></li>
+          <li><a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar mapa</a></li>
+        </ul>
+      </nav>
+      
+      <!-- <div><input type="search" maxlength="50"></div>   -->  
+
+      <div id="map_canvas"></div> 
+    
     </div>
-</div>
+  </div>
 
 
- <!--   FOOTER-->
+ <!-- FOOTER -->
     <div class="footer parent">
         <div class="wrapper">
         
@@ -90,9 +95,11 @@
         
         </div>
     </div>
-    
-    
-    
+  
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHelRWLK0eQSJC52Q-KP_xwm_RBwn813g" ></script>
+  <script type="text/javascript" src="js/jquery-mapit.min.js"></script>
+  <script src="js/plugin.js"></script>
     
 </body>
 </html>
