@@ -39,6 +39,11 @@ iframe {
   width: 100%;
 }
 
+.wrapper-map {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .formfield {
   padding-top: 20px;
   float: left;
@@ -329,6 +334,50 @@ input[type="submit"]:hover {
 .profile-card::after {
   content: "______________________________";
   color: #999999;
+}
+
+/*Mapa vitamin*/
+#map_canvas {
+  height: 100vh;
+  width: 100%;
+}
+
+nav ul {
+  background: #39a9a4;
+  background: rgb(57,169,164);
+  background: rgba(57,169,164, 0.95);
+  color: #fff;
+  margin: 4em 5em !important;
+  padding: 1.5em;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 400px;
+  z-index: 99;
+  list-style: none;
+}
+
+nav ul li strong {
+  display: block;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 14px;
+  margin-left: -4px;
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+nav ul li a:hover {
+  color: #e1704b;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* CAMBIOS JAIME */
