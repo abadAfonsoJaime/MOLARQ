@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Controla tus datos molones - MOLARQ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="x-ua-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+</head>
+
+<body>
+  
+ <div class="container">
+
+<!--   HEADER   -->
+      <nav class="headBoot navbar navbar-default ">
+          <div class="row">
+                <div class="col-md-1">
+                    <ul class="nav navbar-nav">
+    <!-- menu desplegable /hamburguesa -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle tiHeader" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <div class="menDesp">   
+                                    <a class="dropdown-item" href="#">Yacimientos</a>
+                                    <a class="dropdown-item" href="#">Calendario eventos</a>
+                                    <a class="dropdown-item" href="#">Actividades</a>
+                                    <a class="dropdown-item" href="#">Perfil</a>
+                                    <a class="dropdown-item" href="#">Configuración</a>
+                                    <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                    </div>
+                                </div>
+                           
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- logo molarq -->
+                <div class="col-md-2 col-md-offset-4 img-responsive">
+                 <img id="MOL" src="img/logo.png">
+                </div>
+
+                <!--agenda / sign up /login -->
+
+                <div class="col-md-5">
+                    <ul class="nav navbar-nav">
+                        <li class="tiHeader">
+                            <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-globe"></span>Agenda</a>
+                            <a href="#" class="visible-xs"><span class="glyphicon glyphicon-globe"></a>
+                        </li>
+
+                        <li class="tiHeader">
+                          <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+                          <a href="#" class="visible-xs"><span class="glyphicon glyphicon-user"></span></a>
+                        </li>
+
+                        <li class="tiHeader">
+                          <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                          <a href="#" class="visible-xs"><span class="glyphicon glyphicon-log-in"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+      </nav>
+</div>
+
+
+<!-- MAIN -->
+
+<!-- formulario -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 well">
+                   <div class="form-group tiForm">
+                        <label for="eventName">Nombre del evento</label>
+                        <input type="text" class="form-control" id="eventName" aria-describedby="eventName" placeholder="Nombre del evento">
+                    </div>
+
+              <div class="form-group tiForm">
+                <label for="placeEvent">Lugar del evento</label>
+                <input type="placeEvent" class="form-control" id="placeEvent" placeholder="Password">
+              </div>
+             
+              <select class="tiHeader" input-lg>
+                <option selected>Visita ...</option>
+                <option value="1">Turistica</option>
+                <option value="2">Academica</option>
+                <option value="3">Practica</option>
+                <option value="4">Excavación</option>
+              </select>
+
+             <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+
+
+       
+
+                
+              <!-- VENTANA MODAL del formulario -->
+              <button type="button" class="visible-xs visible-sm btn-block btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
+              <button type="button" class="visible-md  btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">Acepto</button>
+              <button type="button" class="visible-lg  btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">Acepto</button>
+
+              <!-- Modal -->
+              <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Confirmación del evento</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>La confirmación del evento acepta las condiciones de Molarq, al mismo tiempo que puede sufrir modificaciones con un máximo de 24 horas de antelación antes de la celebración del mismo.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Acepto</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+
+
+	       </div>
+	
+
+
+  <div class="col-md-6 well">
+    <img id="ya" src="img/yacimiento.jpg">
+    <form>
+    <div class="form-group">
+      <label class="tiForm" for="comment">Descripción</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+  </form>
+  </div>
+</div>
+  <!--                 -->
+
+
+
+
+
+ 
+    <!--   FOOTER   -->
+  <div class="container-fluid headBoot">
+      <div class="row">
+          <div class="col-md-4-offset-8">
+              <div class ="text-center">
+                  <ul class="legalstuff">
+                      <li>
+                          <span>2017&copy;Molarq, Corp.</span>
+                      </li>
+                      <li>
+                          <a href="legal.html" target="_blank">Aviso legal</a>
+                      </li>
+                      <li>
+                          <a href="cookies.html" target="_blank">Cookies</a>
+                      </li>
+                      <li>
+                          <a href="privacy.html" target="_blank">Privacidad</a>
+                      </li>
+                  </ul>
+              </div>
+
+              <ul class="social-icon">
+                  <li>
+                      <a href="http://www.facebook.com/" target="_blank">
+                        <span class="fa fa-facebook-official" aria-hidden="true"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.twitter.com/" target="_blank">
+                          <span class="fa fa-twitter-square" aria-hidden="true"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.instagram.com/" target="_blank">
+                          <span class="fa fa-instagram" aria-hidden="true"></span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</body>
+
+</html>
