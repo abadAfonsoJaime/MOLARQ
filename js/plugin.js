@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
   $('#map_canvas').mapit({
-    latitude:    40.4167754,
-    longitude:   -3.7037901,
-    zoom:        8,
+    latitude:    40.4167754, /*coordenadas Madrid*/
+    longitude:   -3.7037901, /*coordenadas Madrid*/
+    zoom:        6,
     type:        'ROADMAP',
     scrollwheel: false,
     marker: {
-      latitude:   37.970996,
-      longitude:  23.730542,
-      icon:       'images/marker_red.png',
+      latitude:   40.4167754,/* Marcador por defecto */
+      longitude:  -3.7037901,
+      icon:       'img/marker_red.png',
       title:      'The Hotel',
       open:       false,
       center:     true
@@ -24,10 +24,10 @@ $(document).ready(function() {
       [37.971436, 23.736695, 'img/marker_green.png', 'Zappeion', 'Greece', false, '2'],
       [37.975030, 23.747751, 'img/marker_green.png', 'Εθνική Πινακοθήκη Μουσείο Αλεξάνδρου Σούτζου', 'Μιχαλακοπούλου 1, Αθήνα, Greece', false, '2'],
       [37.976104, 23.7141811, 'img/marker_green.png', 'Benaki Museum', 'Koumpari 1, Athens, Greece', false, '2']
-    ],
-    origins: [
+    ]
+/*    origins: [
       ['37.936294', '23.947394'],
       ['37.975669', '23.733868']
-    ]
+    ] /*para rutas*/
   });
 });

@@ -342,7 +342,7 @@ input[type="submit"]:hover {
   width: 100%;
 }
 
-nav ul {
+div.wrapper-map fieldset {
   background: #39a9a4;
   background: rgb(57,169,164);
   background: rgba(57,169,164, 0.95);
@@ -357,13 +357,13 @@ nav ul {
   list-style: none;
 }
 
-nav ul li strong {
+div.wrapper-map fieldset strong {
   display: block;
   font-size: 18px;
   margin-top: 20px;
 }
 
-nav ul li a {
+div.wrapper-map fieldset p a {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -374,7 +374,7 @@ nav ul li a {
   vertical-align: middle;
 }
 
-nav ul li a:hover {
+div.wrapper-map fieldset p a:hover {
   color: #e1704b;
   text-decoration: none;
   cursor: pointer;
