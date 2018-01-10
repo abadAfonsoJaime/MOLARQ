@@ -14,10 +14,34 @@
    <div class="header parent">
       <div class="wrapper">
           <div class="nav-menu parent">
-            <div class="logo col-25">
-            <a href="index.html"><img src="img/logo.png" alt="MOLARQ"></a>
-          </div>
-          <div class="links col-75 right">
+            <div class="col-25">
+              <!-- CAMBIOS CRIS MENU HAMBURGUESA -->
+              <nav class="dropdown">
+            <div id="dropButton" class="dropdownButton"><span class="fa fa-bars" aria-hidden="true"></span></div>
+              <div id="dropContent" class="dropdownContent">
+                <ul>
+                  <!-- Ayuda -->
+                  <li><a href="ventana modal"><span class="fa fa-question-circle" aria-hidden="true"></span>   Ayuda</a></li>
+                  <!-- Mapa Buscador -->
+                  <li><a href="index_alt.html"><span class="fa fa-map-marker" aria-hidden="true"></span>   Mapa Buscador</a></li>
+                  <!-- Agenda -->
+                  <li><a href="calendar.html"><span class="fa fa-calendar" aria-hidden="true"></span>   Agenda</a></li>
+                  <!-- Mi Perfil -->
+                  <li><a href="profile.html"><span class="fa fa-user" aria-hidden="true"></span>   Mi Perfil</a></li>
+                  <!-- Listado de Yacimientos -->
+                  <li><a href="poner link"><span class="fa fa-list-alt" aria-hidden="true"></span>   Listado de Yacimientos</a></li>
+                  <!-- Listado de Eventos -->
+                  <li><a href="poner link"><span class="fa fa-users" aria-hidden="true"></span>   Listado de Eventos</a></li>
+                  <!-- Salir -->
+                  <li><a href="index.html"><span class="fa fa-sign-out" aria-hidden="true"></span>   Salir</a></li>
+                </ul>
+              </div>
+          </nav>
+            </div>
+              <div class="col-25 logo hide">
+              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+              </div>
+          <div class="links col-50 right">
             <ul class="nav">
                     <li><a href="register.html"><span class="link-menu">Registro</span><span class="fa fa-user-circle" aria-hidden="true"></span></a></li>
                     <li><a href="login.html"><span class="link-menu">Entrar</span><span class="fa fa-sign-in" aria-hidden="true"></span></a></li>
@@ -25,30 +49,55 @@
           </div>
           </div>
       </div>
-
     </div>
-    
     
     <!--MAPA-->
   <div class="main parent">
-    <div class="wrapper-map">
-      <nav>
-        <ul class="vertical">
-          <li><strong>Yacimientos por provincia</strong></li>
-          <li><a onclick="javascript:$('#map_canvas').trigger('show', '1')">Cinemas</a></li>
-          <li><strong>Yacimientos por cronología</strong></li>
-          <li><a onclick="javascript:$('#map_canvas').trigger('show', '2')">Museums</a></li>
-          <li><strong>Eventos activos</strong></li>
-          <li><a onclick="javascript:$('#map_canvas').trigger('show', '2')">Museums</a></li>
-          <li><strong>Controles</strong></li>
-          <li><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Limpiar marcadores</a></li>
-          <li><a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar mapa</a></li>
-        </ul>
-      </nav>
+    <div class="wrapper-fluid">
+      <div id="welcome">
+        <div class="banner">
+          <div class="col-25">
+            <img src="img/logo.png" alt="MOLARQ" />
+          </div>
+          <div class="col-75">
+            <div class="white">
+            <h1>Bienvenidos a MOLARQ</h1>
+            <small>Dónde conocer y proteger nuestro patrimonio arqueológico se vuelve molón</small>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quibusdam odit asperiores dicta nostrum ex sapiente unde non corporis animi atque debitis in, exercitationem esse? Dolor ex ab labore eos.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+        <div class="arrow bounce">
+          <a class="smooth blink fa fa-arrow-down fa-2x" href="#map_canvas"></a>
+        </div>
+      <fieldset>
+              <legend><strong>Marcadores de Yacimientos</strong></legend>
+            <h3>Por Provincia</h3>
+            <select onchange="javascript:$('#map_canvas').trigger('show', '1')" name="Provincia" id="Provincia">
+              <optgroup>
+                <option value="MAD">Madrid</option>
+                <option value="BAR">Barcelona</option>
+                <option value="VIG">Vigo</option>
+                <option value="VAL">Valencia</option>
+              </optgroup>
+            </select>
+            <h3>Por Cronología</h3>
+            <select name="Cronologia" id="Cronologia">
+              <optgroup>
+                <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
+                <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
+              </optgroup>
+            </select>
+            <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a><p>
+              <p><strong>Controles</strong>
+            <a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
+            <a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></p>
+      </fieldset>
       
       <!-- <div><input type="search" maxlength="50"></div>   -->  
 
-      <div id="map_canvas"></div> 
+      <div id="map_canvas"></div>
     
     </div>
   </div>
@@ -96,10 +145,10 @@
         </div>
     </div>
   
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHelRWLK0eQSJC52Q-KP_xwm_RBwn813g" ></script>
-  <script type="text/javascript" src="js/jquery-mapit.min.js"></script>
-  <script src="js/plugin.js"></script>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHelRWLK0eQSJC52Q-KP_xwm_RBwn813g" type="text/javascript"></script>
+  <script src="js/jquery-mapit.min.js" type="text/javascript"></script>
+  <script src="js/plugin.js" type="text/javascript"></script>
     
 </body>
 </html>

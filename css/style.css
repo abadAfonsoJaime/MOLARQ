@@ -39,9 +39,17 @@ iframe {
   width: 100%;
 }
 
-.wrapper-map {
+.wrapper-fluid {
   width: 100%;
   margin: 0 auto;
+}
+
+.padding-left {
+  padding-left: 3%;
+}
+
+.padding-right {
+  padding-right: 3%;
 }
 
 .formfield {
@@ -105,11 +113,30 @@ iframe {
 }
 
 header, div.header {
-  background-color: #a3e4d7;
+  height: 72px;
+  background-color: rgba(163, 228, 215,1);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+header.sticky, div.header.sticky {
+  background-color: rgba(163, 228, 215, 0.6);
+  height: 72px;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+}
+
+header.sticky + main, div.header.sticky + main {
+  padding-top: 72px;
 }
 
 .logo img {
   width: 72px;
+  margin 0 auto;
 }
 
 .link-menu {
@@ -135,12 +162,11 @@ ul.public>li {
   font-family: FontAwesome;
 }
 
-div.map {
+/*div.map {
   width: 100%;
   height: 100vh;
   background: #f5f5f5 url(../img/mapstoledo.jpg) no-repeat;
-  /*    padding-top: 600px;*/
-}
+}*/
 
 .padIco100 {
   padding-bottom: 100px;
@@ -336,18 +362,35 @@ input[type="submit"]:hover {
   color: #999999;
 }
 
-/*Mapa vitamin*/
-#map_canvas {
-  height: 100vh;
+#welcome {
   width: 100%;
+  height: 100vh;
+  background: url("../img/bg-main.jpg") no-repeat center center fixed #e5e5e5;
+  background-size: cover;
 }
 
-nav ul {
-  background: #39a9a4;
-  background: rgb(57,169,164);
-  background: rgba(57,169,164, 0.95);
+.banner {
+
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2% 50px;
+  margin-top: 15%;
+  font-size: 120%;
+}
+/*Mapa vitamin*/
+#map_canvas {
+  height: calc(100vh - 72px);
+  width: 100%;
+  padding-top: 72px;
+}
+
+div.wrapper-fluid fieldset {
+  background: #1abc9c;
+  opacity: 0.9;
   color: #fff;
-  margin: 4em 5em !important;
+  margin: 4em 5em;
   padding: 1.5em;
   position: absolute;
   right: 0;
@@ -355,15 +398,16 @@ nav ul {
   width: 400px;
   z-index: 99;
   list-style: none;
+  border: 0;
 }
 
-nav ul li strong {
+div.wrapper-fluid fieldset strong {
   display: block;
   font-size: 18px;
   margin-top: 20px;
 }
 
-nav ul li a {
+div.wrapper-fluid fieldset p a {
   color: white;
   font-size: 16px;
   font-weight: 300;
@@ -374,11 +418,79 @@ nav ul li a {
   vertical-align: middle;
 }
 
-nav ul li a:hover {
-  color: #e1704b;
+div.wrapper-fluid fieldset p a:hover {
+  color: #00ba95;
   text-decoration: none;
   cursor: pointer;
 }
+
+/*Flecha*/
+  .arrow {
+    text-align: center;
+    margin-top: -11%;
+    
+  }
+  .arrow>a {
+    font-size: 5em;
+    color: #00ba95;
+  }
+  .blink {
+   animation-duration: 700ms;
+   animation-name: blink;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+  }
+  @keyframes blink {
+     0% {
+        color: #00ba95;
+     }
+     50% {
+        color: #a3e4d7;
+     }
+     100% {
+        color: #1abc9c;
+     }
+   }
+  .bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  @-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+              transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+              transform: translateY(-15px);
+    }
+  }
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+              transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+              transform: translateY(-15px);
+    }
+  }
 
 /* CAMBIOS JAIME */
 
@@ -406,6 +518,54 @@ div.map-event {
   margin-top: 30px;
 }
 
+
+/*CAMBIOS CRIS MENU HAMBURGUESA*/
+
+/* Estilos para phablets, tablets y smartphones */
+.dropdownButton {
+    color: #333333;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #D7DBDD;
+    min-width: 230px;
+    z-index: 1;
+}
+
+.dropdownContent ul {
+    margin:0;
+    padding: 0;
+ }   
+
+.dropdownContent li {
+    list-style-type: none;
+    list-style: none;
+    margin:0;
+    padding: 0;
+ }   
+
+.dropdownContent a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownContent a:hover {
+    background-color: #a3e4d7;
+}
+.display {
+  display: block;
+}
 
 /* CAMBIOS CRIS */
 
@@ -549,8 +709,6 @@ ul.social-icon li span:hover {
   }
 
 }
-
-
 
 /* Estilos para phablets y tablets */
 @media only screen and (min-width:481px) and (max-width:768px) {
