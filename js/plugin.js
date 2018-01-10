@@ -1,9 +1,9 @@
 $(document).ready(function() {
-
+  // Begin of map
   $('#map_canvas').mapit({
-    latitude:    40.4167754, /*coordenadas Madrid*/
-    longitude:   -3.7037901, /*coordenadas Madrid*/
-    zoom:        6,
+    latitude:    40.4167754, // latitud Madrid
+    longitude:   -3.7037901, // longitud Madrid
+    zoom:        8,
     type:        'ROADMAP',
     scrollwheel: false,
     marker: {
@@ -30,4 +30,59 @@ $(document).ready(function() {
       ['37.975669', '23.733868']
     ] /*para rutas*/
   });
+  // End of map
+
+  // Begin of form validation
+
+  // End of form validation
+
+/*Animations*/
+/*Menú hamburguesa*/
+  $("#dropButton").click(function() {
+
+    if ($("#dropContent").hasClass("display") == false)
+      {
+       $("#dropContent").addClass("display");
+      }
+    else if ($("#dropContent").hasClass ("display") == true) 
+      {
+       $("#dropContent").removeClass("display");
+      }
+  });
+
+// Barra fija al hacer scroll
+    $(window).scroll(function(){
+    if ($(window).scrollTop() >= 72) { // El valor debe ser igual a la altura del header
+       $("header").addClass("sticky");
+       $(".header").addClass("sticky");
+       $(".logo").removeClass("hide");
+    }
+    else {
+       $("header").removeClass("sticky");
+       $(".header").removeClass("sticky");
+       $(".logo").addClass("hide");
+    }
+  });
+
+  // Smooth scroll para los enlaces ancla
+  $(".smooth").on('click mousewheel', function(event) {
+
+    // This.hash debe tener un valor antes de asociarle uno por defecto
+    if (this.hash !== "") { // Lee el href del enlace que tenga la clase smooth (this) y lee la parte del link a partir de #
+      // Sobrescribir la acción por defecto del enlace ancla
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      // Uso de jQuery animate para dar el efecto smooth al hacer clic
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){ // La duración del efecto en milisegundos
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
 });
