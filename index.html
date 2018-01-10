@@ -72,27 +72,24 @@
           <a class="smooth blink fa fa-arrow-down fa-2x" href="#map_canvas"></a>
         </div>
       <fieldset>
-              <legend><strong>Marcadores de Yacimientos</strong></legend>
-            <h3>Por Provincia</h3>
-            <select onchange="javascript:$('#map_canvas').trigger('show', '1')" name="Provincia" id="Provincia">
-              <optgroup>
-                <option value="MAD">Madrid</option>
-                <option value="BAR">Barcelona</option>
-                <option value="VIG">Vigo</option>
-                <option value="VAL">Valencia</option>
-              </optgroup>
-            </select>
-            <h3>Por Cronología</h3>
-            <select name="Cronologia" id="Cronologia">
-              <optgroup>
-                <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
-                <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
-              </optgroup>
-            </select>
-            <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a><p>
-              <p><strong>Controles</strong>
-            <a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
-            <a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></p>
+        <legend><strong>Marcadores de Yacimientos</strong></legend>
+      <h3>Por Provincia</h3>
+      <select name="Provincia" id="Provincia">
+          <option value="default">---Seleccione provincia---</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'CUE')" value="CUE">Cuenca</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'TAR')" value="TAR">Tarragona</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'GER')" value="GER">Gerona</option>
+      </select>
+      <h3>Por Cronología</h3>
+      <select name="Cronologia" id="Cronologia">
+          <option value="default">---Seleccione cultura---</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
+      </select>
+      <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a><p>
+        <p><strong>Controles</strong>
+      <a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
+      <a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></p>
       </fieldset>
       
       <!-- <div><input type="search" maxlength="50"></div>   -->  
