@@ -176,52 +176,6 @@ ul.public>li {
   padding-top: 165px;
 }
 
-/*Nuevos cambios MARRRRRRR*/
-h1{
-  font-size: 35px;
-}
-
-h2{
-  font-size: 20px;
-}
-
-#MOL{
-
-  max-width: 40%;
-}
-
-#ya{
-  max-width: 100%;
-}
-
-#user{
-  max-width: 100%;
-}
-
-.tiForm{
-  font-size: 16px;
-padding-top: 6%;
-
-}
-
-.tiHeader{
-  font-size: 15px;
-}
-.headBoot{
-   background-color: #a3e4d7;
-}
-
-.menDesp{
-  margin-left: 5%;
-  margin-bottom: 8px;
-  padding: 8px;
-  display: inline-block;
-
-}
-
-div.dropdown-menu  a.dropdown-item {
-  display: block;
-}
 
 /* CAMBIOS AARÓN */
 
@@ -725,42 +679,6 @@ ul.social-icon li span:hover {
     display: none;
   }
 
-<<<<<<< HEAD
-.button:hover a {
-  color: #FEFEFE;
-}
-
-div.date-event {
-  padding-top: 23px;
-  font-size: 0.8em;
-  font-weight: 700;
-}
-
-div.date-event::after {
-  content: '\f073';
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  margin: 0px 0px 0px 5px;
-  text-decoration: none;
-}
-
-div.map-event {
-  margin-top: 30px;
-}
-
-
-
-
-/*----------------------------------------------------------------------MEDIAS QUERIES---------------------*/
-
-
-/*FABLET*/
-@media only screen and (min-width:568px) and (max-width:959px) {
-  .wrapper {
-    width: 480px;
-    margin: 0 auto;
-=======
   .calendar {
     font-size: 10em;
   }
@@ -785,7 +703,6 @@ div.map-event {
     padding: 0 20px 20px 20px;
     border: 1px solid #ddd;
     border-radius: 3px;
->>>>>>> master
   }
   .profile-card::after {
     display: none;
