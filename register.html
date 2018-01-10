@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/styleGrupo.css" type="text/css" />
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
     <div class="main parent">
         <div class="wrapper">
-            <form action="profile.html" method="post">
+            <form id="myForm" action="procesar.html" method="post">
 
 
                 <!--    Nombre y Apellidos    -->
@@ -38,7 +38,7 @@
                         <label for="username">Nombre y Apellidos</label>
                     </div>
                     <div class="col-50">
-                        <input type="text" id="username" name="username" maxlength="20" placeholder="Escriba su nombre aquí" required />
+                        <input type="text" id="username" name="username" maxlength="20" placeholder="*Campo obligatorio" required />
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@
                         <label for="usermail">Email</label>
                     </div>
                     <div class="col-50">
-                        <input type="email" id="usermail" name="usermail" maxlength="255" placeholder="Escriba su email aquí" required />
+                        <input type="email" id="usermail" name="usermail" maxlength="255" placeholder="*Campo obligatorio" required />
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@
                         <label for="userpass">Contraseña</label>
                     </div>
                     <div class="col-50">
-                        <input type="password" id="userpass" name="userpass" maxlength="20" placeholder="Escriba su contraseña aquí" required />
+                        <input type="password" id="userpass" name="userpass" maxlength="20" placeholder="*Campo Obligatorio" required />
                     </div>
                 </div>
 
@@ -128,10 +128,15 @@
                     </div>
                 </div>
 
+                <div class="col-50">
+                    <label for="required*"> * Campos requeridos</label>
+                </div>
+
                 <!--        Enviar-->
                 <div class="col-95 formbutton formcentre" id="submit1">
                     <input type="submit" />
                 </div>
+                
             </form>
 
         </div>
@@ -187,6 +192,9 @@
         </div>
     </div>
 
+
+
+<script type="text/javascript" src="js/plugin.js"></script>
 </body>
 
 </html>
