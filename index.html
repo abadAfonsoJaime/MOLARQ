@@ -15,13 +15,14 @@
       <div class="wrapper">
           <div class="nav-menu parent">
             <div class="col-25">
-              <!-- CAMBIOS CRIS MENU HAMBURGUESA -->
+              <!--MENU HAMBURGUESA -->
               <nav class="dropdown">
             <div id="dropButton" class="dropdownButton"><span class="fa fa-bars" aria-hidden="true"></span></div>
               <div id="dropContent" class="dropdownContent">
                 <ul>
                   <!-- Ayuda -->
-                  <li><a href="ventana modal"><span class="fa fa-question-circle" aria-hidden="true"></span>   Ayuda</a></li>
+                  <!-- Trigger: open modal with id="myBtn" --> 
+                  <li><a href="#" id="myBtn"><span class="fa fa-question-circle" aria-hidden="true"></span>   Ayuda</a></li>
                   <!-- Mapa Buscador -->
                   <li><a href="index_alt.html"><span class="fa fa-map-marker" aria-hidden="true"></span>   Mapa Buscador</a></li>
                   <!-- Agenda -->
@@ -37,6 +38,22 @@
                 </ul>
               </div>
           </nav>
+
+
+  <!-- VENTANA MODAL -->
+           <!-- The Modal -->
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close fa fa-times"></span>
+              <p>¿Perdido y desconsolado en el mundo de Molarq? </br> </br> !Haz click aquí para ver un rápido y sencillo vídeo tutorial¡ </p> </br> </br>
+              <a href="videoTutorial.html"><div class="videoBtn">Ver vídeo</div></a> </br>
+            </div>
+
+          </div>   
+
+
             </div>
               <div class="col-25 logo hide">
               <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
