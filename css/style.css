@@ -397,7 +397,7 @@ div.wrapper-fluid fieldset {
   right: 0;
   text-align: left;
   width: 400px;
-  z-index: 99;
+  z-index: 9;
   list-style: none;
   border: 0;
 }
@@ -1421,7 +1421,7 @@ div.map-event {
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 1; /* que quede arriba*/
+    z-index: 99; /* que quede arriba*/
     left: 0;
     top: 0;
     width: 100%; 
