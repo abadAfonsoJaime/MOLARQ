@@ -51,9 +51,11 @@ document.getElementById("Cronologia").value = "default";
 
 
   /*Ventana Modal*/
-var modal = document.getElementById('myModal');
+var modal = document.getElementById("myModal");
           // boton que abre el modal
 var btn = document.getElementById("myBtn");
+
+var helpwdw = document.getElementById("help");
           // span que cierra el modal
 var span = document.getElementsByClassName("close")[0];
 
@@ -62,7 +64,11 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
-          // cuando clickeo el span cierro el modal
+helpwdw.onclick = function() {
+    modal.style.display = "block";
+}
+
+// cuando clickeo el span cierro el modal
 span.onclick = function() {
     modal.style.display = "none";
 }
