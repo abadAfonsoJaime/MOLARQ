@@ -87,16 +87,18 @@ window.onclick = function(event) {
        $("header").addClass("sticky");
        $(".header").addClass("sticky");
        $(".logo").removeClass("hide");
+       $(".brand").addClass("hide");
     }
     else {
        $("header").removeClass("sticky");
        $(".header").removeClass("sticky");
        $(".logo").addClass("hide");
+       $(".brand").removeClass("hide");
     }
   });
 
   // Smooth scroll para los enlaces ancla
-  $(".smooth").on('click mousewheel', function(event) {
+  $(".smooth").on('click', function(event) {
 
     // This.hash debe tener un valor antes de asociarle uno por defecto
     if (this.hash !== "") { // Lee el href del enlace que tenga la clase smooth (this) y lee la parte del link a partir de #

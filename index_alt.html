@@ -17,30 +17,43 @@
             <div class="col-25">
               <!--MENU HAMBURGUESA -->
               <nav class="dropdown">
-            <div id="dropButton" class="dropdownButton"><span class="fa fa-bars" aria-hidden="true"></span></div>
+            <div id="dropButton" class="dropdownButton"><span class="fas fa-bars" aria-hidden="true"></span></div>
               <div id="dropContent" class="dropdownContent">
                 <ul>
                   <!-- Ayuda -->
                   <!-- Trigger: open modal with id="myBtn" --> 
-                  <li><a href="#" id="myBtn"><span class="fa fa-question-circle" aria-hidden="true"></span>   Ayuda</a></li>
+                  <li><a href="#" id="myBtn"><span class="fa fa-question-circle" aria-hidden="true"></span>Ayuda</a></li>
                   <!-- Mapa Buscador -->
-                  <li><a href="index_alt.html"><span class="fa fa-map-marker" aria-hidden="true"></span>   Mapa Buscador</a></li>
+                  <li><a href="index_alt.html"><span class="fa fa-map-marker" aria-hidden="true"></span>Mapa Buscador</a></li>
                   <!-- Agenda -->
-                  <li><a href="calendar.html"><span class="fa fa-calendar" aria-hidden="true"></span>   Agenda</a></li>
+                  <li><a href="calendar.html"><span class="fa fa-calendar" aria-hidden="true"></span>Agenda</a></li>
                   <!-- Mi Perfil -->
-                  <li><a href="profile.html"><span class="fa fa-user" aria-hidden="true"></span>   Mi Perfil</a></li>
+                  <li><a href="profile.html"><span class="fa fa-user" aria-hidden="true"></span>Mi Perfil</a></li>
                   <!-- Listado de Yacimientos -->
-                  <li><a href="site.html"><span class="fa fa-list-alt" aria-hidden="true"></span>   Listado de Yacimientos</a></li>
+                  <li><a href="site.html"><span class="fa fa-list-alt" aria-hidden="true"></span>Listado de Yacimientos</a></li>
                   <!-- Listado de Eventos -->
-                  <li><a href="event.html"><span class="fa fa-users" aria-hidden="true"></span>   Listado de Eventos</a></li>
+                  <li><a href="event.html"><span class="fa fa-users" aria-hidden="true"></span>Listado de Eventos</a></li>
                   <!-- Salir -->
-                  <li><a href="index.html"><span class="fa fa-sign-out" aria-hidden="true"></span>   Salir</a></li>
+                  <li><a href="index.html"><span class="fas fa-times-circle" aria-hidden="true"></span>Salir</a></li>
                 </ul>
               </div>
           </nav>
+        </div>
 
-
-  <!-- VENTANA MODAL -->
+          <div class="col-25 logo hide right">
+              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+              </div>
+              <div class="col-25 logo mobileheader right">
+              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+            </div>
+          <div class="links col-50 right">
+            <ul class="nav">
+                    <li><a href="register.html"><span class="link-menu">Registro</span><span class="far fa-user" aria-hidden="true"></span></a></li>
+                    <li><a href="login.html"><span class="link-menu">Entrar</span><span class="fas fa-expand" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+          </div>
+            <!-- VENTANA MODAL -->
            <!-- The Modal -->
           <div id="myModal" class="modal">
 
@@ -53,27 +66,14 @@
             </div>
 
           </div>   
-
-
-            </div>
-              <div class="col-25 logo hide">
-              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
-              </div>
-          <div class="links col-50 right">
-            <ul class="nav">
-                    <li><a href="register.html"><span class="link-menu">Registro</span><span class="fa fa-user-circle" aria-hidden="true"></span></a></li>
-                    <li><a href="login.html"><span class="link-menu">Entrar</span><span class="fa fa-sign-in" aria-hidden="true"></span></a></li>
-            </ul>
-          </div>
-          </div>
       </div>
     </div>
-    
-    <!--MAPA-->
-  <div class="main parent">
+
+  <!--MAP-->
+  <div class="main parent" id="map">
     <div class="wrapper-fluid">
       <fieldset>
-        <legend><strong>Marcadores de Yacimientos</strong></legend>
+        <legend><h1>Marcadores de Yacimientos</h1></legend>
       <h3>Por Provincia</h3>
       <select name="Provincia" id="Provincia">
           <option value="default">---Seleccione provincia---</option>
@@ -87,19 +87,17 @@
           <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
       </select>
-      <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a><p>
-        <p><strong>Controles</strong>
-      <a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
+      <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a></p>
+      <p><strong>Controles</strong></p>
+      <p><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
       <a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></p>
       </fieldset>
       
       <!-- <div><input type="search" maxlength="50"></div>   -->  
 
       <div id="map_canvas"></div>
-    
     </div>
   </div>
-
 
  <!-- FOOTER -->
     <div class="footer parent">
@@ -109,7 +107,7 @@
                 <div class="col-75 left">
                   <ul class="legalstuff">
                       <li>
-                          <span>2017&copy;Molarq, Corp.</span>
+                          <span>2018&copy;Molarq, Corp.</span>
                       </li>
                       <li>
                           <a href="legal.html" target="_blank">Aviso legal</a>
@@ -126,13 +124,13 @@
                <div class="col-25 right" id="social-icon">
                   <ul class="social-icon">
                         <li>
-                            <a href="http://www.facebook.com/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a>
+                            <a href="http://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
                         </li>
                         <li>
-                            <a href="http://www.twitter.com/" target="_blank"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
+                            <a href="http://www.twitter.com/" target="_blank"><span class="fab fa-twitter" aria-hidden="true"></span></a>
                         </li>
                         <li>
-                            <a href="http://www.instagram.com/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a>
+                            <a href="http://www.instagram.com/" target="_blank"><span class="fab fa-instagram" aria-hidden="true"></span></a>
                         </li>
 
                    </ul>
