@@ -500,6 +500,116 @@ div.wrapper-fluid fieldset p a:hover {
               transform: translateY(-15px);
     }
   }
+  
+/*form validation*/
+label {
+  font-size: 1.3em;
+}
+
+input[type="submit"], input[type="reset"] {
+  color: #e5e5e5;
+  width: 25%;
+  border: 0;
+  background-color: #1abc9c;
+  padding: 10px 20px;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: #a3e4d7;
+  color: #444444;
+  transform: scale(1.1);
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+
+.select {
+  width: 100%;
+  height: 48px;
+  border: 3px solid #1abc9c;
+  border-radius: 2px;
+  background-color: #e5e5e5;
+  color: #666;
+  font-size: 1.3em;
+  padding: 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  height: 48px;
+  border: 3px solid #1abc9c;
+  border-radius: 2px;
+  background-color: #e5e5e5;
+  color: #666;
+  padding: 6px;
+  font-size: 1.3em;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  color: #1abc9c;
+}
+
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  color: #468847;
+  background-color: #DFF0D8;
+  border: 3px solid #D6E9C6;
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  color: #B94A48;
+  background-color: #e5e5e5;
+  border: 3px solid #ad3737;
+  
+}
+
+input.parsley-error:focus,
+select.parsley-error:focus,
+textarea.parsley-error:focus {    
+    border-color:#843534;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ad3737
+}
+.parsley-errors-list {
+  margin: 3px auto;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1em;
+  line-height: 1em;
+  opacity: 0;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+/* end of form validation*/
 
 /*Slider*/
 

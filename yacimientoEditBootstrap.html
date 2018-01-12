@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="js/myJason.js"></script>
+
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -76,58 +78,123 @@
 <!-- MAIN -->
 <div class="container-fluid">
       <!-- video -->
-    <div class="row">
-            <div class="col-md-6 well">
-             <video id="myVideo" src="media/licenciado.mp4" controls></video>
-          <!-- datos del yacimiento -->
-             <div class="form-group tiForm">
-              <label for="coordenadas">Coordenadas</label>
-              <input type="text" class="form-control" id="Coordenadas" aria-describedby="coordenadas" placeholder="coordenadas">
-             </div>
+  <div class="row">
+        <div class="col-md-6 well">
 
-             <select class="tiHeader" input-lg>
-              <option selected>Provincia</option>
-              <option value="1">Toledo</option>
-              <option value="2">Andalucía</option>
-              <option value="3">valencia</option>
-              <option value="4">Extremadura</option>
-             </select>
-             <div class="form-group tiForm">
-              <label for="etiquetas">Etiquetas</label>
-              <input type="text" class="form-control" id="Coordenadas" aria-describedby=" etiquetas">
-             </div>
+              <!-- titulo yacimiento -->
+
+
+
+              <div class="form-group">
+               <label><h1>Título Yacimiento</h1></label><br><input id="title" name= 'title' class="form-control" rows="2" type="text" value="">
+              </div>
+              
+
+          <!-- descripcion short -->
+
+    
+      <div class="form-group">
+        <label class="tiForm" for="shortdesc">Breve descripción del Yacimiento</label>
+        <textarea class="form-control" rows="3" id="comment"></textarea>
+      </div>
+          <!-- descripcion large -->
+      <div class="form-group">
+        <label class="tiForm" for="longdesc">Descripción completa del Yacimiento</label>
+        <textarea class="form-control" rows="8" id="comment2"></textarea>
+      </div>
+
+      <!-- coordenadas latitud-->
+      <div class="form-group tiForm">
+        <label for="coordenadas">Latitud</label>
+        <input type="text" class="form-control" id="latitud" aria-describedby="coordenadas" placeholder="latitud">
+      </div>
+
+
+      <!-- coordenadas latitud-->
+      <div class="form-group tiForm">
+        <label for="coordenadas">Longitud</label>
+        <input type="text" class="form-control" id="longitud" aria-describedby="coordenadas" placeholder="longitud">
+      </div>
+
+     <!-- select region -->
+     <div>
+      <label class="tiForm">Región   </label>
+       <select id="region" class="tiHeader" input-lg>
+        <option selected>--- Provincia ---</option>
+        <option value="1">Toledo</option>
+        <option value="2">Andalucía</option>
+        <option value="3">Valencia</option>
+        <option value="4">Extremadura</option>
+       </select>
+     </div>
+        
+
+    <!-- select period -->
+      <div>
+        <label class="tiForm">Cronología  </label>
+         <select id="period" class="tiHeader" input-lg>
+          <option selected>--- Época ---</option>
+          <option value="1">Roma</option>
+          <option value="2">Grecia</option>
+         </select>
+       </div>     
     </div>
 
 
 
 
 
-    <!-- descripcion yacimiento -->
+    <!-- imagen yacimiento y botón de upload -->
       <div class="col-md-6 well">
-       <form>
-        <div class="form-group">
-          <label class="tiForm" for="comment">Descripción del Yacimiento</label>
-          <textarea class="form-control" rows="8" id="comment"></textarea>
-        </div>
+         <div class="form-group">
+            <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
+            <input type="file" id="subir_img">
+            <p class="help-block">Vídeo o imagen max 2MB</p>
+          </div>
+        <img id="ya" src="img/yacimiento.jpg">
+     
+
+
+
 
     <!-- checkbox -->
-        <div class="checkbox">
-         <label><input type="checkbox" value="">Apto para familias</label>
+
+      <div class="form-group">
+        <p>Otros datos de interés</p>
+      
+
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Apto para familias</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Personas con movilidad reducida</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Actividad gratuita</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Incluye guía turística</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Actividad colaborativa</label>
+            </div>
+          </div>
+ 
         </div>
-        <div class="checkbox">
-         <label><input type="checkbox" value="">Personas con movilidad reducida</label>
-        </div>
-        <div class="checkbox">
-         <label><input type="checkbox" value="">Actividad gratuita</label>
-        </div>
-        <div class="checkbox">
-         <label><input type="checkbox" value="">Incluye guía turística</label>
-        </div>
-        <div class="checkbox">
-         <label><input type="checkbox" value="">Actividad colaborativa</label>
-        </div>
-       </form>
-      </div>
+
+
+
+
+
+
+<!-- boton enviar -->
+         <div class="col-md-6 col-md-offset-4">
+           <div class="form-group tiForm">
+            <div class=".btn-lg">
+                <input type="submit" class="btn btn-info" value="Publicar">
+            </div>
+           </div>
+         </div>
      </div>
 </div>
 
@@ -158,17 +225,17 @@
             <ul class="social-icon">
                 <li>
                     <a href="http://www.facebook.com/" target="_blank">
-                      <span class="fa fa-facebook-official" aria-hidden="true"></span>
+                      <span class="fan fa-facebook" aria-hidden="true"></span>
                     </a>
                 </li>
                 <li>
                     <a href="http://www.twitter.com/" target="_blank">
-                        <span class="fa fa-twitter-square" aria-hidden="true"></span>
+                        <span class="fab fa-twitter" aria-hidden="true"></span>
                     </a>
                 </li>
                 <li>
                     <a href="http://www.instagram.com/" target="_blank">
-                        <span class="fa fa-instagram" aria-hidden="true"></span>
+                        <span class="fab fa-instagram" aria-hidden="true"></span>
                     </a>
                 </li>
             </ul>
