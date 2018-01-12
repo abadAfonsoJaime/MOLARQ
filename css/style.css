@@ -180,6 +180,54 @@ ul.public>li {
 }
 
 
+
+/*Nuevos cambios MARRRRRRR*/
+h1{
+  font-size: 35px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+#MOL{
+
+  max-width: 60%;
+}
+
+#ya{
+  max-width: 100%;
+}
+
+#user{
+  max-width: 100%;
+}
+
+.tiForm{
+  font-size: 16px;
+padding-top: 6%;
+
+}
+
+.tiHeader{
+  font-size: 15px;
+}
+.headBoot{
+   background-color: #a3e4d7;
+}
+
+.menDesp{
+  margin-left: 5%;
+  margin-bottom: 8px;
+  padding: 8px;
+  display: inline-block;
+
+}
+
+div.dropdown-menu  a.dropdown-item {
+  display: block;
+}
+
 /* CAMBIOS AARÓN */
 
 .wrapper button {
