@@ -6,7 +6,6 @@ $(document).ready( function() {
 	//Cuando el usuario haga click en el boton...
 	$("#botonAJAX").click( function() {
 		//...pedir por AJAX aL SERVER el JSON que me devolverá
-
 		$.ajax(
 		{
 			method: "get",
