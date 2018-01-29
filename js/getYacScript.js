@@ -24,8 +24,8 @@ $(document).ready( function() {
 			var output = respuesta.saveTitle;
 			var idYac = "#" + output + i;
 
-			$("#cajaYac").append("<p> +'output'>" + output + "</p>").attr("id", idYac);
-			$(idYac).append("<a href='#'>" + output + "</a>" + "</br>");
+			$("#cajaYac").append("<p></p>").attr("id", idYac);
+			$(idYac).append("<a>" + output + "</a>" + "</br>").attr("href", "JSONvalidate" + i).attr("id", "enlace" + i);
 		})//cierro .done
 	})//cierro el click
 });//cierro el ready
