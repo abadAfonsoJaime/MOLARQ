@@ -1,17 +1,21 @@
-document.querySelector('#saveDataBtn').addEventListener('click',saveData);
+var listaDatos = [];
 
-function saveData(){
-	var saveTitle = document.querySelector('#title').value,
-	 saveDes1 = document.querySelector('#comment').value,
-	 saveDes2 = document.querySelector('#comment2').value,
-	 saveLat = document.querySelector('#latitud').value,
-	 saveLong = document.querySelector('#longitud').value,
-	 saveRegion = document.querySelector('#region').value,
-	 saveCronologia = document.querySelector('#period').value;
+function upDate(postTitulo, postDes1, postDes2, postLat, postLong, postRegion, postCronologia, postUserID){
 
+	var obtener = {
+		title : postTitulo, 
+		des1 : postDes1,
+		des2 : postDes2,
+		lat : postLat,
+		long : postLong,
+		region : postRegion,
+		cronologia : postCronologia,
+		userID : postUserID,
 
+	};
+	
 
-	upDate( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia );
+	console.log(obtener);
+	listaDatos.push(obtener);
+	console.log(listaDatos);
 }
-
-
