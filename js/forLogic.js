@@ -1,15 +1,17 @@
 document.querySelector('#saveDataBtn').addEventListener('click',saveData);
 
 function saveData(){
-	var sTitle = document.querySelector('#title').value,
-	 sDes1 = document.querySelector('#comment').value,
-	 sDes2 = document.querySelector('#comment2').value,
-	 sLat = document.querySelector('#latitud').value,
-	 sLong = document.querySelector('#longitud').value;
+	var saveTitle = document.querySelector('#title').value,
+	 saveDes1 = document.querySelector('#comment').value,
+	 saveDes2 = document.querySelector('#comment2').value,
+	 saveLat = document.querySelector('#latitud').value,
+	 saveLong = document.querySelector('#longitud').value,
+	 saveRegion = document.querySelector('#region').value,
+	 saveCronologia = document.querySelector('#period').value;
 
 
 
-	upDate(sTitle,sDes1,sDes2,sLat,sLong);
+	upDate( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia );
 }
 
 
