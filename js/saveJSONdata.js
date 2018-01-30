@@ -8,11 +8,12 @@ function saveData(){
 	 saveLong = document.querySelector('#longitud').value,
 	 saveRegion = document.querySelector('#region').value,
 	 saveCronologia = document.querySelector('#period').value,
-	 saveUserID = "";
+	 saveUserID = "1",
+	 saveValidate = "false";
 
 
 
-	upDate( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia, saveUserID );
+	upDate( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia, saveUserID, saveValidate );
 }
 
 
