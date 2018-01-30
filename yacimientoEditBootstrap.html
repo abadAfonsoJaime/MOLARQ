@@ -2,261 +2,252 @@
 <html lang="es">
 
 <head>
-    <title>Controla tus datos molones - MOLARQ</title>
+    <title>Validacion de Yacimientos - MOLARQ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-
-    <!-- <script src="js/myJason.js"></script> -->
-
-   <!--  <script src="js/myJason.js"></script> -->
-
-
     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+     
 </head>
 
 <body>
-    <div class="container-fluid">
- <!--   HEADER   -->
-      <nav class="headBoot navbar navbar-default ">
-          <div class="row">
-                <div class="col-md-1">
-                    <ul class="nav navbar-nav">
-    <!-- menu desplegable /hamburguesa -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle tiHeader" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<!--HEADER-->   
+   <div class="header parent">
+      <div class="wrapper">
+          <div class="nav-menu parent">
+            <div class="col-25">
+              <!--MENU HAMBURGUESA -->
+              <nav class="dropdown">
+            <div id="dropButton" class="dropdownButton"><span class="fas fa-bars" aria-hidden="true"></span></div>
+              <div id="dropContent" class="dropdownContent">
+                <ul>
+                  <!-- Ayuda -->
+                  <!-- Trigger: open modal with id="myBtn" --> 
+                  <li><a href="#" id="myBtn"><span class="fas fa-question-circle" aria-hidden="true"></span>Ayuda</a></li>
+                  <!-- Mapa Buscador -->
+                  <li><a href="index_alt.html"><span class="fas fa-map-marker" aria-hidden="true"></span>Mapa Buscador</a></li>
+                  <!-- Agenda -->
+                  <li><a href="calendar.html"><span class="fas fa-calendar" aria-hidden="true"></span>Agenda</a></li>
+                  <!-- Mi Perfil -->
+                  <li><a href="profile.html"><span class="fas fa-user" aria-hidden="true"></span>Mi Perfil</a></li>
+                  <!-- Listado de Yacimientos -->
+                  <li><a href="site.html"><span class="fas fa-list-alt" aria-hidden="true"></span>Listado de Yacimientos</a></li>
+                  <!-- Listado de Eventos -->
+                  <li><a href="event.html"><span class="fas fa-users" aria-hidden="true"></span>Listado de Eventos</a></li>
+                  <!-- Salir -->
+                  <li><a href="index.html"><span class="fas fa-times-circle" aria-hidden="true"></span>Salir</a></li>
+                </ul>
+              </div>
+          </nav>
+        </div>
 
-                                <span class="glyphicon glyphicon-menu-hamburger"></span>
-                            </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <div class="menDesp">   
-                                    <a class="dropdown-item" href="#">Yacimientos</a>
-                                    <a class="dropdown-item" href="#">Calendario eventos</a>
-                                    <a class="dropdown-item" href="#">Actividades</a>
-                                    <a class="dropdown-item" href="#">Perfil</a>
-                                    <a class="dropdown-item" href="#">Configuración</a>
-                                    <a class="dropdown-item" href="#">Cerrar sesión</a>
-                                    </div>
-                                </div>
-                           
-                        </li>
-                    </ul>
-                </div>
+          <div class="col-25 logo right">
+              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+              </div>
+<!--               <div class="col-25 logo mobileheader right">
+              <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+            </div> -->
+          <div class="links col-50 right">
+            <ul class="nav">
+                    <li><a href="calendar.html"><span class="link-menu">Agenda</span><span class="far fa-calendar-alt" aria-hidden="true"></span></a></li>
+                    <li><a href="register.html"><span class="link-menu">Registro</span><span class="far fa-user" aria-hidden="true"></span></a></li>
+                    <li><a href="login.html"><span class="link-menu">Entrar</span><span class="fas fa-expand" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+          </div>
+            <!-- VENTANA MODAL -->
+           <!-- The Modal -->
+          <div id="myModal" class="modal">
 
-
-                <!-- logo molarq -->
-                <div class="col-md-2 col-md-offset-4 img-responsive">
-                 <img id="MOL" src="img/logo.png">
-                </div>
-
-                <!--agenda / sign up /login -->
-
-                <div class="col-md-5">
-                    <ul class="nav navbar-nav">
-                        <li class="tiHeader">
-                            <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-globe"></span>Agenda</a>
-                            <a href="#" class="visible-xs"><span class="glyphicon glyphicon-globe"></a>
-                        </li>
-
-                        <li class="tiHeader">
-                          <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
-                          <a href="#" class="visible-xs"><span class="glyphicon glyphicon-user"></span></a>
-                        </li>
-
-                        <li class="tiHeader">
-                          <a href="#" class="hidden-xs"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                          <a href="#" class="visible-xs"><span class="glyphicon glyphicon-log-in"></span></a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close fa fa-times"></span>
+              <p>¿Perdido y desconsolado en el mundo de Molarq?</p>
+              <p>!Haz click aquí para ver un rápido y sencillo vídeo tutorial¡</p>
+              <a href="videoTutorial.html"><div class="videoBtn">Ver vídeo</div></a>
             </div>
 
-      </nav>
-</div>
-
+          </div>   
+      </div>
+    </div>
 
 <!-- MAIN -->
 <div class="container-fluid">
-      <!-- video -->
-  <div class="row">
-        <div class="col-md-6 well">
+    <!-- video -->
+<div class="row">
+      <div class="col-md-6 well">
 
-              <!-- titulo yacimiento -->
-
-
-
-              <div class="form-group">
-               <label><h1>Título Yacimiento</h1></label><br><input id="title" name= 'title' class="form-control" rows="2" type="text" value="">
-              </div>
-              
-
-          <!-- descripcion short -->
-
-    
-      <div class="form-group">
-        <label class="tiForm" for="shortdesc">Breve descripción del Yacimiento</label>
-        <textarea class="form-control" rows="3" id="comment"></textarea>
-      </div>
-          <!-- descripcion large -->
-      <div class="form-group">
-        <label class="tiForm" for="longdesc">Descripción completa del Yacimiento</label>
-        <textarea class="form-control" rows="8" id="comment2"></textarea>
-      </div>
-
-      <!-- coordenadas latitud-->
-      <div class="form-group tiForm">
-        <label for="coordenadas">Latitud</label>
-        <input type="text" class="form-control" id="latitud" aria-describedby="coordenadas" placeholder="latitud">
-      </div>
+            <!-- titulo yacimiento -->
 
 
-      <!-- coordenadas latitud-->
-      <div class="form-group tiForm">
-        <label for="coordenadas">Longitud</label>
-        <input type="text" class="form-control" id="longitud" aria-describedby="coordenadas" placeholder="longitud">
-      </div>
 
-     <!-- select region -->
-     <div>
-      <label class="tiForm">Región   </label>
-       <select id="region" class="tiHeader" input-lg>
-        <option selected>--- Provincia ---</option>
-        <option value="1">Toledo</option>
-        <option value="2">Andalucía</option>
-        <option value="3">Valencia</option>
-        <option value="4">Extremadura</option>
-       </select>
-     </div>
-        
+            <div class="form-group">
+             <label><h1>Título Yacimiento</h1></label><br><input id="title" name= 'title' class="form-control" rows="2" type="text" value="">
+            </div>
+            
 
-    <!-- select period -->
-      <div>
-        <label class="tiForm">Cronología  </label>
-         <select id="period" class="tiHeader" input-lg>
-          <option selected>--- Época ---</option>
-          <option value="1">Roma</option>
-          <option value="2">Grecia</option>
-         </select>
-       </div>     
+        <!-- descripcion short -->
+
+  
+    <div class="form-group">
+      <label class="tiForm" for="shortdesc">Breve descripción del Yacimiento</label>
+      <textarea class="form-control" rows="3" id="comment"></textarea>
+    </div>
+        <!-- descripcion large -->
+    <div class="form-group">
+      <label class="tiForm" for="longdesc">Descripción completa del Yacimiento</label>
+      <textarea class="form-control" rows="8" id="comment2"></textarea>
+    </div>
+
+    <!-- coordenadas latitud-->
+    <div class="form-group tiForm">
+      <label for="coordenadas">Latitud</label>
+      <input type="text" class="form-control" id="latitud" aria-describedby="coordenadas" placeholder="latitud">
     </div>
 
 
+    <!-- coordenadas latitud-->
+    <div class="form-group tiForm">
+      <label for="coordenadas">Longitud</label>
+      <input type="text" class="form-control" id="longitud" aria-describedby="coordenadas" placeholder="longitud">
+    </div>
 
-
-
-    <!-- imagen yacimiento y botón de upload -->
-      <div class="col-md-6 well">
-         <div class="form-group">
-            <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
-            <input type="file" id="subir_img">
-            <p class="help-block">Vídeo o imagen max 2MB</p>
-          </div>
-        <img id="ya" src="img/yacimiento.jpg">
-     
-
-
-
-
-    <!-- checkbox -->
-
-      <div class="form-group">
-        <p>Otros datos de interés</p>
+   <!-- select region -->
+   <div>
+    <label class="tiForm">Región   </label>
+     <select id="region" class="tiHeader" input-lg>
+      <option selected>--- Provincia ---</option>
+      <option value="1">Toledo</option>
+      <option value="2">Andalucía</option>
+      <option value="3">Valencia</option>
+      <option value="4">Extremadura</option>
+     </select>
+   </div>
       
 
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Apto para familias</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Personas con movilidad reducida</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Actividad gratuita</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Incluye guía turística</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Actividad colaborativa</label>
-            </div>
+  <!-- select period -->
+    <div>
+      <label class="tiForm">Cronología  </label>
+       <select id="period" class="tiHeader" input-lg>
+        <option selected>--- Época ---</option>
+        <option value="1">Roma</option>
+        <option value="2">Grecia</option>
+       </select>
+     </div>     
+  </div>
+
+
+
+
+
+  <!-- imagen yacimiento y botón de upload -->
+    <div class="col-md-6 well">
+       <div class="form-group">
+          <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
+          <input type="file" id="subir_img">
+          <p class="help-block">Vídeo o imagen max 2MB</p>
+        </div>
+      <img id="ya" src="img/yacimiento.jpg">
+   
+
+
+
+
+  <!-- checkbox -->
+
+    <div class="form-group">
+      <p>Otros datos de interés</p>
+    
+
+          <div class="checkbox">
+           <label><input type="checkbox" value="">Apto para familias</label>
           </div>
- 
+          <div class="checkbox">
+           <label><input type="checkbox" value="">Personas con movilidad reducida</label>
+          </div>
+          <div class="checkbox">
+           <label><input type="checkbox" value="">Actividad gratuita</label>
+          </div>
+          <div class="checkbox">
+           <label><input type="checkbox" value="">Incluye guía turística</label>
+          </div>
+          <div class="checkbox">
+           <label><input type="checkbox" value="">Actividad colaborativa</label>
+          </div>
         </div>
 
+      </div>
 
 
 
-
-<!-- boton enviar -->
-         <div class="col-md-6 col-md-offset-4">
-            <div class=".btn-lg">
-                <input id="saveDataBtn" type="button" class="btn btn-info" value="Publicar">
 
 
 <!-- boton enviar -->
-    <!--      <div class="col-md-6 col-md-offset-4">
-           <div class="form-group tiForm">
-            <div class=".btn-lg">
-                <input type="submit" class="btn btn-info" value="Publicar">
- -->
-            </div>
-           </div>
+       <div class="col-md-6 col-md-offset-4">
+          <div class=".btn-lg">
+              <input id="saveDataBtn" type="button" class="btn btn-info" value="Publicar">
+
+
+<!-- boton enviar -->
+  <!--      <div class="col-md-6 col-md-offset-4">
+         <div class="form-group tiForm">
+          <div class=".btn-lg">
+              <input type="submit" class="btn btn-info" value="Publicar">
+-->
+          </div>
          </div>
-     </div>
+       </div>
+   </div>
 </div>
 
+	<!-- FOOTER -->
+    <div class="footer parent">
+        <div class="wrapper">
+        
+           <div>
+                <div class="col-75 left">
+                  <ul class="legalstuff">
+                      <li>
+                          <span>2018&copy;Molarq, Corp.</span>
+                      </li>
+                      <li>
+                          <a href="legal.html" target="_blank">Aviso legal</a>
+                      </li>
+                      <li>
+                          <a href="cookies.html" target="_blank">Cookies</a>
+                      </li>
+                      <li>
+                           <a href="privacy.html" target="_blank">Privacidad</a>
+                      </li>
+                   </ul>
+               </div>
 
+               <div class="col-25 right" id="social-icon">
+                  <ul class="social-icon">
+                        <li>
+                            <a href="http://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.twitter.com/" target="_blank"><span class="fab fa-twitter" aria-hidden="true"></span></a>
+                        </li>
+                        <li>
+                            <a href="http://www.instagram.com/" target="_blank"><span class="fab fa-instagram" aria-hidden="true"></span></a>
+                        </li>
 
-
-<!--   FOOTER   -->
-<div class="container-fluid headBoot">
-    <div class="row">
-        <div class="col-md-4-offset-8">
-            <div class ="text-center">
-                <ul class="legalstuff">
-                    <li>
-                        <span>2017&copy;Molarq, Corp.</span>
-                    </li>
-                    <li>
-                        <a href="legal.html" target="_blank">Aviso legal</a>
-                    </li>
-                    <li>
-                        <a href="cookies.html" target="_blank">Cookies</a>
-                    </li>
-                    <li>
-                        <a href="privacy.html" target="_blank">Privacidad</a>
-                    </li>
-                </ul>
-            </div>
-
-            <ul class="social-icon">
-                <li>
-                    <a href="http://www.facebook.com/" target="_blank">
-                      <span class="fan fa-facebook" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.twitter.com/" target="_blank">
-                        <span class="fab fa-twitter" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.instagram.com/" target="_blank">
-                        <span class="fab fa-instagram" aria-hidden="true"></span>
-                    </a>
-                </li>
-            </ul>
+                   </ul>
+                   
+               </div>
+           </div>
+        
         </div>
     </div>
-</div>
+    
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
+	<script type="text/javascript" src="js/getYacScript.js"></script>
+  <script type="text/javascript" src="js/plantillaJSON.js"></script>
 
-
-  <script type="text/javascript" src="js/saveJSONdata.js"></script>
-  <script type="text/javascript" src="js/postJSONdata.js"></script>
 </body>
-
 </html>

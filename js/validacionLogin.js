@@ -1,7 +1,7 @@
 
 function validarUser(){
     var nombreUsuario = document.getElementById("usernick");
-    if ( nombreUsuario.value == ""){
+    if ( nombreUsuario.value == "" || nombreUsuario.length <= 3 || nombreUsuario.length >= 8 ){
         return false;
     }else{
         return true;
