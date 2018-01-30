@@ -9,10 +9,10 @@ $(document).ready(function() {
 				data: NewJSON,
 				dataType: "json",
 				beforeSend: function () {
-		            $("#resultado").html("Procesando, espere por favor...");
+		            $("#resultadoAjax").html("Procesando, espere por favor...");
 		                },
 		        success: function(NewJSON){
-		        	$("#resultado").html("Yacimiento guardado.");
+		        	$("#resultadoAjax").html("Yacimiento guardado.");
 		        },
 		        fail: function( xhr, status){
 		        	alert("Ha ocurrido un problema.");

@@ -81,62 +81,60 @@
 
             <!-- titulo yacimiento -->
 
+        <div class="form-group">
+         <label><h1>Título Yacimiento</h1></label><br><input id="title" name= 'title' class="form-control" rows="2" type="text" value="">
+        </div>
+                
 
+            <!-- descripcion short -->
 
-            <div class="form-group">
-             <label><h1>Título Yacimiento</h1></label><br><input id="title" name= 'title' class="form-control" rows="2" type="text" value="">
-            </div>
-            
-
-        <!-- descripcion short -->
-
-  
-    <div class="form-group">
-      <label class="tiForm" for="shortdesc">Breve descripción del Yacimiento</label>
-      <textarea class="form-control" rows="3" id="comment"></textarea>
-    </div>
-        <!-- descripcion large -->
-    <div class="form-group">
-      <label class="tiForm" for="longdesc">Descripción completa del Yacimiento</label>
-      <textarea class="form-control" rows="8" id="comment2"></textarea>
-    </div>
-
-    <!-- coordenadas latitud-->
-    <div class="form-group tiForm">
-      <label for="coordenadas">Latitud</label>
-      <input type="text" class="form-control" id="latitud" aria-describedby="coordenadas" placeholder="latitud">
-    </div>
-
-
-    <!-- coordenadas latitud-->
-    <div class="form-group tiForm">
-      <label for="coordenadas">Longitud</label>
-      <input type="text" class="form-control" id="longitud" aria-describedby="coordenadas" placeholder="longitud">
-    </div>
-
-   <!-- select region -->
-   <div>
-    <label class="tiForm">Región   </label>
-     <select id="region" class="tiHeader" input-lg>
-      <option selected>--- Provincia ---</option>
-      <option value="1">Toledo</option>
-      <option value="2">Andalucía</option>
-      <option value="3">Valencia</option>
-      <option value="4">Extremadura</option>
-     </select>
-   </div>
       
+        <div class="form-group">
+          <label class="tiForm" for="shortdesc">Breve descripción del Yacimiento</label>
+          <textarea class="form-control" rows="3" id="comment"></textarea>
+        </div>
+            <!-- descripcion large -->
+        <div class="form-group">
+          <label class="tiForm" for="longdesc">Descripción completa del Yacimiento</label>
+          <textarea class="form-control" rows="8" id="comment2"></textarea>
+        </div>
 
-  <!-- select period -->
-    <div>
-      <label class="tiForm">Cronología  </label>
-       <select id="period" class="tiHeader" input-lg>
-        <option selected>--- Época ---</option>
-        <option value="1">Roma</option>
-        <option value="2">Grecia</option>
-       </select>
-     </div>     
-  </div>
+        <!-- coordenadas latitud-->
+        <div class="form-group tiForm">
+          <label for="coordenadas">Latitud</label>
+          <input type="text" class="form-control" id="latitud" aria-describedby="coordenadas" placeholder="latitud">
+        </div>
+
+
+        <!-- coordenadas latitud-->
+        <div class="form-group tiForm">
+          <label for="coordenadas">Longitud</label>
+          <input type="text" class="form-control" id="longitud" aria-describedby="coordenadas" placeholder="longitud">
+        </div>
+
+       <!-- select region -->
+        <div>
+          <label class="tiForm">Región   </label>
+           <select id="region" class="tiHeader" input-lg>
+            <option selected>--- Provincia ---</option>
+            <option value="1">Toledo</option>
+            <option value="2">Andalucía</option>
+            <option value="3">Valencia</option>
+            <option value="4">Extremadura</option>
+           </select>
+        </div>
+          
+
+      <!-- select period -->
+        <div>
+          <label class="tiForm">Cronología  </label>
+           <select id="period" class="tiHeader" input-lg>
+            <option selected>--- Época ---</option>
+            <option value="1">Roma</option>
+            <option value="2">Grecia</option>
+           </select>
+        </div>     
+      </div>
 
 
 
@@ -144,12 +142,17 @@
 
   <!-- imagen yacimiento y botón de upload -->
     <div class="col-md-6 well">
-       <div class="form-group">
+        <div class="form-group">
           <label for="ejemplo_archivo_1">Adjuntar un archivo</label>
           <input type="file" id="subir_img">
           <p class="help-block">Vídeo o imagen max 2MB</p>
         </div>
       <img id="ya" src="img/yacimiento.jpg">
+
+      <div>
+        <h1>Carga de yacimiento</h1>
+        <p id="resultadoAjax"></p>
+      </div>
    
 
 
