@@ -143,44 +143,7 @@ function nuevoUsuario()
 	escribirLocalStorage(nombreUsuario, JSON.stringify(normalUserJSON));
 }
 
-function leerLocalStorage(nombreObjetoJSON)
-{
-	if(typeof localStorage != "undefined")
-	{
-		return JSON.parse(localStorage.getItem(nombreObjetoJSON));
-	}//Devuelve
-	else
-	{
-		alert("localStorage no soportado")
-	}
-}
 
-/* ------------------------------------
-*/
-
-var usuarioUnico = leerLocalStorage(nombreUsuario);
-
-usuarioUnico.nickname == 
-/*
- ------------------------------------ */
-
-document.getElementById("enviar").addEventListener("click", validarUserJSON);
-
-function validarUserJSON()
-{
-		var usuarioUnico = leerLocalStorage(nombreUsuario);
-		var elNickIntroducido = document.getElementById ("usernick").value;
-		var laPassIntroducida = document.getElementById ("password").value;
-
-		if(usuarioUnico.nickname == elNickIntroducido && usuarioUnico.password == laPassIntroducida)
-		{
-			window.location.assign("profile.html");
-		}
-		else
-		{
-			alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
-		}
-};
 
 
 /*document.getElementById("enviar").addEventListener("click", function(){
