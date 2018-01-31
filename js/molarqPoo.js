@@ -47,20 +47,18 @@ function User (name, email, password, userName, birthDate){
 	this.darLike = function() {
 		return 
 	}
-	// this.logearse = function() {
-	// 	return 
-	// }
+	
 
 }
 
 function normalUser(name, email, password, userName, birthDate, ocuppation, id) {		
-	user.call(this, name, email, password, userName, birthDate);
+	User.call(this, name, email, password, userName, birthDate);
 	this.ocuppation = ocuppation;
 	this.id = id;
 }
 
 function adminUser(name, email, password, userName, birthDate, id) {		
-	user.call(this, name, email, password, userName, birthDate);
+	User.call(this, name, email, password, userName, birthDate);
 	this.id = id;
 	this.baner = function() {
 		return
@@ -81,25 +79,6 @@ function yacimiento(nameYac, region, coordinates, description, cronoCivi, accept
 	this.accepted = accepted;
 }
 
-var user1 = new User ("Pepe", //name 
-								  "pepe@gmail.com", //email
-								  "1234", //password
-								  "Pepeking",  //userName
-								  "11.06.1991")//birthDate
-
-								  // , 
-								  // "Docente en el campo", //ocuppation
-								  // "1"); //id
-
-var user2 = new User ("Conchita", //name 
-								  "concha@gmail.com", //email
-								  "1234", //password
-								  "Conchaqueen",  //userName
-								  "20.08.1960")//birthDate
-
-								  // , 
-								  // "Docente en el campo", //ocuppation
-								  // "1"); //id
 
 
 User.prototype.login = function(userName, password ) {
@@ -111,6 +90,8 @@ User.prototype.login = function(userName, password ) {
 	}
 }
 
+normalUser.prototype = Object.create(User.prototype);
+adminUser.prototype = Object.create(User.prototype);
 
 
 document.getElementById("enviar").addEventListener("click", function(){
@@ -118,14 +99,14 @@ document.getElementById("enviar").addEventListener("click", function(){
 	var elNombreUser = document.getElementById ("usernick").value;
 	var elPassword = document.getElementById ("password").value;
 
-	if(user1.login(elNombreUser, elPassword ) == true) {
+	if(normalUser1.login(elNombreUser, elPassword ) == true) {
 		window.location.assign("index_alt.html");
 	}
 	else
 	{
-		if (user2.login(elNombreUser, elPassword ) == true)
+		if (normalUser2.login(elNombreUser, elPassword ) == true)
 		{
-			window.location.assign("index_alt.html");
+			window.location.assign("profile.html");
 		}
 		else
 		{
@@ -138,10 +119,59 @@ document.getElementById("enviar").addEventListener("click", function(){
 
 
 
+// User.prototype.register = function(name, email, password, userName, ocuppation, birthDate) {
+// 	if(userName == this.userName && email == this.email && password == this.password && userName == this.userName && ocuppation == this.ocuppation && birthDate == this.birthDate) {
+// 		return true;
+// 	}
+// }
+
+// normalUser.prototype = Object.create(User.prototype);
+// adminUser.prototype = Object.create(User.prototype);
+
+
+// document.getElementById("register").addEventListener("click", function(){
+
+// 	var elName = document.getElementById("username").value;
+// 	var elEmail = document.getElementById("usermail").value;
+// 	var elPassword = document.getElementById ("userpass").value;
+// 	var elNombreUser = document.getElementById ("usernick").value;
+// 	var laOcuppation = document.getElementById("occupation").value;
+// 	var elBirthDate = document.getElementById("userbdate").value;
+	 	
+
+// 	if(normalUser1.register(elName, elNombreUser, elPassword, elNombreUser, laOcuppation, elBirthDate) == true)
+// 	{
+// 		window.location.assign("login.html");
+// 	}
+// 	else
+// 	{
+// 		alert("No se ha podido enviar tu petición de registro ¡comprueba que todos los campos estén correctamente completados!");
+// 	}
+
+// });
 
 
 
-
+var normalUser1 = new normalUser ("Patricio Garcia",  //name
+								  "patricio@gmail.com",  //email
+								  "1234",  //password
+								  "Patricioprince",  //userName
+								  "Estudiante en el campo",  //birthDate
+							      "22.03.1989"); //ocuppation
+var normalUser2 = new normalUser ("Conchita", //name 
+					  "concha@gmail.com", //email
+					  "1234", //password
+					  "Conchaqueen",  //userName
+					  "20.08.1960");//birthDate
+					   // "Docente en el campo", //ocuppation
+					   // "1"); //id
+var normalUser3 = new normalUser ("Pepe", //name 
+					  "pepe@gmail.com", //email
+					  "1234", //password
+					  "Pepeking",  //userName
+					  "11.06.1991");//birthDate
+					   // "Docente en el campo", //ocuppation
+					   // "1"); //id
 
 
 
