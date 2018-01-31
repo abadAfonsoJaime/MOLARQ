@@ -101,7 +101,7 @@ registerButton.addEventListener("click", nuevoUsuario);
 
 function escribirLocalStorage(nombreObjeto, elObjeto)
 {
-	if (typeof localStorage != "undefined")
+	if (typeof localStorage != "undefined" && JSON)
 	{
 		localStorage.setItem(nombreObjeto, elObjeto);
 	}
@@ -115,19 +115,17 @@ var nombreUsuario;
 
 function nuevoUsuario()
 {
-	var userID;
+	var userID = "1";
 	var name = document.getElementById("username").value;
-	var email = document.queryselector("#usermail").value;
-	var userName = document.queryselector("#usernick").value;
-	var password = document.queryselector("#userpass2").value;
-	var birthDate = document.queryselector("#userbdate").value;
-	var occupation = document.queryselector("#occupation").value;
-	userID = userID + 1;
+	var email = document.getElementById("usermail").value;
+	var userName = document.getElementById("usernick").value;
+	var password = document.getElementById("userpass2").value;
+	var birthDate = document.getElementById("userbdate").value;
+	var occupation = document.getElementById("occupation").value;
 
-	nombreUsuario = ocuppation + "-" + userID;
+	nombreUsuario = occupation + "-" + userID;
 
 	var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);
-	console.log(usuario);
 
 	var normalUserJSON = 
 		{
@@ -139,11 +137,43 @@ function nuevoUsuario()
 			"occupation" : occupation,
 			"id" : userID,
 		};
+	var almacenar = JSON.stringify( normalUserJSON )
 
-	escribirLocalStorage(nombreUsuario, JSON.stringify(normalUserJSON));
+	escribirLocalStorage( nombreUsuario, almacenar );
+
+}
+
+function leerLocalStorage( nombreObjetoJSON )
+{
+	if(localStorage.getItem( nombreObjetoJSON ) )
+	{
+		let normalUserJSON = JSON.parse( localStorage.getItem( nombreObjetoJSON ) );
+		return normalUserJSON;
+	}//Devuelve el JSON
+	else
+	{
+		alert("No existe en localStorage")
+	}
 }
 
 
+document.getElementById("enviar").addEventListener("click", validarUserJSON);
+
+function validarUserJSON()
+{
+		leerLocalStorage( nombreUsuario );
+		var elNickIntroducido = document.getElementById ("usernick").value;
+		var laPassIntroducida = document.getElementById ("password").value;
+
+		if(normalUserJSON.nickname == elNickIntroducido && normalUserJSON.password == laPassIntroducida)
+		{
+			window.location.assign("profile.html");
+		}
+		else
+		{
+			alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
+		}
+};
 
 
 /*document.getElementById("enviar").addEventListener("click", function(){
