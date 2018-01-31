@@ -29,8 +29,8 @@ $("#userInfo").append(html);
 	var compilation = Handlebars.compile(cogerTemplate);
 
 	var data = {
-		"nickname": "anonymus",
-    	"username": "Anon",
+		"nickname": "patatas",
+    	"username": "Jamon",
     	"surname": "Nymus",
     	"birthdate": "10/10/1923",
     	"email": "me@gmail.com",

@@ -47,7 +47,7 @@ function User (name, email, password, userName, birthDate){
 	this.darLike = function() {
 		return 
 	}
-	
+
 
 }
 
@@ -80,8 +80,9 @@ function yacimiento(nameYac, region, coordinates, description, cronoCivi, accept
 }
 
 
+//Pura y segura
+User.prototype.login = function( userName, password ) {
 
-User.prototype.login = function(userName, password ) {
 	if(userName == this.userName && password == this.password) {
 		return true;
 	}
@@ -94,7 +95,119 @@ normalUser.prototype = Object.create(User.prototype);
 adminUser.prototype = Object.create(User.prototype);
 
 
-document.getElementById("enviar").addEventListener("click", function(){
+
+var registerButton = document.getElementById("register");
+registerButton.addEventListener("click", nuevoUsuario);
+
+function escribirLocalStorage(nombreObjeto, elObjeto)
+{
+	if (typeof localStorage != "undefined")
+	{
+		localStorage.setItem(nombreObjeto, elObjeto);
+	}
+	else
+	{
+		alert("localStorage no soportado")
+	}
+}
+
+var nombreUsuario;
+
+function nuevoUsuario()
+{
+	var userID;
+	var name = document.getElementById("username").value;
+	var email = document.queryselector("#usermail").value;
+	var userName = document.queryselector("#usernick").value;
+	var password = document.queryselector("#userpass2").value;
+	var birthDate = document.queryselector("#userbdate").value;
+	var occupation = document.queryselector("#occupation").value;
+	userID = userID + 1;
+
+	nombreUsuario = ocuppation + "-" + userID;
+
+	var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);
+	console.log(usuario);
+
+	var normalUserJSON = 
+		{
+			"username" : name,
+			"email" : email,
+			"nickname" : userName,
+			"password" : password,
+			"birthdate" : birthDate,
+			"occupation" : occupation,
+			"id" : userID,
+		};
+
+	escribirLocalStorage(nombreUsuario, JSON.stringify(normalUserJSON));
+}
+
+function leerLocalStorage(nombreObjetoJSON)
+{
+	if(typeof localStorage != "undefined")
+	{
+		return JSON.parse(localStorage.getItem(nombreObjetoJSON));
+	}//Devuelve
+	else
+	{
+		alert("localStorage no soportado")
+	}
+}
+
+/* ------------------------------------
+*/
+
+var usuarioUnico = leerLocalStorage(nombreUsuario);
+
+usuarioUnico.nickname == 
+/*
+ ------------------------------------ */
+
+document.getElementById("enviar").addEventListener("click", validarUserJSON);
+
+function validarUserJSON()
+{
+		var usuarioUnico = leerLocalStorage(nombreUsuario);
+		var elNickIntroducido = document.getElementById ("usernick").value;
+		var laPassIntroducida = document.getElementById ("password").value;
+
+		if(usuarioUnico.nickname == elNickIntroducido && usuarioUnico.password == laPassIntroducida)
+		{
+			window.location.assign("profile.html");
+		}
+		else
+		{
+			alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
+		}
+};
+
+
+/*document.getElementById("enviar").addEventListener("click", function(){
+
+	var elNombreUser = document.getElementById ("usernick").value;
+	var elPassword = document.getElementById ("password").value;
+
+	if(usuarioUnico.login(elNombreUser, elPassword ) == true) {
+		window.location.assign("index_alt.html");
+	}
+	else
+	{
+		if (normalUser2.login(elNombreUser, elPassword ) == true)
+		{
+			window.location.assign("profile.html");
+		}
+		else
+		{
+			alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
+		}
+	
+	}
+
+});
+*/
+
+/*document.getElementById("enviar").addEventListener("click", function(){
 
 	var elNombreUser = document.getElementById ("usernick").value;
 	var elPassword = document.getElementById ("password").value;
@@ -115,9 +228,7 @@ document.getElementById("enviar").addEventListener("click", function(){
 	
 	}
 
-});
-
-
+});*/
 
 // User.prototype.register = function(name, email, password, userName, ocuppation, birthDate) {
 // 	if(userName == this.userName && email == this.email && password == this.password && userName == this.userName && ocuppation == this.ocuppation && birthDate == this.birthDate) {
@@ -172,6 +283,7 @@ var normalUser3 = new normalUser ("Pepe", //name
 					  "11.06.1991");//birthDate
 					   // "Docente en el campo", //ocuppation
 					   // "1"); //id
+
 
 
 
