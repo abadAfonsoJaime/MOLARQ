@@ -22,7 +22,7 @@ document.getElementById("Cronologia").value = "default";
     address: '<h2>The Hotel</h2><p>Address 1, Area - County<br />Athens 123 45, Greece</p><p>Tel.: +30 210 123 4567<br />Fax: +30 210 123 4567</p>',
     styles: 'GRAYSCALE',
     locations: [
-      [39.920491, -2.804128, 'img/marker_blue.png', 'Parque arqueológico', '<a href="file:///C:/Users/Arranque%201/PROYECTOS/MOLARQ/site.html">Saelices, Cuenca</a>', false, 'CUE'],
+      [39.920491, -2.804128, 'img/marker_blue.png', 'Parque arqueológico', '<a href="site.html">Saelices, Cuenca</a>', false, 'CUE'],
       [41.193839, 1.566456, 'img/marker_blue.png', 'Ciudadela Ibérica', 'Calafell, Tarragona', false, 'TAR'],
       [42.1198504, 3.1227702, 'img/marker_blue.png', 'Ampurias', 'La Escala (Gerona)', false, 'GER'],
       [36.902915, -4.113961, 'img/marker_green.png', 'Castillo de Zalia', 'Alcaucin, Málaga', false, '1'],
