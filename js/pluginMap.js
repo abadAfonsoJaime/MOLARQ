@@ -35,7 +35,7 @@ document.getElementById("Cronologia").value = "default";
     ] /*para rutas*/
 /*newMarker = [latit, longit, 'img/marker_green.png', longDescription, shortDescription, region, false, marcadorValue ]*/
 
-    var botonInicioWorker = document.getElementById("workerButton");
+/*    var botonInicioWorker = document.getElementById("workerButton");
 
     var myWorker;
     botonInicioWorker.addEventListener("click", inicioWorker);
@@ -53,7 +53,7 @@ document.getElementById("Cronologia").value = "default";
       }
     }
     console.log(locations);
-  })
+  })*/
 });
 
 

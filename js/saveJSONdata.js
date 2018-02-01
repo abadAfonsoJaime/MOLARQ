@@ -8,7 +8,7 @@ function saveData(){
 	 saveLong = document.querySelector('#longitud').value,
 	 saveRegion = document.querySelector('#region').value,
 	 saveCronologia = document.querySelector('#period').value,
-	 saveUserID = "1",
+	 saveUserID = "1",//NI PUTA IDEA DE ESTE CAMPO
 	 saveValidate = "false";
 
 
