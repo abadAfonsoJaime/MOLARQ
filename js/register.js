@@ -91,9 +91,9 @@ function escribirLocalStorage(nombreObjeto, elObjeto)
 {
 	if (typeof localStorage != "undefined" && JSON)
 	{
+		window.location.assign("login.html");
 		localStorage.setItem(nombreObjeto, elObjeto);
 		console.log("okSetItem");
-		window.location.assign("login.html");
 	}
 	else
 	{
@@ -108,13 +108,13 @@ function nuevoUsuario()
 	var name = document.getElementById("username").value;
 	var email = document.getElementById("usermail").value;
 	var userName = document.getElementById("usernick").value;
-	var pas0rd = document.getElementById("userpass2").value;
+	var password = document.getElementById("userpass2").value;
 	var birthDate = document.getElementById("userbdate").value;
 	var occupation = document.getElementById("occupation").value;
 
 	nombreUsuario = localStorage.length + 1;
 
-	var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);
+	/*var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);*/
 
 	var normalUserJSON = 
 		{
@@ -134,6 +134,6 @@ function nuevoUsuario()
 
 var borrarStorage = document.getElementById("deleteLocalStorage");
 borrarStorage.addEventListener("click", function(){
-	localStorage.clear();
+	window.localStorage.clear();
 	console.log("todas las entradas del LocalStorage elimnadas");
 });

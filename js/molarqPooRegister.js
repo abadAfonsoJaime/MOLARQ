@@ -119,7 +119,7 @@ function nuevoUsuario()
 	var name = document.getElementById("username").value;
 	var email = document.getElementById("usermail").value;
 	var userName = document.getElementById("usernick").value;
-	var pas0rd = document.getElementById("userpass2").value;
+	var password = document.getElementById("userpass2").value;
 	var birthDate = document.getElementById("userbdate").value;
 	var occupation = document.getElementById("occupation").value;
 
@@ -151,7 +151,7 @@ borrarStorage.addEventListener("click", function(){
 });
 
 
-/*function leerLocalStorage( nombreObjetoJSON )
+function leerLocalStorage( nombreObjetoJSON )
 {
 	if(localStorage.getItem( nombreObjetoJSON ) )
 	{
@@ -164,7 +164,7 @@ borrarStorage.addEventListener("click", function(){
 	}
 }
 
-var nombreUsuario;
+/*var nombreUsuario;
 document.getElementById("enviar").addEventListener("click", validarUserJSON);
 
 function validarUserJSON()
