@@ -1,0 +1,41 @@
+$(document).ready(function() {
+  // Obtener JSON del servidor mediante Ajax
+  var getJSON = $.ajax({
+      url: "XXX",
+      method: "get",
+      dataType: "json"
+      });
+
+  getJSON.done(function(response) {
+    // Parsear JSON obtenido mediante Ajax arriba
+    var answer = JSON.parse( response );
+
+    // Pintar mediante JS los elementos del JSON en la vista adminValidate.html
+    $(".site-description")
+    .append( "<h1>" + response.saveTitle + "</h1>").attr("id", "title")
+    .append ( "<small>" + response.postDes1 + "</small>" )
+    .append ( "<p>" + response.postDes2 + "</p>" );
+    $(".leftAdmin")
+    .append ( "<div>" + response.postLat + "</div>" )
+    .append ( "<div>" + response.postRegion + "</div>" );
+    $(".rightAdmin")
+    .append ( "<div>" + response.postLong + "</div>" )
+    .append ( "<div>" + response.postCronologia + "</div>" );
+
+      // Cambiar el campo validate de reject a ok con un botón
+      $("#validate").click( function() {
+        function (reject, ok) {
+          if (reject == response.Validate) {
+            response.Validate = ok;
+          }
+          return JSONupdated;
+          // alternativa
+          $.put(JSONupdated, {Validate:"ok"}, function(result){
+          console.log(result);
+          });
+        };
+
+      });
+    });
+
+}); // End of document.ready
