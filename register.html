@@ -25,7 +25,7 @@
 
   <!--   REGISTER FORM-->
 
-  <div class="main parent">
+  <div class="main parent clear">
     <div class="wrapper">
 
       <form id="registration" data-parsley-validate="login.html">
@@ -130,9 +130,13 @@
         </div>
 
         <!--        Enviar-->
-        <div class="col-95 formbutton formcentre" id="submit1">
-          <input type="reset" id="deleteLocalStorage"/>
-          <input type="submit" id="register" />
+        <div class="row">
+          <div class="col-50">
+            <input type="reset" id="deleteLocalStorage" class="formbutton formcentre" />
+          </div>
+          <div class="col-50">
+            <input type="submit" id="submit1" />
+          </div>
         </div>
       </form>
 

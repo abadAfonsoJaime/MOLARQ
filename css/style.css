@@ -59,7 +59,7 @@ iframe {
 }
 
 .clear {
-  margin: 15px 0;
+  margin: 2% 0 2% 0;
 }
 
 .valign {
@@ -135,7 +135,7 @@ header.sticky, div.header.sticky {
 }
 
 header.sticky + main, div.header.sticky + main {
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
 .logo img {
@@ -143,9 +143,6 @@ header.sticky + main, div.header.sticky + main {
   margin: 0 auto;
 }
 
-.link-menu {
-  margin-right: 5px;
-}
 
 /* CAMBIOS MAR */
 
@@ -300,8 +297,10 @@ div.main>div.wrapper>div.col-50>p {
 }
 
 .nav-menu>.links>ul.nav>li a {
-  font-size: 24px;
-  margin: 0 3px;
+  font-size: 1.5em;
+}
+.link-menu {
+  margin-right: 5px;
 }
 
 .nav-menu>.links>ul.nav>li a:hover {
@@ -455,7 +454,6 @@ div.wrapper-fluid fieldset {
   padding: 1em;
   position: absolute;
   right: 0;
-  width: 400px;
   z-index: 9;
   list-style: none;
   border: 0;
@@ -476,9 +474,6 @@ div.wrapper-fluid fieldset p a {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 2px;
-  line-height: 14px;
-  margin-left: -4px;
-  padding: 0 5px;
   vertical-align: middle;
 }
 
@@ -486,6 +481,14 @@ div.wrapper-fluid fieldset p a:hover {
   color: #555555;
   text-decoration: none;
   cursor: pointer;
+}
+
+.controlMap {
+  cursor: pointer;
+  color: #1abc9c;
+  background-color: #e5e5e5;
+  width: 200px;
+  padding: 3px 3px;
 }
 
 /*Flecha*/
@@ -1521,21 +1524,6 @@ a.sp-video:after {
 
 /* CAMBIOS JAIME */
 
-/*div.main>div.wrapper>div.col-50>p::after {
-  content: "\f274";
-  font-family: "Font Awesome 5 Free";
-  font-size: 1em;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: none;
-  margin: 0 0 0 10px;
-}*/
-
-/* div.main>div.wrapper>div.calendar {
-  width: 100%;
-  float: left;
-} */
-
 .calendar {
   text-align: center;
   font-size: 30em;
@@ -1734,6 +1722,9 @@ ul.social-icon li span:hover {
 .mobileheader {
   display: block;
 }
+    .logo {
+      display: none;
+    }
 
   .banner img {
     display: none;
@@ -1764,8 +1755,13 @@ div.wrapper-fluid fieldset {
     width: 75%;
     text-align: right;
   }
+  .nav-menu>.links>ul.nav {
+    margin: 0;
+    padding: 0;
+  }
   .nav-menu>.links>ul.nav>li a {
     font-size: 48px;
+    margin: 0;
   }
   .nav-menu>.links>ul.nav>li span.link-menu {
     display: none;
@@ -1829,6 +1825,9 @@ div.wrapper-fluid fieldset {
       padding: 0 20px 20px 20px;
       border: 1px solid #ddd;
       border-radius: 3px;
+    }
+    .logo {
+      display: none;
     }
 
 }

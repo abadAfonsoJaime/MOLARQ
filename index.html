@@ -114,8 +114,9 @@
       </select>
       <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a></p>
       <p><strong>Controles</strong></p>
-      <p><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a>
-      <a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></p>
+      <div id="workerButton" class="controlMap">Actualizar marcadores</div>
+      <div class="controlMap"><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a></div>
+      <div class="controlMap"><a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></div>
       </fieldset>
       
       <!-- <div><input type="search" maxlength="50"></div>   -->  
