@@ -1526,7 +1526,7 @@ a.sp-video:after {
 
 .calendar {
   text-align: center;
-  font-size: 30em;
+  font-size: 20em;
 }
 
 div.map-event {
@@ -1768,7 +1768,7 @@ div.wrapper-fluid fieldset {
   }
 
   .calendar {
-    font-size: 15em;
+    font-size: 12em;
   }
 
   .title-event {

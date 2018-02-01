@@ -1,21 +1,8 @@
-/*$(document).ready( function() {
+$(document).ready( function() {
 
-var data = {
-      "nickname": "anonymus",
-      "username": "Anon",
-      "surname": "Nymus",
-      "birthdate": "10/10/1923",
-      "email": "me@gmail.com",
-      "password": "1234"
-};
+// var compile = Handlebars.compile($("#template").html());
 
-
-
-var compile = Handlebars.compile($("#template").html());
-
-$("#userInfo").append(compile(data));
-
-});*/ // End of document.ready
+// $("#userInfo").append(compile(data));
 
 /* // Esto es lo mismo pero por pasos
 var template = $("#template").html();
@@ -25,19 +12,20 @@ $("#userInfo").append(html);
 */
 
 
-	var cogerTemplate = $("#template").html();
-	var compilation = Handlebars.compile(cogerTemplate);
+	var template = $("#template").html();
+	var compilation = Handlebars.compile(template);
 
 	var data = {
-		"nickname": "patatas",
-    	"username": "Jamon",
-    	"surname": "Nymus",
-    	"birthdate": "10/10/1923",
-    	"email": "me@gmail.com",
-    	"password": 1234
+		"nickname": "Patricioprince",
+    	"username": "Patricio",
+    	"surname": "García",
+    	"birthdate": "22.03.1989",
+    	"email": "patricio@gmail.com",
+    	"password": "1234"
 	}
 
-	var pasarDatos = compilation(data);
+	var writeData = compilation(data);
 
-	$("#userInfo").append(pasarDatos);
+	$("#userInfo").append(writeData);
 
+}); // End of document.ready
