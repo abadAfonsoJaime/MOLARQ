@@ -95,7 +95,6 @@ normalUser.prototype = Object.create(User.prototype);
 adminUser.prototype = Object.create(User.prototype);
 
 
-
 var registerButton = document.getElementById("register");
 registerButton.addEventListener("click", nuevoUsuario);
 
@@ -104,6 +103,8 @@ function escribirLocalStorage(nombreObjeto, elObjeto)
 	if (typeof localStorage != "undefined" && JSON)
 	{
 		localStorage.setItem(nombreObjeto, elObjeto);
+		console.log("okSetItem");
+		window.location.assign("login.html");
 	}
 	else
 	{
@@ -115,6 +116,7 @@ var nombreUsuario;
 
 function nuevoUsuario()
 {
+	
 	var userID = "1";
 	var name = document.getElementById("username").value;
 	var email = document.getElementById("usermail").value;
@@ -138,7 +140,7 @@ function nuevoUsuario()
 			"id" : userID,
 		};
 	var almacenar = JSON.stringify( normalUserJSON )
-
+	console.log(almacenar);
 	escribirLocalStorage( nombreUsuario, almacenar );
 
 }
@@ -152,7 +154,7 @@ function leerLocalStorage( nombreObjetoJSON )
 	}//Devuelve el JSON
 	else
 	{
-		alert("No existe en localStorage")
+		alert("No existe en localStorage");
 	}
 }
 
