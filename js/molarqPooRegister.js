@@ -112,20 +112,18 @@ function escribirLocalStorage(nombreObjeto, elObjeto)
 	}
 }
 
-var nombreUsuario;
 
 function nuevoUsuario()
 {
 	
-	var userID = "1";
 	var name = document.getElementById("username").value;
 	var email = document.getElementById("usermail").value;
 	var userName = document.getElementById("usernick").value;
-	var password = document.getElementById("userpass2").value;
+	var pas0rd = document.getElementById("userpass2").value;
 	var birthDate = document.getElementById("userbdate").value;
 	var occupation = document.getElementById("occupation").value;
 
-	nombreUsuario = occupation + "-" + userID;
+	nombreUsuario = localStorage.length + 1;
 
 	var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);
 
@@ -145,7 +143,15 @@ function nuevoUsuario()
 
 }
 
-function leerLocalStorage( nombreObjetoJSON )
+
+var borrarStorage = document.getElementById("deleteLocalStorage");
+borrarStorage.addEventListener("click", function(){
+	console.log("que borres");
+	localStorage.clear();
+});
+
+
+/*function leerLocalStorage( nombreObjetoJSON )
 {
 	if(localStorage.getItem( nombreObjetoJSON ) )
 	{
@@ -158,7 +164,7 @@ function leerLocalStorage( nombreObjetoJSON )
 	}
 }
 
-
+var nombreUsuario;
 document.getElementById("enviar").addEventListener("click", validarUserJSON);
 
 function validarUserJSON()
@@ -175,7 +181,7 @@ function validarUserJSON()
 		{
 			alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
 		}
-};
+};*/
 
 
 /*document.getElementById("enviar").addEventListener("click", function(){
@@ -201,6 +207,14 @@ function validarUserJSON()
 
 });
 */
+
+
+
+
+
+
+
+
 
 /*document.getElementById("enviar").addEventListener("click", function(){
 
