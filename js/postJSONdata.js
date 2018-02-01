@@ -1,12 +1,32 @@
 $(document).ready(function() {
+				document.querySelector('#saveDataBtn').addEventListener('click',saveData);
 
-		var posteo = function() { //jQuery 
+			function saveData(){
+				var saveTitle = document.querySelector('#title').value,
+				 saveDes1 = document.querySelector('#comment').value,
+				 saveDes2 = document.querySelector('#comment2').value,
+				 saveLat = document.querySelector('#latitud').value,
+				 saveLong = document.querySelector('#longitud').value,
+				 saveRegion = document.querySelector('#region').value,
+				 saveCronologia = document.querySelector('#period').value,
+				 saveUserID = "1",//NI PUTA IDEA DE ESTE CAMPO
+				 
+
+				 console.log("recoge datos");
+
+
+
+				createJSON( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia, saveUserID );
+			}
+
+
+		var posteo = function(elJSON) { //jQuery 
 		
 			$.ajax(
 			{
 				type: "POST", //method: "post",
-				url: "http://xxx.xxx.xxx.xxx/yacSinVal/",
-				data: NewJSON,
+				url: "http://192.168.201.102/molarq/molarq.php",
+				data: elJSON,
 				dataType: "json",
 				beforeSend: function () {
 		            $("#resultadoAjax").html("Procesando, espere por favor...");
@@ -23,7 +43,7 @@ $(document).ready(function() {
 
 		var listaDatos = [];
 
-		function upDate(postTitulo, postDes1, postDes2, postLat, postLong, postRegion, postCronologia, postUserID, postValidate){
+		function createJSON(postTitulo, postDes1, postDes2, postLat, postLong, postRegion, postCronologia, postUserID){
 
 			var NewJSON = {
 				title : postTitulo, 
@@ -33,16 +53,16 @@ $(document).ready(function() {
 				long : postLong,
 				region : postRegion,
 				cronologia : postCronologia,
-				userID : postUserID,
-				validate : postValidate
-
-			};
+				userID : postUserID
+				};
 			
-			posteo();
+			posteo(NewJSON);
 			
 			console.log(NewJSON);
 			listaDatos.push(NewJSON);
 			console.log(listaDatos);
 		}
-	}
 });
+
+
+/*39.110491, -2.114128*/
