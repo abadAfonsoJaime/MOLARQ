@@ -33,7 +33,29 @@ document.getElementById("Cronologia").value = "default";
       ['37.936294', '23.947394'],
       ['37.975669', '23.733868']
     ] /*para rutas*/
-  });
+/*newMarker = [latit, longit, 'img/marker_green.png', longDescription, shortDescription, region, false, marcadorValue ]*/
+
+    var botonInicioWorker = document.getElementById("workerButton");
+
+    var myWorker;
+    botonInicioWorker.addEventListener("click", inicioWorker);
+
+    function inicioWorker(){
+      //Comprobar que el navegador soporta Web Worker
+      if (Worker){
+        // Crear el Web Worker, pasando por parametro el JS secundario
+        myWorker = new Worker("funcionP.js");
+        myWorker.addEventListener("message",function(eventMarker)
+          {
+            locations.push(eventMarker.data);
+          }
+        )
+      }
+    }
+    console.log(locations);
+  })
+});
+
 
 
   // Smooth scroll para los enlaces ancla
