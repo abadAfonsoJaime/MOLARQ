@@ -5,22 +5,22 @@ $(document).ready(function() {
 document.getElementById("Provincia").value = "default";
 document.getElementById("Cronologia").value = "default";
 
-  $('#map_canvas').mapit({
+  $("#map_canvas").mapit({
     latitude:    40.4167754, /*coordenadas Madrid*/
     longitude:   1.482148, /*coordenadas Madrid*/
     zoom:        6,
-    type:        'ROADMAP',
+    type:        "ROADMAP",
     scrollwheel: false,
     marker: {
       latitude:   39.52001,/* Marcador por defecto */
       longitude:  1.482148,
-      icon:       'img/black_red.png',
-      title:      '',
+      icon:       "img/black_red.png",
+      title:      "",
       open:       false,
       center:     true
     },
-    address: '<h2>The Hotel</h2><p>Address 1, Area - County<br />Athens 123 45, Greece</p><p>Tel.: +30 210 123 4567<br />Fax: +30 210 123 4567</p>',
-    styles: 'GRAYSCALE',
+    address: "<h2>The Hotel</h2><p>Address 1, Area - County<br />Athens 123 45, Greece</p><p>Tel.: +30 210 123 4567<br />Fax: +30 210 123 4567</p>",
+    styles: "GRAYSCALE",
     locations: [
       [39.920491, -2.804128, 'img/marker_blue.png', 'Parque arqueológico', '<a href="site.html">Saelices, Cuenca</a>', false, 'CUE'],
       [41.193839, 1.566456, 'img/marker_blue.png', 'Ciudadela Ibérica', 'Calafell, Tarragona', false, 'TAR'],
@@ -59,7 +59,7 @@ document.getElementById("Cronologia").value = "default";
 
 
   // Smooth scroll para los enlaces ancla
-  $(".smooth").on('click', function(event) {
+  $(".smooth").on("click", function(event) {
 
     // This.hash debe tener un valor antes de asociarle uno por defecto
     if (this.hash !== "") { // Lee el href del enlace que tenga la clase smooth (this) y lee la parte del link a partir de #
@@ -69,11 +69,11 @@ document.getElementById("Cronologia").value = "default";
       var hash = this.hash;
 
       // Uso de jQuery animate para dar el efecto smooth al hacer clic
-      $('html, body').animate({
+      $("html, body").animate({
         scrollTop: $(hash).offset().top
       }, 1000, function(){ // La duración del efecto en milisegundos
    
-        // Add hash (#) to URL when done scrolling (default click behavior)
+        // Añadir # a la URL del enlace cuando haces scroll (default)
         window.location.hash = hash;
       });
     } // End if
