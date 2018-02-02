@@ -18,12 +18,13 @@ $(document).ready( function() {
 */
 
 	var data = {
-		"nickname": "Patricioprince",
+		"nickname": "PatricioPrince",
     	"username": "Patricio",
-    	"surname": "García",
-    	"birthdate": "22.03.1989",
+    	"surname": "Gor Zas",
+    	"birthdate": "02/02/2018",
     	"email": "patricio@gmail.com",
-    	"password": "1234"
+    	"password": "1234",
+      "role": "Turista aficionado"
 	}
 
 	var writeData = compilation(data);

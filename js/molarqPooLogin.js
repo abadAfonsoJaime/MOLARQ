@@ -33,7 +33,7 @@ function validarUserJSON()
 
   setTimeout(function()
   {
-    alert( "El user o la contraseña son incorrectos, ¡intentalo otra vez!" );
+    alert( "El nombre de usuario o la contraseña son incorrectos, ¡intentalo otra vez!" );
   }, 1000);
         
   /*    }
