@@ -1,19 +1,21 @@
 $(document).ready( function() {
-
-// var compile = Handlebars.compile($("#template").html());
-
-// $("#userInfo").append(compile(data));
-
-/* // Esto es lo mismo pero por pasos
-var template = $("#template").html();
-var compile = Handlebars.compile(template);
-var html = compile(data);
-$("#userInfo").append(html);
-*/
-
-
 	var template = $("#template").html();
 	var compilation = Handlebars.compile(template);
+
+
+/*ESTO DEBERIA FUNCIONAR!!
+	var data;
+
+	if (Worker){
+	        // Crear el Web Worker, pasando por parametro el JS secundario
+	        myWorker = new Worker("molarqPooLogin.js");
+	        myWorker.addEventListener("message",function(profileData)
+	          {
+	            data = (profileData.data);
+	          }
+	        )
+	    }
+*/
 
 	var data = {
 		"nickname": "Patricioprince",
