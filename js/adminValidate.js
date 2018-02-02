@@ -6,7 +6,7 @@ $(document).ready(function() {
       url: "http://192.168.201.102/molarq/molarq.php",
       method: "get",
       dataType: "json",
-      data: { idsite : 1 }//numero: yacimiento que pido
+      data: { idsite : 2 }//numero: yacimiento que pido
   });
 
   getJSON.done(function(response) {
