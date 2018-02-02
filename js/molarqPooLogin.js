@@ -1,33 +1,43 @@
-// function leerLocalStorage(nombreObjetoJSON)
-// {
-//  if(typeof localStorage != "undefined")
-//  {
-//    return JSON.parse(localStorage.getItem(nombreObjetoJSON));
-//  }//Devuelve
-//  else
-//  {
-//    alert("localStorage no soportado")
-//  }
-// }
+function leerLocalStorage( nombreObjetoJSON )
+{
+  if( typeof localStorage != "undefined" && JSON )
+  {
+    return JSON.parse( localStorage.getItem( nombreObjetoJSON ) );
+  }//Devuelve un JSON
+ else
+  {
+    alert("localStorage no soportado")
+  }
+}
 
 
-// document.getElementById("login").addEventListener("click", validarUserJSON);
+document.getElementById( "login" ).addEventListener( "click", validarUserJSON );
 
-// function validarUserJSON()
-// {
-//    var usuarioUnico = leerLocalStorage("2-1");
-//    var elNickIntroducido = document.getElementById ("usernick").value;
-//    var laPassIntroducida = document.getElementById ("password").value;
+function validarUserJSON()
+{
+  
+  var elNickIntroducido = document.getElementById ( "usernick" );
+  var laPassIntroducida = document.getElementById ( "password" );
+  var i = 0;
 
-//    if(usuarioUnico.userName == elNickIntroducido && usuarioUnico.password == laPassIntroducida)
-//    {
-//      window.location.assign("profile.html");
-//    }
-//    else
-//    {
-//      alert("El user o la contraseña son incorrectos, ¡intentalo otra vez!");
-//    }
-// };
+  do {
+    i += 1;
+    var nombreJSON = leerLocalStorage( i );
+    console.log(nombreJSON);
+     if( nombreJSON.userName == elNickIntroducido.value && nombreJSON.userPassword == laPassIntroducida.value )
+      {
+        window.location.assign( "profile.html" );
+      }
+  } while (i < localStorage.length);
+
+  setTimeout(function()
+  {
+    alert( "El user o la contraseña son incorrectos, ¡intentalo otra vez!" );
+  }, 1000);
+        
+  /*    }
+  }*/
+};
 
 function User (name, email, password, userName, birthDate){
   this.name = name;
@@ -78,8 +88,6 @@ function User (name, email, password, userName, birthDate){
   this.darLike = function() {
     return 
   }
-
-
 }
 
 function normalUser(name, email, password, userName, birthDate, ocuppation, id) {   
@@ -103,7 +111,7 @@ normalUser.prototype = Object.create(User.prototype);
 adminUser.prototype = Object.create(User.prototype);
 
 //Pura y segura
-User.prototype.login = function( userName, password ) {
+/*User.prototype.login = function( userName, password ) {
 
   if(userName == this.userName && password == this.password) {
     return true;
@@ -155,4 +163,4 @@ var normalUser3 = new normalUser ("Pepe", //name
             "Pepeking",  //userName
             "11.06.1991");//birthDate
              // "Docente en el campo", //ocuppation
-             // "1"); //id
+             // "1"); //id*/

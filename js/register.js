@@ -49,8 +49,6 @@ function User (name, email, password, userName, birthDate){
 	this.darLike = function() {
 		return 
 	}
-
-
 }
 
 function normalUser(name, email, password, userName, birthDate, occupation, id) {		
@@ -93,59 +91,11 @@ function yacimiento(nameYac, region, coordinates, description, cronoCivi, accept
 	this.accepted = accepted;
 }
 
-
-
-
-var registerButton = document.getElementById("register");
-registerButton.addEventListener("click", nuevoUsuario);
-
-function escribirLocalStorage(nombreObjeto, elObjeto)
-{
-	if (typeof localStorage != "undefined" && JSON)
-	{
-		window.location.assign("login.html");
-		localStorage.setItem(nombreObjeto, elObjeto);
-		console.log("okSetItem");
-	}
-	else
-	{
-		alert("localStorage no soportado")
-	}
-}
-
-
-function nuevoUsuario()
-{
-	
-	var name = document.getElementById("username").value;
-	var email = document.getElementById("usermail").value;
-	var userName = document.getElementById("usernick").value;
-	var password = document.getElementById("userpass2").value;
-	var birthDate = document.getElementById("userbdate").value;
-	var occupation = document.getElementById("occupation").value;
-
-	nombreUsuario = localStorage.length + 1;
-
-	/*var objetoUsuario = new normalUser(name, email, userName, password, birthDate, occupation, userID);*/
-
-	var normalUserJSON = 
-		{
-			"username" : name,
-			"email" : email,
-			"nickname" : userName,
-			"password" : password,
-			"birthdate" : birthDate,
-			"occupation" : occupation
-		};
-	var almacenar = JSON.stringify( normalUserJSON )
-	console.log(almacenar);
-	escribirLocalStorage( nombreUsuario, almacenar );
-
-}
-
-
+/* +++++++++++++++++++ Delete local Storaga boton restaurar +++++++++++++++++++ */
 var borrarStorage = document.getElementById("deleteLocalStorage");
-borrarStorage.addEventListener("click", function(){
+
+borrarStorage.addEventListener( "click", function(){
+
 	window.localStorage.clear();
-	console.log("todas las entradas del LocalStorage elimnadas");
+	console.log( "todas las entradas del LocalStorage elimnadas" );
 });
