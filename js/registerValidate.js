@@ -182,14 +182,14 @@ function validar( event ){
     else 
 	{
  		console.log( almacenar );
- 		escribirLocalStorage( userID, almacenar);
+ 		escribirLocalStorage( userID, almacenar );
         console.log( "todas las funciones OK" );
         console.log(  );
     }
 }
 
 /* ++++++++++++++ PROMESA LOCAL STORAGE ++++++++++++++ */
-function escribirLocalStorage(nombreObjeto, elObjeto)
+function escribirLocalStorage( nombreObjeto, elObjeto )
 {
 	if (typeof localStorage != "undefined" && JSON)
 	{

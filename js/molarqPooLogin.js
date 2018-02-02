@@ -27,7 +27,7 @@ function validarUserJSON()
      if( nombreJSON.userName == elNickIntroducido.value && nombreJSON.userPassword == laPassIntroducida.value )
       {
         window.location.assign( "profile.html" );
-        /*postMessage(nombreJSON);*/
+        postMessage( nombreJSON.stringify() );
       }
   } while (i < localStorage.length);
 
