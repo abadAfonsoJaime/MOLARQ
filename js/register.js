@@ -28,13 +28,13 @@ function User (name, email, password, userName, birthDate){
 	this.getuserName = function() {
 		return this.userName;
 	}
-	this.setuserName = function(newUserName) {
+	this.setUserName = function(newUserName) {
 		this.userName = newUserName;
 	}
-	this.getbirthDate = function() {
+	this.getBirthDate = function() {
 		return this.birthDate;
 	}
-	this.setbirthDate = function(newBirthDate) {
+	this.setBirthDate = function(newBirthDate) {
 		this.birthDate = newBirthDate;
 	}
 	this.crearYacimiento = function() {
@@ -53,10 +53,22 @@ function User (name, email, password, userName, birthDate){
 
 }
 
-function normalUser(name, email, password, userName, birthDate, ocuppation, id) {		
+function normalUser(name, email, password, userName, birthDate, occupation, id) {		
 	User.call(this, name, email, password, userName, birthDate);
-	this.ocuppation = ocuppation;
+	this.occupation = occupation;
 	this.id = id;
+	this.getOccupation = function() {
+		return this.occupation;
+	}
+	this.setOccupation = function(newOccupation) {
+		this.occupation = newOccupation;
+	}
+	this.getID = function() {
+		return this.id;
+	}
+	this.setID = function(newID) {
+		this.id = newID;
+	}
 }
 
 function adminUser(name, email, password, userName, birthDate, id) {		
