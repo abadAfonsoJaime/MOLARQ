@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>mapCanvas</title>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js" type="text/javascript"></script>
+  <![endif]-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+    <header class="container">
+      <div class="wrapper">
+        <nav>
+            <ul class="menu">
+              <li><a href="" class="link"></a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Main -->
+    <main class="container">
+        <div class="wrapper-fluid">
+          <div class="legend">
+            <h1>Marcadores de Yacimientos</h1>
+            <h3>Por región</h3>
+            <select name="Provincia" id="Provincia">
+            <option value="default">--- Selecciona provincia ---</option>
+            <option onclick="javascript:$('#map_canvas').trigger('show', 'CUE')" value="CUE">Cuenca</option>
+            <option onclick="javascript:$('#map_canvas').trigger('show', 'TAR')" value="TAR">Tarragona</option>
+            <option onclick="javascript:$('#map_canvas').trigger('show', 'GER')" value="GER">Gerona</option>
+            </select>
+            <h3>Por cronología</h3>
+            <select name="Cronologia" id="Cronologia">
+            <option value="default">--- Selecciona cultura ---</option>
+            <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
+            <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
+            </select>
+            <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a></p>
+            <h5>Controles</h5>
+            <div id="updateMarkers" class="controlMap">Actualizar marcadores</div>
+            <div id="clearMarkers" class="controlMap" onclick="clearMarkers();">Ocultar marcadores</div>
+            <div id="showMarkers" class="controlMap" onclick="showMarkers();">Mostrar marcadores</div>
+            <div id="deleteMarkers" class="controlMap" onclick="deleteMarkers();">Eliminar marcadores</div>
+          </div>
+
+          <div id="map"></div>
+        </div>
+    </main>
+
+  <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+          <small>credits</small>
+        </div>
+    </footer>
+
+  <!-- Scripts -->
+  <script src="js/mapPlugin.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHelRWLK0eQSJC52Q-KP_xwm_RBwn813g&callback=initMap"></script>
+</body>
+</html>
