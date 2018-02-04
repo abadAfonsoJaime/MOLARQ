@@ -1618,17 +1618,17 @@ div.map-event {
 
 /* Modal Content*/
 .modal-content {
-    background-color: #D7DBDD;
-    margin: 20% auto; 
+    background-color: #e5e5e5;
+    margin: 10% auto; 
     padding: 20px;
-    border: 1px solid #888;
+    border: 5px solid #a3e4d7;
     width: 50%; 
     text-align: center;
 }
 
 /* Close Button */
 .close {
-    color: #aaa;
+    color: #c5c5c5;
     float: right;
     font-size: 30px;
     font-weight: bold;
@@ -1636,7 +1636,7 @@ div.map-event {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #1abc9c;
     text-decoration: none;
     cursor: pointer;
 }

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-/* Menú hamburguesa */
+/* Hamburger Menu */
   $("#dropButton").click(function() {
 
     if ($("#dropContent").hasClass("display") == false)
@@ -13,30 +13,25 @@ $(document).ready(function() {
       }
   });
 
-
-  /* Ventana Modal */
+  /* Modal Window*/
   var modal = document.getElementById("myModal");
   
   // boton que abre el modal
   var btn = document.getElementById("myBtn");
 
-/*var helpwdw = document.getElementById("help");*/
-          // span que cierra el modal
-var span = document.getElementsByClassName("close")[0];
+
+  // span que cierra el modal
+  var span = document.getElementsByClassName("close")[0];
 
   // cuando clickeo el boton abro el modal
   btn.onclick = function() {
       modal.style.display = "block";
   };
 
-/*helpwdw.onclick = function() {
-    modal.style.display = "block";
-}
-*/
-// cuando clickeo el span cierro el modal
-span.onclick = function() {
+  // cuando clickeo el span cierro el modal
+  span.onclick = function() {
     modal.style.display = "none";
-}
+  }
 
   // cuando clickeo fuera del modal, lo cierro
   window.onclick = function(event) {
