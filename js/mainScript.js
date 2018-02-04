@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-/* Menú hamburguesa */
+/* Hamburger Menu */
   $("#dropButton").click(function() {
 
     if ($("#dropContent").hasClass("display") == false)
@@ -13,8 +13,7 @@ $(document).ready(function() {
       }
   });
 
-
-  /* Ventana Modal */
+  /* Modal Window*/
   var modal = document.getElementById("myModal");
   
   // boton que abre el modal
