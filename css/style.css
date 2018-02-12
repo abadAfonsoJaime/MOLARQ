@@ -1,95 +1,3 @@
-/* Filterable Dropdown */
-form.dropdown {
-  position: relative;
-  width: 310px;
-}
- 
-.chosen-value,
-.value-list {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
- 
-.chosen-value {
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 4px;
-  height: 4rem;
-  font-size: 1.1rem;
-  padding: 1rem;
-  background-color: #e5e5e5;
-  border: 3px solid transparent;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-.chosen-value::-webkit-input-placeholder {
-  color: #333;
-}
-.chosen-value:hover {
-  background-color: #e5e5e5;
-  color: #333333;
-  cursor: pointer;
-}
-.chosen-value:hover::-webkit-input-placeholder {
-  color: #333;
-}
-.chosen-value:focus, .chosen-value.open {
-  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
-  outline: 0;
-  background-color: #e5e5e5;
-  border: 1px solid #1abc9c;
-  color: #333333;
-}
-.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
-  color: #333333;
-}
- 
-.value-list {
-  list-style: none;
-  margin-top: 4.4rem;
-  margin-left: -2.8rem;
-/*  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);*/
-  overflow: hidden;
-  width: 320px;
-  max-height: 0;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-.value-list.open {
-  max-height: 320px;
-  overflow: auto;
-}
-.value-list li {
-  position: relative;
-  height: 2rem;
-  color: #333333;
-  background-color: #e5e5e5;
-  padding: 0.7rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
-  opacity: 1;
-}
-.value-list li:hover {
-  background-color: rgba(163, 228, 215,1);
-}
-.value-list li.closed {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0;
-  opacity: 0;
-}
-
 body {
   margin: 0;
   font-family: "text", sans-serif;
@@ -502,10 +410,6 @@ input[type="submit"]:hover {
   background-size: cover;
 }
 
-.banner {
-
-}
-
 .white {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 2% 50px;
@@ -521,7 +425,7 @@ input[type="submit"]:hover {
 }
 
 #map_single {
-  height: calc(95vh - 164px);
+  height: calc(100vh - 82px);
   width: 100%;
 }
 
@@ -568,6 +472,98 @@ div.wrapper-fluid fieldset p a:hover {
   background-color: #e5e5e5;
   width: 200px;
   padding: 3px 3px;
+}
+
+/* Filterable Dropdown */
+form.dropdown {
+  position: relative;
+  width: 310px;
+}
+ 
+.chosen-value,
+.value-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+ 
+.chosen-value {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+  height: 4rem;
+  font-size: 1.1rem;
+  padding: 1rem;
+  background-color: #e5e5e5;
+  border: 3px solid transparent;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.chosen-value::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:hover {
+  background-color: #e5e5e5;
+  color: #333333;
+  cursor: pointer;
+}
+.chosen-value:hover::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:focus, .chosen-value.open {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  background-color: #e5e5e5;
+  border: 1px solid #1abc9c;
+  color: #333333;
+}
+.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
+  color: #333333;
+}
+ 
+.value-list {
+  list-style: none;
+  margin-top: 4.4rem;
+  margin-left: -2.8rem;
+/*  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);*/
+  overflow: hidden;
+  width: 320px;
+  max-height: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.value-list.open {
+  max-height: 320px;
+  overflow: auto;
+}
+.value-list li {
+  position: relative;
+  height: 2rem;
+  color: #333333;
+  background-color: #e5e5e5;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  opacity: 1;
+}
+.value-list li:hover {
+  background-color: rgba(163, 228, 215,1);
+}
+.value-list li.closed {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
 }
 
 /*Flecha*/
