@@ -1,3 +1,95 @@
+/* Filterable Dropdown */
+form.dropdown {
+  position: relative;
+  width: 310px;
+}
+ 
+.chosen-value,
+.value-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+ 
+.chosen-value {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+  height: 4rem;
+  font-size: 1.1rem;
+  padding: 1rem;
+  background-color: #e5e5e5;
+  border: 3px solid transparent;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.chosen-value::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:hover {
+  background-color: #e5e5e5;
+  color: #333333;
+  cursor: pointer;
+}
+.chosen-value:hover::-webkit-input-placeholder {
+  color: #333;
+}
+.chosen-value:focus, .chosen-value.open {
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  background-color: #e5e5e5;
+  border: 1px solid #1abc9c;
+  color: #333333;
+}
+.chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
+  color: #000000;
+}
+ 
+.value-list {
+  list-style: none;
+  margin-top: 4.4rem;
+  margin-left: -2.8rem;
+/*  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);*/
+  overflow: hidden;
+  width: 320px;
+  max-height: 0;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.value-list.open {
+  max-height: 320px;
+  overflow: auto;
+}
+.value-list li {
+  position: relative;
+  height: 2rem;
+  color: #333333;
+  background-color: #e5e5e5;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  opacity: 1;
+}
+.value-list li:hover {
+  background-color: rgba(163, 228, 215,1);
+}
+.value-list li.closed {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
 body {
   margin: 0;
   font-family: "text", sans-serif;
@@ -115,6 +207,7 @@ iframe {
 header, div.header {
   height: 72px;
   background-color: rgba(163, 228, 215,1);
+
 }
 
 .hide {
@@ -162,29 +255,10 @@ ul.public>li {
   color: #333333;
 }
 
-/*div.map {
-  width: 100%;
-  height: 100vh;
-  background: #f5f5f5 url(../img/mapstoledo.jpg) no-repeat;
-}*/
-
-.padIco100 {
-  padding-bottom: 100px;
-}
-
-.padIco165 {
-  padding-top: 165px;
-}
-
-
-
 /*Nuevos cambios MARRRRRRR*/
 ul.listaYac>li {
   font-size: 20px;
 }
-
-
-
 
 h1{
   font-size: 35px;
@@ -424,7 +498,7 @@ input[type="submit"]:hover {
 #welcome {
   width: 100%;
   height: 100vh;
-  background: url("../img/bg-main.jpg") no-repeat center center fixed #e5e5e5;
+  background: url("../img/bg-main.jpg") no-repeat center center #e5e5e5;
   background-size: cover;
 }
 
@@ -441,9 +515,14 @@ input[type="submit"]:hover {
 
 /*Mapa vitamin*/
 #map_canvas {
-  height: calc(100vh - 72px);
+  height: calc(95vh - 168px);
   width: 100%;
-  padding-top: 72px;
+  margin-top: 70px;
+}
+
+#map_single {
+  height: calc(100vh - 168px);
+  width: 100%;
 }
 
 div.wrapper-fluid fieldset {
@@ -559,7 +638,7 @@ div.wrapper-fluid fieldset p a:hover {
     }
   }
   
-/* FORMS */
+/* Forms Beautify */
 label {
   font-size: 1.3em;
 }
@@ -679,7 +758,6 @@ textarea.parsley-error:focus {
 .parsley-errors-list.filled {
   opacity: 1;
 }
-/* end of form validation*/
 
 /*Slider*/
 
@@ -1449,87 +1527,6 @@ a.sp-video:after {
   line-height: 52px;
 }
 
-/* CSS for preventing styling issues in WordPress
---------------------------------------------------*/
-.slider-pro img.sp-image,
-.slider-pro img.sp-thumbnail {
-  max-width: none;
-  max-height: none;
-  border: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  -webkit-box-shadow: none !important;
-  -mox-box-shadow: none !important;
-  box-shadow: none !important;
-  transition: none;
-  -moz-transition: none;
-  -webkit-transition: none;
-  -o-transition: none;
-}
-
-.slider-pro a {
-  position: static;
-  transition: none !important;
-  -moz-transition: none !important;
-  -webkit-transition: none !important;
-  -o-transition: none !important;
-}
-
-.slider-pro iframe,
-.slider-pro object,
-.slider-pro video,
-.slider-pro embed,
-.slider-pro canvas {
-  max-width: none;
-  max-height: none;
-}
-
-.slider-pro p.sp-layer {
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h1.sp-layer {
-  font-size: 32px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h2.sp-layer {
-  font-size: 24px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h3.sp-layer {
-  font-size: 19px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h4.sp-layer {
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h5.sp-layer {
-  font-size: 13px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro h6.sp-layer {
-  font-size: 11px;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.slider-pro img.sp-layer {
-  border: none;
-}
-
 /* CAMBIOS JAIME */
 
 .calendar {
@@ -1542,8 +1539,9 @@ div.map-event {
 }
 
 
-/*CAMBIOS CRIS - MENU HAMBURGUESA*/
-/* Estilos para phablets, tablets y smartphones */
+/* CAMBIOS CRIS */
+
+/* Hamburger Menu */
 .dropdownButton {
     color: #333333;
     font-size: 36px;
@@ -1601,8 +1599,7 @@ div.map-event {
   display: block;
 }
 
-/*CAMBIOS CRIS - VENTANA MODAL*/
-/* The Modal (background) */
+/* Modal Window */
 .modal {
     display: none; 
     position: fixed; 
@@ -1616,7 +1613,6 @@ div.map-event {
     background-color: rgba(0,0,0,0.4); /* negro con opacity */
 }
 
-/* Modal Content*/
 .modal-content {
     background-color: #e5e5e5;
     margin: 10% auto; 
@@ -1626,7 +1622,6 @@ div.map-event {
     text-align: center;
 }
 
-/* Close Button */
 .close {
     color: #c5c5c5;
     float: right;
@@ -1640,8 +1635,6 @@ div.map-event {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* CAMBIOS CRIS - Log, Reg, Foot */
 
 .logo-init img {
   width: 96px;
@@ -1663,7 +1656,8 @@ div.formbutton a:hover {
 }
 
 footer, div.footer {
-  padding: 40px 0;
+  height: 96px;
+  padding: 20px 0;
   background-color: #a3e4d7;
 }
 
@@ -1701,6 +1695,18 @@ ul.social-icon li span {
 ul.social-icon li span:hover {
   color: #1abc9c;
 }
+
+/* Beautify Selection */
+::-moz-selection {
+  color: #333333;
+  background: rgba(163, 228, 215,0.7);
+}
+
+::selection {
+  color: #333333;
+  background: rgba(163, 228, 215,0.7);
+}
+
 
 /* Estilos para smartphones */
 @media only screen and (max-width:480px) {
