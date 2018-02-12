@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Encuentra tu yacimiento - MOLARQangular</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head> 
+<body>
+
+  <!--HEADER-->   
+  <div id="header" class="header parent">
+    <div class="wrapper">
+  <div class="nav-menu parent">
+    <div class="col-25">
+      <!--MENU HAMBURGUESA -->
+      <nav class="dropdown">
+    <div id="dropButton" class="dropdownButton"><span class="fas fa-bars" aria-hidden="true"></span></div>
+      <div id="dropContent" class="dropdownContent">
+        <ul>
+          <!-- Ayuda -->
+          <!-- Trigger: open modal with id="myBtn" --> 
+          <li><a href="#" id="myBtn"><span class="fas fa-question-circle" aria-hidden="true"></span>Ayuda</a></li>
+          <!-- Mapa Buscador -->
+          <li><a href="index_alt.html"><span class="fas fa-map-marker" aria-hidden="true"></span>Mapa Buscador</a></li>
+          <!-- Agenda -->
+          <li><a href="calendar.html"><span class="fas fa-calendar" aria-hidden="true"></span>Agenda</a></li>
+          <!-- Mi Perfil -->
+          <li><a href="profile.html"><span class="fas fa-user" aria-hidden="true"></span>Mi Perfil</a></li>
+          <!-- Listado de Yacimientos -->
+          <li><a href="site.html"><span class="fas fa-list-alt" aria-hidden="true"></span>Listado de Yacimientos</a></li>
+          <!-- Listado de Eventos -->
+          <li><a href="event.html"><span class="fas fa-users" aria-hidden="true"></span>Listado de Eventos</a></li>
+          <!-- Salir -->
+          <li><a href="index.html"><span class="fas fa-times-circle" aria-hidden="true"></span>Salir</a></li>
+        </ul>
+      </div>
+  </nav>
+</div>
+
+  <div class="col-25 logo hide right">
+      <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+      </div>
+      <div class="col-25 logo mobileheader right">
+      <a href="index.html"><img src="img/logo.png" alt="MOLARQ" /></a>
+    </div>
+  <div class="links col-50 right">
+    <ul class="nav">
+            <li><a href="calendar.html"><span class="link-menu">Agenda</span><span class="far fa-calendar-alt" aria-hidden="true"></span></a></li>
+            <li><a href="register.html"><span class="link-menu">Registro</span><span class="far fa-user" aria-hidden="true"></span></a></li>
+            <li><a href="login.html"><span class="link-menu">Entrar</span><span class="fas fa-expand" aria-hidden="true"></span></a></li>
+    </ul>
+  </div>
+  </div>
+    <!-- VENTANA MODAL -->
+   <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close fa fa-times"></span>
+      <p>¿Perdido y desconsolado en el mundo de Molarq?</p>
+      <p>¡Esperamos que este sencillo vídeo tutorial te ayude a encontrar el camino!</p>
+      <video controls>
+        <source src="https://youtu.be/XCqDWVFjcLA" type="video/mp4"/>
+      Your browser does not support the video tag.
+      </video>
+      <div><a href="https://youtu.be/XCqDWVFjcLA" target="_blank">Ver vídeo en ventana nueva</a></div>
+    </div>
+
+  </div>
+</div>
+  </div>
+    
+  <!--MAIN-->
+  <div id="main" class="main parent">
+    <div class="wrapper-fluid">
+      <div id="welcome">
+        <div class="banner">
+          <div class="col-25 brand">
+            <img src="img/logo.png" alt="MOLARQ" />
+          </div>
+          <div class="col-75">
+            <div class="white">
+            <h1>Bienvenidos a MOLARQ</h1>
+            <small>Dónde conocer y proteger nuestro patrimonio arqueológico se vuelve molón.</small>
+            <p>Tenemos una labor que hacer pero si no sabes por donde empezar, te invitamos a <a href="#" id="help">ver nuestro vídeo de ayuda</a> para empezar a <strong>molarq!</strong></p>
+            <p><strong>¯\_(ツ)_/¯</strong></p>
+          </div>
+          </div>
+        </div>
+      </div>
+        <div class="arrow bounce">
+          <a class="smooth blink fa fa-arrow-down fa-2x" href="#map"></a>
+        </div>
+    
+    </div>
+  </div>
+
+  <!--MAP-->
+  <div id="map" class="main parent">
+    <div class="wrapper-fluid">
+      <fieldset>
+        <legend><h1>Marcadores de Yacimientos</h1></legend>
+          <div>
+          <h3>Por Provincia</h3>
+          <form class="dropdown">
+            <input class="chosen-value" type="text" value="" placeholder="Provincias">
+            <ul class="value-list">
+              <li onclick="javascript:$('#map_canvas').trigger('show', 'CUE')">Cuenca</li>
+              <li onclick="javascript:$('#map_canvas').trigger('show', 'GER')">Gerona</li>
+              <li onclick="javascript:$('#map_canvas').trigger('show', 'TAR')">Tarragona</li>
+            </ul>
+          </form>
+          </div>
+<!--       <select name="Provincia" id="Provincia">
+          <option value="default">-Seleccione provincia-</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'CUE')" value="CUE">Cuenca</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'TAR')" value="TAR">Tarragona</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', 'GER')" value="GER">Gerona</option>
+      </select> -->
+        <div>
+        <h3>Por Cronología</h3>
+        <form class="dropdown">
+          <input class="chosen-value" type="text" value="" placeholder="Cronología">
+          <ul class="value-list">
+            <li onclick="javascript:$('#map_canvas').trigger('show', '1')">Grecia</li>
+            <li onclick="javascript:$('#map_canvas').trigger('show', '2')">Roma</li>
+          </ul>
+        </form>
+        </div>
+<!--       <select name="Cronologia" id="Cronologia">
+          <option value="default">-Seleccione cultura-</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
+          <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
+      </select> -->
+      <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a></p>
+      <p><strong>Controles</strong></p>
+      <div id="workerButton" class="controlMap">Actualizar marcadores</div>
+      <div class="controlMap"><a onclick="javascript:$('#map_canvas').trigger('hide_all')">Ocultar marcadores</a></div>
+      <div class="controlMap"><a onclick="javascript:$('#map_canvas').trigger('reset')">Centrar Mapa</a></div>
+      </fieldset>
+      
+      <!-- <div><input type="search" maxlength="50"></div>   -->  
+
+      <div id="map_canvas"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer" class="footer parent">
+    <div class="wrapper">
+   <div>
+        <div class="col-75 left">
+          <ul class="legalstuff">
+              <li>
+                  <span>2018&copy;Molarq, Corp.</span>
+              </li>
+              <li>
+                  <a href="legal.html" target="_blank">Aviso legal</a>
+              </li>
+              <li>
+                  <a href="cookies.html" target="_blank">Cookies</a>
+              </li>
+              <li>
+                   <a href="privacy.html" target="_blank">Privacidad</a>
+              </li>
+           </ul>
+       </div>
+
+       <div class="col-25 right" id="social-icon">
+          <ul class="social-icon">
+                <li>
+                    <a href="http://www.facebook.com/" target="_blank"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="http://www.twitter.com/" target="_blank"><span class="fab fa-twitter" aria-hidden="true"></span></a>
+                </li>
+                <li>
+                    <a href="http://www.instagram.com/" target="_blank"><span class="fab fa-instagram" aria-hidden="true"></span></a>
+                </li>
+
+           </ul>
+           
+       </div>
+   </div>
+</div> 
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+<!--   <script src="js/templates.js"></script> -->
+  <script src="js/mainScript.js"></script>
+  <script>
+    document.getElementById("help").onclick = function() {
+    document.getElementById("myModal").style.display = "block";
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHelRWLK0eQSJC52Q-KP_xwm_RBwn813g"></script>
+  <script async defer src="js/jquery-mapit.min.js"></script>
+  <script async defer src="js/pluginMap.js"></script>
+    
+</body>
+</html>
