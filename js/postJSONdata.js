@@ -9,12 +9,7 @@ $(document).ready(function() {
 				 saveLong = document.querySelector('#longitud').value,
 				 saveRegion = document.querySelector('#region').value,
 				 saveCronologia = document.querySelector('#period').value,
-				 saveUserID = "1",//NI PUTA IDEA DE ESTE CAMPO
-				 
-
-				 console.log("recoge datos");
-
-
+				 saveUserID = "1"
 
 				createJSON( saveTitle, saveDes1, saveDes2, saveLat, saveLong, saveRegion, saveCronologia, saveUserID );
 			}
@@ -25,7 +20,7 @@ $(document).ready(function() {
 			$.ajax(
 			{
 				type: "POST", //method: "post",
-				url: "http://192.168.201.102/molarq/molarq.php",
+				url: "https://gekubo.net/molarq.php",
 				data: elJSON,
 				dataType: "json",
 				beforeSend: function () {
