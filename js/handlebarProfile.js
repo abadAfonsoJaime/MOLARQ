@@ -2,6 +2,16 @@ $(document).ready( function() {
 	var template = $( "#template" ).html();
 	var compilation = Handlebars.compile( template );
 
+    var data = {
+    "userName": "PatricioPrince",
+      "username": "Patricio",
+      "surname": "Gor Zas",
+      "birthdate": "02/02/2018",
+      "email": "patricio@gmail.com",
+      "userPassword": "********",
+      "occupation": "Turista aficionado"
+  }
+
 
 /*ESTO DEBERIA FUNCIONAR!!*/
 	var data;
@@ -17,17 +27,6 @@ $(document).ready( function() {
 	          }
 	        )
 	    }
-
-
-/*	var data = {
-		"nickname": "PatricioPrince",
-    	"username": "Patricio",
-    	"surname": "Gor Zas",
-    	"birthdate": "02/02/2018",
-    	"email": "patricio@gmail.com",
-    	"password": "1234",
-      "role": "Turista aficionado"
-	}*/
 
 	var writeData = compilation( data );
 

@@ -1,18 +1,14 @@
 $(document).ready(function() {
-  // Obtener JSON del servidor mediante Ajax
-  console.log("ajax");
-
   var getJSON = $.ajax({
-      url: "http://192.168.201.102/molarq/molarq.php",
+      url: "https://gekubo.net/molarq.php",
       method: "get",
       dataType: "json",
       data: { idsite : 2 }//numero: yacimiento que pido
   });
 
   getJSON.done(function(response) {
-    // Parsear JSON obtenido mediante Ajax arriba
+    // Parsear JSON obtenido mediante Ajax arriba (no parece ser necesario)
     /*var answer = JSON.parse( response );*/
-    console.log(response);
     // Pintar mediante JS los elementos del JSON en la vista adminValidate.html
     $(".site-description")
     .append( "<h1>" + response.title + "</h1>").attr("id", "title");
@@ -43,7 +39,7 @@ $(document).ready(function() {
 
 
 
-document.querySelector('#validar').addEventListener('click', markerData);
+document.querySelector('#validate').addEventListener('click', markerData);
 
 function markerData(){
 

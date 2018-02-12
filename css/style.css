@@ -43,7 +43,7 @@ form.dropdown {
   color: #333333;
 }
 .chosen-value:focus::-webkit-input-placeholder, .chosen-value.open::-webkit-input-placeholder {
-  color: #000000;
+  color: #333333;
 }
  
 .value-list {
@@ -515,13 +515,13 @@ input[type="submit"]:hover {
 
 /*Mapa vitamin*/
 #map_canvas {
-  height: calc(95vh - 168px);
+  height: calc(95vh - 164px);
   width: 100%;
-  margin-top: 70px;
+  margin-top: 0;
 }
 
 #map_single {
-  height: calc(100vh - 168px);
+  height: calc(95vh - 164px);
   width: 100%;
 }
 
