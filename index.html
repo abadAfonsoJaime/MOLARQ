@@ -104,7 +104,7 @@
     <div class="wrapper-fluid">
       <fieldset>
         <legend><h1>Marcadores de Yacimientos</h1></legend>
-          <div>
+<!--           <div>
           <h3>Por Provincia</h3>
           <form class="dropdown">
             <input class="chosen-value" type="text" value="" placeholder="Provincias">
@@ -114,14 +114,14 @@
               <li onclick="javascript:$('#map_canvas').trigger('show', 'TAR')">Tarragona</li>
             </ul>
           </form>
-          </div>
-<!--       <select name="Provincia" id="Provincia">
-          <option value="default">-Seleccione provincia-</option>
+          </div> -->
+      <select name="Provincia" id="Provincia">
+          <option value="default">--- Selecciona provincia ---</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', 'CUE')" value="CUE">Cuenca</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', 'TAR')" value="TAR">Tarragona</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', 'GER')" value="GER">Gerona</option>
-      </select> -->
-        <div>
+      </select>
+<!--         <div>
         <h3>Por Cronología</h3>
         <form class="dropdown">
           <input class="chosen-value" type="text" value="" placeholder="Cronología">
@@ -130,12 +130,12 @@
             <li onclick="javascript:$('#map_canvas').trigger('show', '2')">Roma</li>
           </ul>
         </form>
-        </div>
-<!--       <select name="Cronologia" id="Cronologia">
-          <option value="default">-Seleccione cultura-</option>
+        </div> -->
+      <select name="Cronologia" id="Cronologia">
+          <option value="default">--- Selecciona cultura ---</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', '1')" value="GRE">Grecia</option>
           <option onclick="javascript:$('#map_canvas').trigger('show', '2')" value="ROM">Roma</option>
-      </select> -->
+      </select>
       <p><a onclick="javascript:$('#map_canvas').trigger('show', '2')"><strong>Próximos eventos</strong></a></p>
       <p><strong>Controles</strong></p>
       <div id="workerButton" class="controlMap">Actualizar marcadores</div>
