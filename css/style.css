@@ -419,7 +419,7 @@ input[type="submit"]:hover {
 
 /*Mapa vitamin*/
 #map_canvas {
-  height: calc(95vh - 164px);
+  height: calc(95vh - 160px);
   width: 100%;
   margin-top: 0;
 }

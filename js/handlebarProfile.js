@@ -3,12 +3,12 @@ $(document).ready( function() {
 	var compilation = Handlebars.compile( template );
 
     var data = {
-    "userName": "PatricioPrince",
-      "username": "Patricio",
-      "surname": "Gor Zas",
-      "birthdate": "02/02/2018",
-      "email": "patricio@gmail.com",
-      "userPassword": "********",
+      "username": "genaro",
+      "name": "Guillermo",
+      "surname": "Gar Gal",
+      "birthdate": "02/04/1987",
+      "email": "genaro@yahoo.es",
+      "userPassword": "*****",
       "occupation": "Turista aficionado"
   }
 
