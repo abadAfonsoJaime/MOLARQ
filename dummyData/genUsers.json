@@ -1,0 +1,71 @@
+[
+   {
+      "form": 0,
+      "name": "",
+      "type": "text",
+      "id": "txt2",
+      "elementPos": 2,
+      "checked": false,
+      "namePos": 0,
+      "value": "guid, alpha(5), yn, alpha(5), last, email, name, birthday, phone, city, pick(admin|editor|guide|contributor|anonym), date(2)"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "hidden",
+      "id": "txt1",
+      "elementPos": 3,
+      "checked": false,
+      "namePos": 0,
+      "value": "guid, alpha(5), yn, alpha(5), last, email, name, birthday, phone, city, pick(admin|editor|guide|contributor|anonym), date(2)"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "text",
+      "id": "fieldnames",
+      "elementPos": 4,
+      "checked": false,
+      "namePos": 0,
+      "value": "id, processId, u_state, u_id, nickname, email, name, birthday, phone, nationality, u_type, u_creationdate"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "select-one",
+      "id": "selOutFormat",
+      "elementPos": 5,
+      "namePos": 0,
+      "value": "JSON"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "number",
+      "id": "txtRows",
+      "elementPos": 7,
+      "checked": false,
+      "namePos": 0,
+      "value": "500"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "checkbox",
+      "id": "chkDefaultHeader",
+      "elementPos": 8,
+      "checked": true,
+      "namePos": 0,
+      "value": "Y"
+   },
+   {
+      "form": 0,
+      "name": "",
+      "type": "checkbox",
+      "id": "chkMongoDbMode",
+      "elementPos": 9,
+      "checked": false,
+      "namePos": 0,
+      "value": "Y"
+   }
+]
